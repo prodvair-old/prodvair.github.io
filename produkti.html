@@ -21,29 +21,27 @@
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
-
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
-<body class="is-home">
+<body  class="is-not-home">
 
 	<header class="header">
 		<div class="header__bar">
 			<div class="header__bar__logo">
 				<img src="img/logo.png" alt="">
 			</div>
-			
 			<nav class="header__bar__menu">
 				<ul>
-					<li><a href="/" class="active">Главная</a></li>
-					<li><a href="produkti.html">Продукты</a></li>
+					<li><a href="/">Главная</a></li>
+					<li><a href="produkti.html" class="active">Продукты</a></li>
 					<li><a href="accesuar.html">Акссесуары</a></li>
 					<li><a href="news.html">Блог</a></li>
 					<li><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
-
 			<div class="header__bar_right">
 				<div class="header__bar__phone">
 					<i class="f icon-phone-call"></i>
@@ -65,6 +63,7 @@
 						<span>2</span>	
 					</a>
 				</div>
+
 				<nav class="header__bar__mmenu">
 					<a href="#" class="header__bar__mmenu-burger">
 						<span></span>
@@ -78,61 +77,73 @@
 					</ul>
 				</nav>
 			</div>
-
-			
-
 		</div>
 
-		<div class="header__content">
-			<div class="container">
-				<div class="header__content__text">
-					<h1> <span class="bold">UMBRA</span> ДИЗАЙН СОВРЕМЕННОЙ МЕБЕЛИ</h1>
-					<p>Мы сделаем ваш новый интерьер</p>
-				</div>
-			</div>
-		</div>
-		
 	</header>
 
-	<sectiaon class="block">
-		<div class="block__dacha">
-			<div>
-				<span>МЕБЕЛь ДЛЯ ДАЧИ<a href="">Смотреть больше <i class="f icon-right-arrow-line"></i></a></span>
+	<section class="sell">
+		<div class="row">
+			<div class="col-lg-6 sell__block">
+				<a href="#" class="sell__block__text">
+					<h4>Эргономичный Стул <span>Oh chair</span></h4>
+					<span class="sell__block__text__cena">
+						4 990
+						<i class="f icon-ruble"></i>
+					</span>
+				</a>
+				<img src="img/предложения/1.png" alt="">
 			</div>
-			<div>
-				<img src="img/интересное/dacha.png" alt="">
-			</div>
-		</div>
-		<div class="block__divan-o">
-			<img src="img/интересное/divan2.png" alt="">
-		</div>
-		<div class="block__divan">
-			<div>
-				<span>НОВЫЕ МОДЕЛИ ДИВАНОВ<a href="">Смотреть больше <i class="f icon-right-arrow-line"></i></a></span>
-			</div>
-			<div>
-				<img src="img/интересное/divan.png" alt="">
-			</div>
-		</div>
-		<div class="block__accesuars">
-			<div>
-				<span>АКСЕССУАРЫ ДЛЯ ИНТЕРЬЕРА<a href="">Смотреть больше <i class="f icon-right-arrow-line"></i></a></span>
-			</div>
-			<div>
-				<img src="img/интересное/accesuars.png" alt="">
+			<div class="col-lg-6 sell__block">
+				<a href="#" class="sell__block__text">
+					<h4>Столик журнальный <span>Hexa</span></h4>
+					<span class="sell__block__text__cena">
+						5 960
+						<i class="f icon-ruble"></i>
+					</span>
+				</a>
+				<img src="img/предложения/2.png" alt="">
 			</div>
 		</div>
-			<div class="block__accesuars-o">
-			<img src="img/интересное/lamp.png" alt="">
-		</div>
-		</div>
-		
-	</sectiaon>
+	</section>
 
 	<section class="top">
 		<div class="container">
 			<div class="top-h2">
-				<h2>Лучшие МОДЕЛИ</h2>
+				<h2>Каталог товаров</h2>
+				<div class="top__hleb"><a href="/index.html">Главная </a> > <a href="/produkti.html">Товары</a> </div>
+			</div>
+			<div class="top__filter">
+				<div class="row">
+					<div class="col-lg-5">
+						<span class="top__filter-sort">Сортировка: </span>
+						<a href="#" class="top__filter-kategor active">Новые</a>
+						<a href="#" class="top__filter-kategor">Хит продаж</a>
+						<a href="#" class="top__filter-kategor">По цене</a>
+					</div>
+					<div class="col-lg-3">
+						<div id="slider-range"></div>
+						<div class="top__filter__cen">
+								<span class="top__filter-null"></span>
+								<span class="top__filter-tit">Цена</span>
+								<span class="top__filter-all"></span>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<span class="top__filter__material-name">
+							Материал изготовления: 
+						</span>
+						<label for="aterial" id="material" class="top__filter__material-select">
+								<i id="material" class="f icon-down-open-big"></i>
+							<select name="material" id="material">
+								<option selected="selected">Дерево</option>
+								<option>Метал</option>
+								<option>Пластик</option>
+								<option>Стекло</option>
+							</select>
+							
+						</label>
+					</div>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-3 col-md-4 col-sm-6 offset-sm-0 offset-1 col-10">
@@ -304,31 +315,6 @@
 		</div>
 	</section>
 
-	<section class="sell">
-		<div class="row">
-			<div class="col-md-6 sell__block">
-				<a href="#" class="sell__block__text">
-					<h4>Эргономичный Стул <span>Oh chair</span></h4>
-					<span class="sell__block__text__cena">
-						4 990
-						<i class="f icon-ruble"></i>
-					</span>
-				</a>
-				<img src="img/предложения/1.png" alt="">
-			</div>
-			<div class="col-md-6 sell__block">
-				<a href="#" class="sell__block__text">
-					<h4>Столик журнальный <span>Hexa</span></h4>
-					<span class="sell__block__text__cena">
-						5 960
-						<i class="f icon-ruble"></i>
-					</span>
-				</a>
-				<img src="img/предложения/2.png" alt="">
-			</div>
-		</div>
-	</section>
-
 	<section class="news">
 		<div class="container">
 			<div class="news-h2">
@@ -420,8 +406,9 @@
 			</div>
 		</div>
 	</footer>
-
+	
 	<script src="js/scripts.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,350 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+    .header
+        &__bar
+            &__menu
+                margin-left: 0%
+                ul
+                    li
+                        margin-right: 20px
+            &_right
+                margin-right: 30px
+            &__logo
+                margin-left: 30px
+    .block
+        img
+            width: 180px
+        &__dacha
+            img
+                margin-bottom: -11%
+                width: 100%
+                height: 200px
+        &__divan
+            img
+                width: 90%
+                height: 100%
+        &__accesuars
+            img
+                width: 70%
+                margin-top: 0px
+                height: 60%
+        &__accesuars-o
+            img 
+                width: 250px
+    .top
+        &__item
+            &__img
+                height: 190px
+            &-h3
+                height: 80px
+    .sell
+        .row
+            margin: 0
+        &__block
+            padding: 0 30px
+            &__text
+                &__cena
+                    margin: 10px 0 20px
+                h4
+                    font-size: 25px
+            img
+                width: 50%
+    .news
+        &__btn
+            padding: 20px 0
+    .contacts
+        &__form
+            width: 430px
+
+// ≥992px
++media-breakpoint-down(md)
+    .header
+        &__bar
+            &_right
+                margin-right: 0px
+            &__menu
+                display: none
+            &__mmenu
+                display: block
+                &-burger
+                    margin-left: 20px
+    .block
+        img
+            width: 140px
+        &__dacha
+            span
+                font-size: 25px
+                line-height: 30px
+                width: 140px
+            img
+                margin-bottom: -11%
+                width: 80%
+                height: 150px
+        &__divan
+            div
+                padding: 30px
+            span
+                padding-left: 0px
+                font-size: 25px
+                line-height: 30px
+                width: 150px
+            img
+                margin-left: -40px
+                width: 100%
+                height: 100%
+        &__accesuars
+            div
+                padding: 30px
+            span
+                padding-left: 20px
+                font-size: 25px
+                line-height: 30px
+            img
+                width: 100px
+                margin-left: -40px
+                margin-top: 0px
+                height: 100%
+        &__accesuars-o
+            img 
+                width: 200px
+    .contacts
+        &__form
+            width: 100%
+    
+// ≥768px
++media-breakpoint-down(sm)
+    .is-news
+        .news__block
+            display: flex
+            flex-flow: wrap
+            &__text
+                order: 2
+            &__img
+                order: 1
+    .header
+        &__content
+            padding-bottom: 300px
+            &__text
+                width: 180px
+                border-top: 15px solid $accent
+                border-left: 15px solid $accent
+                border-bottom: 15px solid $accent
+                padding: 30px 60px
+            h1
+                width: 450px
+                line-height: 70px
+            p
+                width: 414px
+                font-size: 25px
+                color: $text
+    .block
+        grid-template-columns: 1fr 1fr 1fr 
+        img
+            width: 140px
+        &__dacha
+            span
+                font-size: 25px
+                line-height: 30px
+                width: 140px
+            img
+                display: block
+                margin-bottom: -11%
+                width: 80%
+                height: 150px
+        &__divan
+            div
+                padding: 30px
+                &:nth-child(2)
+                    display: none
+            span
+                padding-left: 10px
+                font-size: 25px
+                line-height: 30px
+                a
+                    width: 150px
+            img
+                display: none
+                margin-left: -40px
+                width: 100%
+                height: 100%
+        &__accesuars
+            div
+                padding: 30px
+                &:nth-child(2)
+                    display: none
+            span
+                padding-left: 0px
+                font-size: 25px
+                line-height: 30px
+                width: 180px
+            img
+                width: 100px
+                margin-left: -40px
+                margin-top: 0px
+                height: 100%
+        &__accesuars-o
+            display: none
+            img 
+                width: 200px
+    .contacts
+        .row
+            display: flex
+            .first
+                order: 1
+            .second
+                order: 2
+// ≥576px
++media-breakpoint-down(xs)
+    .header
+        &__content
+            padding-bottom: 300px
+            &__text
+                width: 180px
+                padding: 20px 30px
+            h1
+                min-width: 250px
+                font-size: 30px
+                line-height: 30px
+            p
+                width: 250px
+                font-size: 20px
+                color: $text
+        &__bar
+            &__phone
+                display: none
+            &_right
+                margin-right: 0px
+            &__mmenu
+                display: block
+                &-burger
+                    margin-left: 20px
+                .active
+                    right: 0
+                ul
+                    right: -100vw
+                    background-color: #ffffff
+                    width: 250px
+                    font-size: 18px
+                    text-align: center
+                    line-height: 60px
+                    padding: 60px 60px
+                    transition: all 0.3s ease
+                    z-index: 1
+                    margin: 0
+    .news__block
+        display: flex
+        flex-flow: wrap
+        &__text
+            order: 2
+        &__img
+            order: 1
+            height: 300px
+    .block
+        grid-template-columns: 1fr 1fr
+        img
+            width: 140px
+        &__dacha
+            grid-column: 1 / 2
+            span
+                font-size: 20px
+                line-height: 30px
+                width: 150px
+                padding: 0 30px
+                padding-top: 5px
+                a
+                    width: 120px
+                    font-size: 10px
+                    i
+                        font-size: 16px
+            img
+                display: block
+                margin-bottom: -11%
+                width: 60%
+                height: 160px
+        &__divan-o
+            display: none
+        &__divan
+            grid-column: 2 / 3
+            grid-row: 1
+            div
+                padding: 30px 10px
+                &:nth-child(2)
+                    display: none
+            span
+                font-size: 20px
+                line-height: 30px
+                width: 120px
+                a
+                    width: 120px
+                    font-size: 10px
+                    i
+                        font-size: 16px
+        &__accesuars
+            grid-column: 2 / 3
+            div
+                padding: 30px 10px
+                margin: 0 auto
+                width: auto
+                &:nth-child(2)
+                    display: none
+            span
+                font-size: 20px
+                line-height: 30px
+                width: 120px
+                a
+                    width: 120px
+                    font-size: 10px
+                    i
+                        font-size: 16px
+            img
+                display: none
+                width: 100px
+                margin-left: -40px
+                margin-top: 0px
+                height: 100%
+        &__accesuars-o
+            display: none
+            img 
+                width: 200px
+    .sell
+        .row
+            margin: 0
+        &__block
+            padding: 0 30px
+            &__text
+                &__cena
+                    margin: 10px 0 20px
+                    font-size: 20px
+                h4
+                    font-size: 20px
+            img
+                width: 40%
+    .footer
+        &-h3
+            text-align: center
+            margin-top: 10px
+        &__social
+            text-align: center
+        &__menu
+            display: none
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
