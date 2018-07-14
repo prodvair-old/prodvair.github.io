@@ -14,11 +14,11 @@ ExpiresActive On
 ExpiresDefault "access plus 5 seconds"
 
 # Cache Images
-ExpiresByType image/x-icon "access plus 2592000 seconds"
-ExpiresByType image/jpeg "access plus 2592000 seconds"
-ExpiresByType image/png "access plus 2592000 seconds"
-ExpiresByType image/gif "access plus 2592000 seconds"
-ExpiresByType image/svg+xml "access plus 2592000 seconds"
+ExpiresByType img/x-icon "access plus 2592000 seconds"
+ExpiresByType img/jpeg "access plus 2592000 seconds"
+ExpiresByType img/png "access plus 2592000 seconds"
+ExpiresByType img/gif "access plus 2592000 seconds"
+ExpiresByType img/svg+xml "access plus 2592000 seconds"
 
 # Cache Fonts
 ExpiresByType application/vnd.ms-fontobject "access plus 2592000 seconds"
@@ -43,3 +43,22 @@ ExpiresByType application/xhtml+xml "access plus 600 seconds"
 AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
 
 </ifModule>
+
+<ifModule mod_headers.c>
+    #кэшировать HTML и HTM файлы на один день
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=43200"
+    </FilesMatch>
+    #кэшировать CSS, JavaScript и текстовые файлы на одну неделю
+    <FilesMatch "\.(js|css|txt)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+    #кэшировать флэш и изображения на месяц
+    <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+        Header set Cache-Control "max-age=2592000"
+    </FilesMatch>
+    #отключить кэширование
+    <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+        Header unset Cache-Control
+    </FilesMatch>
+</IfModule>
