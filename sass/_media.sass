@@ -112,6 +112,16 @@
         &__accesuars-o
             img 
                 width: 200px
+    .top
+        &__filter
+            &__cen
+                width: 400px
+                span
+                    margin-bottom: 20px
+            &-kategor
+                margin-bottom: 20px
+            #slider-range
+                width: 400px
     .contacts
         &__form
             width: 100%
@@ -198,6 +208,9 @@
                 order: 1
             .second
                 order: 2
+    .footer
+        .none
+            display: none
 // ≥576px
 +media-breakpoint-down(xs)
     .header
@@ -207,7 +220,7 @@
                 width: 180px
                 padding: 20px 30px
             h1
-                min-width: 250px
+                width: 250px
                 font-size: 30px
                 line-height: 30px
             p
@@ -236,6 +249,20 @@
                     transition: all 0.3s ease
                     z-index: 1
                     margin: 0
+    .top
+        &__filter
+            &__cen
+                width: 100%
+                span
+                    margin-bottom: 20px
+            &-sort
+                display: block
+                margin-left: 13px
+            &-kategor
+                margin-top: 20px
+                margin-bottom: 20px
+            #slider-range
+                width: 100%
     .news__block
         display: flex
         flex-flow: wrap

@@ -20,5 +20,8 @@ $(function() {
 	$( ".top__filter-null" ).html( $( "#slider-range" ).slider( "values", 0 ) );
 	$( ".top__filter-all" ).html( $( "#slider-range" ).slider( "values", 1 ) );
 	
-
+	$('nav ul li a').on('click', function(e){
+		$('nav ul li a').removeClass('active');
+		$(this).addClass('active');
+	});
 });
