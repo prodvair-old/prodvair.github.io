@@ -1,0 +1,245 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: $p_font-regular
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong, .bold
+	font-weight: bold
+	font-family: $p_font-bold
+
+.green
+	color: $green
+	font-family: $p_font-black
+
+.blue
+	color: $blue
+	font-family: $p_font-black
+
+.red
+	color: $red
+	font-family: $p_font-black
+
+p
+	ff$p_font-regular
+
+.h, h1, h2, h3, h4
+	font-family: $h_font
+	text-transform: none
+	letter-spacing: 2px
+
+a
+	font-family: $font
+	
+// Главный экран сайта
+
+.header
+	background-image: url('../img/header/bg.gif')
+	background-position-y: bottom
+	background-repeat: no-repeat
+	background-size: cover
+	height: 100vh
+	&__content
+		img
+			position: absolute
+			top: 13%
+			left: -25%
+			width: 150%
+			z-index: 0
+	&__top
+		// background-image: url("../img/header/bg-top_line.png")
+		// background-repeat: no-repeat
+		position: relative
+		z-index: 1
+		&__phone
+			float: right
+			padding-top: 5px
+			span
+				font-family: $font
+				font-size: 30px
+				color: $accent
+				text-shadow: $text-shadow
+				margin-left: -15px
+			img
+				height: 80px
+				width: 80px
+		&__clock
+			padding: 0 40px
+			div
+				display: inline-block
+				width: 180px
+				text-align: center
+				font-family: $font
+				font-size: 20px
+				color: $main
+				padding-top: 15px
+				text-shadow: $text-shadow
+				line-height: 1.2em
+				margin-left: -25px
+				span
+					display: block
+					font-size: 24px
+			img
+				margin: 0
+				margin-top: -30px
+				width: 99px
+				height: 95px
+		&__menu
+			background-image: url("../img/header/menu.png")
+			background-repeat: no-repeat
+			background-size: contain
+			width: 433px
+			height: 658px
+			margin-top: 17px
+			ul
+				list-style-type: none
+				margin: 0
+				padding: 0
+				padding-top: 197px
+				text-align: center
+				li
+					padding-bottom: 71px
+					margin-left: -75px
+					&:last-child
+						color: $accent
+					a
+						font-size: 30px
+						color: $main
+						text-decoration: none
+						transform: scale(1)
+						display: block
+						transition: all 0.1s ease
+						text-shadow: $text-shadow
+						text-transform: uppercase
+						animation: yourAnimation 1s none 0s ease
+						&:hover
+							transform: scale(1.05)
+						.last
+							color: $accent
+
+.about
+	background-image: url("../img/about/bg.png")
+	background-size: cover
+	background-position: center
+	position: relative
+	z-index: 2
+	margin-top: -145px
+	padding-top: 120px
+	padding-bottom: 70px
+	&__slider
+		margin-top: 210px
+		width: 483px
+		height: auto
+		&__controls
+			margin-left: 150px
+			margin-top: -20px
+			position: relative
+			&-right
+				position: absolute
+				top: 73px
+				left: 242px
+				transform: scale(1) rotateZ(0deg)
+				&:hover
+					transform: scale(1.1) rotateZ(-3deg)
+			&-left
+				position: absolute
+				top: 34px
+				left: 15px
+				transform: scale(1) rotateZ(0deg)
+				&:hover
+					transform: scale(1.1) rotateZ(-3deg)
+			&-dots
+				position: absolute
+				top: 74px
+				left: 145px
+				a
+					display: inline-block
+					padding-right: 3px
+					opacity: 0.4
+					transform: scale(1)
+					text-decoration: none
+					&:hover
+						transform: scale(1.1)
+				.active
+					opacity: 1
+		&__text
+			width: 100%
+			p
+				ff
+				font-size: 17px
+	h2
+		display: none
+		// text-shadow: 1px 1px 1px
+		background: linear-gradient(90deg, #836622 0%, #ae8b2f 60%, #caaa53 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		width: 400px
+		font-family: $font
+		font-size: 40px
+		// color: $main
+		padding-top: 20px
+		position: relative
+		
+.condition
+	background-image: url("../img/condition/bg.jpg")
+	background-size: cover
+	background-position: center
+	min-height: 780px
+	margin-top: -15px
+	padding-top: 140px
+	padding-bottom: 70px
+	position: relative
+	z-index: 1
+	&__text
+		display: inline-block
+		font-size: 17px
+		&__block-3
+			width: 340px
+			margin-left: 50px
+			margin-top: 50px
+			transform: rotateZ(6deg)
+		&__block-2
+			width: 340px
+			margin-left: 150px
+			margin-top: 32px
+			transform: rotateZ(-6deg)
+		&__block-1
+			width: 350px
+			margin-left: 55px
+			transform: rotateZ(8deg)
+	&__car
+		display: inline-block
+		position: relative
+		top: -190px
+
+	
+@import "media" // Always at the end
