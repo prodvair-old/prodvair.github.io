@@ -50,39 +50,75 @@ b, strong, .bold
 	font-family: $p_font-black
 
 p
-	ff$p_font-regular
+	font-family: $p_font-regular
 
 .h, h1, h2, h3, h4
 	font-family: $h_font
 	text-transform: none
-	letter-spacing: 2px
+	letter-spacing: 3px
 
 a
 	font-family: $font
+
+@keyframes smoke
+	0%
+		transform: rotate(0) translateX(0) translateY(0)
+		opacity: 0.6
+	40%
+		opacity: 1
+	50%
+		transform: translateX(20%) translateY(-10%)
+		opacity: 0.7
+	55%
+		opacity: 1
+	100%
+		transform: rotate(0) translateX(0) translateY(0)
+		opacity: 0.6
+
 	
 // Главный экран сайта
 
 .header
-	background-image: url('../img/header/bg.gif')
+	background-image: url('../img/header/bg.jpg')
 	background-position-y: bottom
 	background-repeat: no-repeat
 	background-size: cover
-	height: 100vh
+	height: 110vh
 	&__content
+		display: flex
+		justify-content: center
+		video
+			position: absolute
+			top: 0
+			left: 0
+			height: 110vh
 		img
 			position: absolute
-			top: 13%
-			left: -25%
+			top: 10%
+			left: -50%
 			width: 150%
+			opacity: 0.5
 			z-index: 0
+			animation: smoke 30s infinite 0s ease-in-out
 	&__top
-		// background-image: url("../img/header/bg-top_line.png")
-		// background-repeat: no-repeat
+		background-image: url("../img/header/bg-top_line.png")
+		background-repeat: no-repeat
 		position: relative
 		z-index: 1
 		&__phone
 			float: right
-			padding-top: 5px
+			padding-top: 10px
+			position: relative
+			&::after
+				content: ''
+				width: 462px
+				height: 155px
+				background-image: url('../img/header/phone_bg.png')
+				display: block
+				opacity: 0.7
+				position: absolute
+				top: -70px
+				left: 0
 			span
 				font-family: $font
 				font-size: 30px
@@ -94,6 +130,17 @@ a
 				width: 80px
 		&__clock
 			padding: 0 40px
+			position: relative
+			&::after
+				content: ''
+				width: 366px
+				height: 99px
+				background-image: url('../img/header/clock_bg.png')
+				display: block
+				opacity: 0.7
+				position: absolute
+				top: 0
+				left: 0
 			div
 				display: inline-block
 				width: 180px
@@ -101,7 +148,7 @@ a
 				font-family: $font
 				font-size: 20px
 				color: $main
-				padding-top: 15px
+				padding-top: 20px
 				text-shadow: $text-shadow
 				line-height: 1.2em
 				margin-left: -25px
@@ -117,18 +164,18 @@ a
 			background-image: url("../img/header/menu.png")
 			background-repeat: no-repeat
 			background-size: contain
-			width: 433px
-			height: 658px
+			width: 434px
+			height: 811px
 			margin-top: 17px
 			ul
 				list-style-type: none
 				margin: 0
 				padding: 0
-				padding-top: 197px
+				padding-top: 263px
 				text-align: center
 				li
-					padding-bottom: 71px
-					margin-left: -75px
+					padding-bottom: 101px
+					margin-left: -17px
 					&:last-child
 						color: $accent
 					a
@@ -140,6 +187,7 @@ a
 						transition: all 0.1s ease
 						text-shadow: $text-shadow
 						text-transform: uppercase
+						letter-spacing: 2px
 						animation: yourAnimation 1s none 0s ease
 						&:hover
 							transform: scale(1.05)
@@ -152,7 +200,7 @@ a
 	background-position: center
 	position: relative
 	z-index: 2
-	margin-top: -145px
+	margin-top: -111px
 	padding-top: 120px
 	padding-bottom: 70px
 	&__slider
@@ -161,7 +209,7 @@ a
 		height: auto
 		&__controls
 			margin-left: 150px
-			margin-top: -20px
+			margin-top: -60px
 			position: relative
 			&-right
 				position: absolute
@@ -194,7 +242,6 @@ a
 		&__text
 			width: 100%
 			p
-				ff
 				font-size: 17px
 	h2
 		display: none
@@ -210,13 +257,13 @@ a
 		position: relative
 		
 .condition
-	background-image: url("../img/condition/bg.jpg")
-	background-size: cover
+	background-image: url("../img/condition/bg.png")
 	background-position: center
-	min-height: 780px
-	margin-top: -15px
+	background-repeat: no-repeat
+	background-size: cover
+	min-height: 793px
+	margin-top: -19px
 	padding-top: 140px
-	padding-bottom: 70px
 	position: relative
 	z-index: 1
 	&__text
@@ -225,12 +272,12 @@ a
 		&__block-3
 			width: 340px
 			margin-left: 50px
-			margin-top: 50px
+			margin-top: 55px
 			transform: rotateZ(6deg)
 		&__block-2
 			width: 340px
 			margin-left: 150px
-			margin-top: 32px
+			margin-top: 35px
 			transform: rotateZ(-6deg)
 		&__block-1
 			width: 350px
@@ -241,5 +288,129 @@ a
 		position: relative
 		top: -190px
 
-	
+.features
+	background-image: url("../img/features/bg.png")
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 1221px
+	margin-top: -90px
+	padding: 343px
+	position: relative
+	z-index: 3
+	&__popup
+		background-image: url('../img/features/popup/bg.jpg')
+		background-size: cover
+		background-position: center
+		width: 100vw
+		height: 100vh
+		position: fixed
+		top: 220px
+		left: -420px
+		transform: scale(0)
+		transition: all 0.5s ease
+		visibility: hidden
+		&-active
+			visibility: visible
+			transform: scale(1)
+			top: 0
+			left: 0
+		&-btn-form
+			display: inline-block
+			background-image: url('../img/features/popup/form.png')
+			width: 285px
+			height: 46px
+			float: right
+			margin-right: 10px
+			margin-top: 50px
+			text-align: center
+			font-family: $p_font-black
+			font-size: 22px
+			color: $main
+			line-height: 46px
+			text-shadow: $text-shadow
+			padding-left: 10px
+			transition: all 0.2s ease
+			&:hover
+				color: $main
+				text-decoration: none
+				font-size: 24px
+		&-btn-close
+			float: right
+			margin-right: 70px
+			margin-top: 50px
+			transition: all 0.2s ease
+			&:hover
+				transform: rotateZ(10deg) scale(1.1)
+		&__slider
+			width: 330px
+			position: absolute
+			left: 50%
+			top: 102px
+			transform: translateX(-65%)
+			&__block
+				margin-top: 5px
+				overflow: hidden
+				height: 414px
+				perspective: 1000px
+				position: relative
+				&-next
+					display: flex
+					justify-content: flex-end
+					transform: rotateY(20deg) rotateZ(1deg)
+					position: absolute
+					bottom: 10px
+					right: 20px
+					font-family: $p_font-regular
+					font-size: 14px
+					color: $accent
+					text-decoration: none
+					outline: none
+					transition: all 0.2s ease
+					&:hover
+						color: darken($accent, 5%)
+						text-decoration: none
+						img
+							transform: rotateZ(-3deg)
+					img
+						margin-left: 3px
+						margin-top: 4px
+						height: 14px
+				&__text
+					width: 320px
+					font-size: 17px
+					color: $main
+					transform: rotateY(20deg) rotateZ(1deg)
+	&__content
+		&-btn
+			margin-left: 17px
+			margin-top: -148px
+			display: block
+			text-decoration: none
+			width: 214px
+			img
+				transform: rotateZ(0deg)
+			&:hover
+				img
+					transform: rotateZ(-5deg)
+		&__text
+			&-block-5
+				width: 232px
+				margin-top: 140px
+				margin-left: -10px
+			&-block-4
+				width: 221px
+				margin-top: 90px
+				margin-left: 5px
+			&-block-3
+				width: 190px
+				margin-top: 40px
+				margin-left: 90px
+			&-block-2
+				width: 219px
+				margin-top: 25px
+				margin-left: 70px
+			&-block-1
+				width: 205px
+				margin-left: 90px
 @import "media" // Always at the end

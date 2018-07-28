@@ -10,6 +10,19 @@ $(function() {
 		autoplaySpeed: 25000
 	});
 
+	$('.features__popup__slider').slick({
+		dots: false,
+		speed: 700,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 25000
+	});
+
+	$('.features__popup__slider__block-next').click(function(e){
+		e.preventDefault();
+		$('.features__popup__slider').slick('slickNext');
+	});
+
 	$('.about__slider__controls-right-btn').click(function(e){
 		e.preventDefault();
 		$('.about__slider').slick('slickNext');
@@ -58,6 +71,27 @@ $(function() {
 		}
 	});
 
+	$('.features__content-btn').on('click', function (e) {
+		e.preventDefault();
+		$('.features__popup').addClass('features__popup-active');
+	});
+
+	$('.features__popup-btn-close').on('click', function (e) {
+		e.preventDefault();
+		$('.features__popup').removeClass('features__popup-active');
+	});
+
+	// var videobackground = new $.backgroundVideo($('.header'), {
+	// 	"align": "centerXY",
+	// 	"width": 1280,
+	// 	"height": 720,
+	// 	"path": "video/",
+	// 	"filename": "bg",
+	// 	"types": ["mp4","ogg","webm"],
+	// 	preload: true,
+	// 	autoplay: true,
+	// 	loop: true
+	// });
 	// $('.photocards-slider').slick({
 	// 	centerMode: true,
 	// 	dots: false,

@@ -40,8 +40,8 @@
 					<div class="col-md-4">
 						<nav class="header__top__menu">
 							<ul>
-								<li class="wow bounceInLeft" data-wow-duration="1s" data-wow-delay="1s"><a href="#">Всё о <span class="h">Steam Team Show</span></a></li>
-								<li class="wow bounceInRight" data-wow-duration="1.3s" data-wow-delay="1s"><a href="#">Фото & Видео</a></li>
+								<li class="wow bounceInLeft" data-wow-duration="1s" data-wow-delay="1s"><a href="#about">Всё о <span class="h">Steam Team Show</span></a></li>
+								<li class="wow bounceInRight" data-wow-duration="1.3s" data-wow-delay="1s"><a href="#photos">Фото & Видео</a></li>
 								<li class="wow bounceInLeft" data-wow-duration="1.6s" data-wow-delay="1s"><a href="#">Отзывы о нас</a></li>
 								<li class="wow bounceInRight" data-wow-duration="1.9s" data-wow-delay="1s"><a href="#"><span class="last">Заказать шоу</span></a></li>
 							</ul>
@@ -76,9 +76,10 @@
 		</div>
 
 		<!-- Контент главного экрана -->
-		<!-- <div class="header__content">
+		<div class="header__content">
 			<img src="img/header/smoke.png" class="parallax" alt="">
-		</div> -->
+			<!-- <video src="video/bg.mp4" autoplay loop preload="metadata"></video> -->
+		</div>
 	</header>
 
 	<!-- Секция О нас -->
@@ -89,7 +90,7 @@
 				
 				<!-- Слайдер в разделе О нас -->
 				<div class="col-md-6 offset-md-3">
-					<div class="about__slider">
+					<div class="about__slider wow pulse">
 						<div class="about__slider__text">
 							<p>
 								<span class="blue">SteamTeamShow</span> - это научное шоу в стиле <span class="blue">"стимпанк"</span>!
@@ -107,7 +108,7 @@
 								Так что не стоит пугаться этого	 слова, оно не имеет 
 								отношения к тем панкам, что по ночам за гаражами ходят! 
 								<span class="red">Стимпанк</span> - это фантастический и удивительный 
-								мир, в который мы предлагаем вам <br>
+								<br>мир, в который мы предлагаем вам <br>
 								отправиться <b>вместе с нами</b>.
 							</p>
 						</div>
@@ -122,7 +123,7 @@
 							<p>
 								<span class="green">SteamTeamShow</span> идёт дальше! Оригинальные костюмы, 
 								реквизит и захватывающий сценарий шоу позволяют детям 
-								и взрослым погрузиться в удивительный, сказочный 
+								<br>и взрослым погрузиться в удивительный, сказочный 
 								<br>мир науки. <b>Шоу полностью интерактивное!</b>
 							</p>
 							<p>
@@ -130,7 +131,7 @@
 								<br>А что значит? Что зрители наравне с ведущим участвуют 
 								<br>во всех без исключения опытах! Да, да, во всех! 
 								<br><b>Это не шутка!</b> Хотя, нет... Наверное всё-таки...есть опыт, 
-								где ведущий пытается выпить жидкий азот! 
+								<br>где ведущий пытается выпить жидкий азот! 
 								<br>Вот его мы делаем сами , а так, во всех!
 							</p>
 						</div>
@@ -165,7 +166,7 @@
 			<div class="row">
 
 				<!-- Контроллеры управления слайдером в разделе О нас -->
-				<div class="about__slider__controls">
+				<div class="about__slider__controls wow bounceInLeft">
 					<img src="img/about/controller.png" alt="">
 
 					<div class="about__slider__controls-dots">
@@ -242,31 +243,165 @@
 		</div>
 	</section>
 
+	<!-- секция Преимущества  -->
 	<section class="features" id="features">
 		<h2 class="d-none">Наши преимущества</h2>
 		<div class="container">
 			<div class="features__content">
-				<img src="img/features/" alt="">
 				<div class="features__content__text">
-					<div class="features__content__text-block-1">
-						<p></p>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="features__content__text-block-1 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.5s" data-wow-offset="150">
+								<p>
+									Более 5 лет опыта работы 
+									ведущими на детских 
+									праздниках, шоу 
+									<br>и спектаклях, как для 
+									обычных людей, так 
+									<br>и для звезд шоу-бизнеса. 
+									Да...Звезды шоу-бизнеса 
+									люди необычные...
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="features__content__text-block-2 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="150">
+								<p>
+									Все в нашем шоу люди 
+									образованные, с высшим 
+									актерским образованием 
+									<br>и огромным опытом работы 
+									<br>с детьми и людьми, а также 
+									химическими элементами 
+									таблицы Менделеева.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="features__content__text-block-3 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="150">
+								<p>
+									Эксклюзивный дизайн 
+									костюмов и реквизита:
+									steampunk.
+									<br>Всё, от реквизита до 
+									костюмов, проработано 
+									до мельчайших деталей 
+									<br>и с первых мгновений 
+									приковывает 
+									к себе взгляд.
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="features__content__text-block-2">
-						<p></p>
+
+					<div class="row">
+						<div class="offset-md-3 col-md-4">
+							<div class="features__content__text-block-4 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.4s" data-wow-offset="150">
+								<p>
+									Для развертывания 
+									мобильной лаборатории 
+									профессору нужно минимум 
+									<br>1 час времени. Но он 
+									приезжает за 1.30, а иногда 
+									<br>и за 2 часа, чтобы 
+									разведать обстановку!
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="features__content__text-block-5 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.5s" data-wow-offset="150">
+								<p>
+									У вас есть индивидуальный 
+									сценарий, в который нужно 
+									вписать шоу? Нет проблем, 
+									ведущий придумает историю, 
+									которая отлично вольется 
+									<br>в сценарный план любого 
+									праздника. Даже Дня 
+									<br>взятия Бастилии...
+								</p>
+							</div>
+						</div>
 					</div>
-					<div class="features__content__text-block-3">
-						<p></p>
-					</div>
-					<div class="features__content__text-block-4">
-						<p></p>
-					</div>
-					<div class="features__content__text-block-5">
-						<p></p>
-					</div>
+
 				</div>
+				<a href="#" class="btn features__content-btn">
+					<img src="img/features/binoculars.png" alt="">
+				</a>
+			</div>
+		</div>
+		<div class="features__popup">
+			<a href="#" class="features__popup-btn-close"><img src="img/features/popup/close.png" alt=""></a>
+			<a href="#" class="features__popup-btn-form">Заказать Шоу</a>
+			<div class="features__popup__slider">
+				<div class="features__popup__slider__block">
+					<img src="img/features/popup/1-title.png" class="features__popup__slider__block__title" alt="">
+					<div class="features__popup__slider__block__text">
+						<p>
+							Это не обычное научное шоу с набором 
+							опытов, без истории, в котором зритель 
+							просто наблюдает за тем , как некий 
+							человек в халате говорит наигранно 
+							смешным голосом. 
+						</p>
+						<p>
+							Это необычное шоу! 
+							Это шоу сказка, в котором зритель - 
+							полноправный участник, у ведущего 
+							нет халата, и говорит он хоть и смешным, 
+							но не наигранным голосом.
+						</p>
+					</div>
+					<a href="#" class="features__popup__slider__block-next">Далее <img src="img/features/popup/next-btn.png" alt=""></a>
+				</div>
+
+				<div class="features__popup__slider__block">
+					<img src="img/features/popup/2-title.png" class="features__popup__slider__block__title" alt="">
+					<div class="features__popup__slider__block__text">
+						<p>
+							Музыка для Steamteamshow специально 
+							подобрана под стилистику костюмов 
+							и реквизита. Она позволяет полностью 
+							погрузиться в сказку, добавляет 
+							динамичности всему происходящему, 
+							улучшает аппетит. 
+						</p>
+						<p>
+							Специально для этого мы всегда 
+							берем с собой граммофон для пластинок. 
+							Бывает, что он капризничает, тогда мы
+							берём в помощь Hi-Fi колонку из 21 века.
+						</p>
+					</div>
+					<a href="#" class="features__popup__slider__block-next">Далее <img src="img/features/popup/next-btn.png" alt=""></a>
+				</div>
+				
+				<div class="features__popup__slider__block">
+					<img src="img/features/popup/3-title.png" class="features__popup__slider__block__title" alt="">
+					<div class="features__popup__slider__block__text">
+						<p>
+							Трудности нас не пугают!
+							Мы проведем шоу любой сложности 
+							и с любым количеством зрителей: 
+							обычный день рождения, 
+							праздник на открытой площадке, стадионе 
+							или в концертном зале. 
+						</p>
+						<p>
+							Мы сделаем всё на высшем уровне! 
+							Это не шутка, мы действительно 
+							воплотим ваше пожелание  в реальность.
+						</p>
+					</div>
+					<a href="#" class="features__popup__slider__block-next">В начало <img src="img/features/popup/next-btn.png" alt=""></a>
+				</div>
+
 			</div>
 		</div>
 	</section>
+
+	<section class="photos" id="photos"></section>
 	<script src="js/scripts.min.js"></script>
 	<script>
 		new WOW().init();
