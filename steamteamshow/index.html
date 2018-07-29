@@ -247,6 +247,10 @@
 	<section class="features" id="features">
 		<h2 class="d-none">Наши преимущества</h2>
 		<div class="container">
+			<div class="features__bra">
+				<img src="img/features/bra.png" alt="">
+			</div>
+
 			<div class="features__content">
 				<div class="features__content__text">
 
@@ -278,12 +282,12 @@
 								</p>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 smoke">
 							<div class="features__content__text-block-3 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="150">
 								<p>
 									Эксклюзивный дизайн 
 									костюмов и реквизита:
-									steampunk.
+									STEAMPUNK.
 									<br>Всё, от реквизита до 
 									костюмов, проработано 
 									до мельчайших деталей 
@@ -292,6 +296,7 @@
 									к себе взгляд.
 								</p>
 							</div>
+							<img src="img/features/smoke.png" alt="">
 						</div>
 					</div>
 
@@ -331,7 +336,11 @@
 				</a>
 			</div>
 		</div>
-		<div class="features__popup">
+		
+	</section>
+
+	<!-- попап окно в секиций Преимущества -->
+	<div class="features__popup">
 			<a href="#" class="features__popup-btn-close"><img src="img/features/popup/close.png" alt=""></a>
 			<a href="#" class="features__popup-btn-form">Заказать Шоу</a>
 			<div class="features__popup__slider">
@@ -399,9 +408,92 @@
 
 			</div>
 		</div>
+
+
+	<!-- секция с Фотографиями -->
+	<section class="photos" id="photos">
+		<h2 class="d-none">Наши фотокарточки</h2>
+		<a href="#" class="photos__btn-prev"><img src="img/photocards/prev.png" alt=""></a>
+			<div class="photos__slider">
+				<div class="photos__slider__block">
+					<div class="photos__slider__block-img">
+						<img src="photo/azot.jpg" alt="">
+					</div>
+					<h3>Азотное шоу</h3>
+				</div>
+				<div class="photos__slider__block">
+					<div class="photos__slider__block-img">
+						<img src="photo/icecream.jpg" alt="">
+					</div>
+					<h3>мк "Мороженое"</h3>
+				</div>
+				<div class="photos__slider__block">
+					<div class="photos__slider__block-img">
+						<img src="photo/phisic.jpg" alt="">
+					</div>
+					<h3>Физическое шоу</h3>
+				</div>
+				<div class="photos__slider__block">
+					<div class="photos__slider__block-img">
+						<img src="photo/tesla.jpg" alt="">
+					</div>
+					<h3>Тесла шоу</h3>
+				</div>
+				<div class="photos__slider__block">
+					<div class="photos__slider__block-img">
+						<img src="photo/so_close_1.jpg" alt="">
+					</div>
+					<h3>Новое шоу</h3>
+				</div>
+				<div class="photos__slider__block">
+					<div class="photos__slider__block-img">
+						<img src="photo/so_close_2.jpg" alt="">
+					</div>
+					<h3>Новое шоу</h3>
+				</div>
+			</div>
+		<a href="#" class="photos__btn-next"><img src="img/photocards/next.png" alt=""></a>
 	</section>
 
-	<section class="photos" id="photos"></section>
+	<section class="videos" id="videos">
+		<h2 class="d-none">Видео Steam Team Show</h2>
+		<div class="container">
+			<div class="row">
+				<div class="offset-md-1 col-md-10">
+					<div class="videos__screen">
+						<div class="videos__screen-item">
+							<img src="video/stopcadr/1.png" alt="">
+							<video src="video/1.mp4"></video>
+						</div>
+						<div class="videos__screen-item">
+							<img src="video/stopcadr/2.png" alt="">
+							<video src="video/2.mp4"></video>
+						</div>
+						<div class="videos__screen-item">
+							<img src="video/stopcadr/3.png" alt="">
+							<video src="video/3.mp4"></video>
+						</div>
+						<div class="videos__screen-item">
+							<img src="video/stopcadr/4.png" alt="">
+							<video src="video/4.mp4"></video>
+						</div>
+					</div>
+
+					<div class="videos__controls">
+						<div class="videos__controls__playpause">
+							<a href="#" class="videos__controls__playpause-stop"><img src="img/videos/controls/stop.png" alt=""></a>
+							<a href="#" class="videos__controls__playpause-play" data-video='pause'><img src="img/videos/controls/play.png" alt=""></a>
+							<a href="#" class="videos__controls__playpause-mute" data-video='song'><img src="img/videos/controls/sound.png" alt=""></a>
+						</div>
+						<div class="videos__controls__next">
+							<a href="" class="videos__controls__next-btn">1</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<script src="js/scripts.min.js"></script>
 	<script>
 		new WOW().init();

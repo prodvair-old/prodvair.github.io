@@ -62,20 +62,54 @@ a
 
 @keyframes smoke
 	0%
-		transform: rotate(0) translateX(0) translateY(0)
+		transform: rotateY(0deg) translateX(0) translateY(0)
 		opacity: 0.6
 	40%
 		opacity: 1
 	50%
-		transform: translateX(20%) translateY(-10%)
+		transform: rotateY(-25deg) translateX(20%) translateY(-10%)
 		opacity: 0.7
 	55%
 		opacity: 1
 	100%
-		transform: rotate(0) translateX(0) translateY(0)
+		transform: rotateY(0deg) translateX(0) translateY(0)
 		opacity: 0.6
 
-	
+@keyframes screenLight
+    0%
+        transform: scale(0.9)
+    40%
+        transform: scale(1)
+        
+    50%
+        transform: scale(1.05)
+        
+    100%
+        transform: scale(0.9)
+
+@keyframes Light
+    0%
+        transform: scale(0.7)
+    40%
+        transform: scale(1)
+        
+    50%
+        transform: scale(1.1)
+        
+    100%
+        transform: scale(0.7)
+
+@keyframes smokeSmal
+	0%
+		transform: scale(1)
+		opacity: 1
+	50%
+		transform: scale(0.8) translateX(-10px)
+		opacity: 0.5
+	100%
+		transform: scale(1)
+		opacity: 1
+
 // Главный экран сайта
 
 .header
@@ -84,17 +118,13 @@ a
 	background-repeat: no-repeat
 	background-size: cover
 	height: 110vh
+	margin-top: 30px
 	&__content
 		display: flex
 		justify-content: center
-		video
-			position: absolute
-			top: 0
-			left: 0
-			height: 110vh
 		img
 			position: absolute
-			top: 10%
+			top: 3%
 			left: -50%
 			width: 150%
 			opacity: 0.5
@@ -105,9 +135,11 @@ a
 		background-repeat: no-repeat
 		position: relative
 		z-index: 1
+		top: -30px
 		&__phone
 			float: right
-			padding-top: 10px
+			padding-top: 11px
+			margin-right: 3px
 			position: relative
 			&::after
 				content: ''
@@ -125,13 +157,14 @@ a
 				color: $accent
 				text-shadow: $text-shadow
 				margin-left: -15px
+				letter-spacing: 1px
 			img
 				height: 80px
 				width: 80px
 		&__clock
-			padding: 0 40px
+			margin-left: 32px
 			position: relative
-			&::after
+			&::before
 				content: ''
 				width: 366px
 				height: 99px
@@ -141,9 +174,10 @@ a
 				position: absolute
 				top: 0
 				left: 0
+				z-index: -1
 			div
 				display: inline-block
-				width: 180px
+				width: auto
 				text-align: center
 				font-family: $font
 				font-size: 20px
@@ -152,6 +186,7 @@ a
 				text-shadow: $text-shadow
 				line-height: 1.2em
 				margin-left: -25px
+				letter-spacing: 1px
 				span
 					display: block
 					font-size: 24px
@@ -160,13 +195,15 @@ a
 				margin-top: -30px
 				width: 99px
 				height: 95px
+				margin-right: -5px
 		&__menu
 			background-image: url("../img/header/menu.png")
 			background-repeat: no-repeat
 			background-size: contain
 			width: 434px
 			height: 811px
-			margin-top: 17px
+			margin-top: 9px
+			margin-left: -40px
 			ul
 				list-style-type: none
 				margin: 0
@@ -198,6 +235,7 @@ a
 	background-image: url("../img/about/bg.png")
 	background-size: cover
 	background-position: center
+	height: 1124px
 	position: relative
 	z-index: 2
 	margin-top: -111px
@@ -209,7 +247,7 @@ a
 		height: auto
 		&__controls
 			margin-left: 150px
-			margin-top: -60px
+			margin-top: -39px
 			position: relative
 			&-right
 				position: absolute
@@ -307,6 +345,7 @@ a
 		position: fixed
 		top: 220px
 		left: -420px
+		z-index: 999999999999
 		transform: scale(0)
 		transition: all 0.5s ease
 		visibility: hidden
@@ -324,13 +363,15 @@ a
 			margin-right: 10px
 			margin-top: 50px
 			text-align: center
-			font-family: $p_font-black
+			font-family: $p_font-bold
 			font-size: 22px
 			color: $main
 			line-height: 46px
+			letter-spacing: 2px
 			text-shadow: $form
 			padding-left: 10px
 			transition: all 0.2s ease
+			text-transform: uppercase
 			&:hover
 				color: $main
 				text-decoration: none
@@ -381,6 +422,25 @@ a
 					font-size: 17px
 					color: $main
 					transform: rotateY(20deg) rotateZ(1deg)
+	&__bra
+		position: relative
+		&::after
+			content: ''
+			display: block
+			background-image: url('../img/features/bra-light.png')
+			background-repeat: no-repeat
+			background-size: contain
+			width: 623px
+			height: 623px
+			position: absolute
+			top: -120px
+			left: -571px
+			animation: Light 5s linear infinite
+		img
+			position: absolute
+			top: 39px
+			left: -280px
+			z-index: 1
 	&__content
 		&-btn
 			margin-left: 17px
@@ -394,6 +454,14 @@ a
 				img
 					transform: rotateZ(-5deg)
 		&__text
+			.smoke
+				position: relative
+				img
+					position: absolute
+					bottom: 30px
+					left: 180px
+					transform-origin: bottom
+					animation: smokeSmal 13s ease infinite
 			&-block-5
 				width: 232px
 				margin-top: 140px
@@ -413,4 +481,207 @@ a
 			&-block-1
 				width: 205px
 				margin-left: 90px
+
+// секция фотографий
+.photos
+	background-image: url('../img/photocards/bg.png')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 1004px
+	margin-top: -150px
+	position: relative
+	z-index: 3
+	display: flex
+	align-items: center
+	justify-content: center
+	padding-top: 190px
+	&__btn-next
+		width: 100%
+		img
+			margin-left: 20px
+			transition: all 0.2s ease
+		&:hover
+			img
+				transform: scale(1.1)
+	&__btn-prev
+		width: 100%
+		display: flex
+		justify-content: flex-end
+		img
+			margin-right: 20px
+			transition: all 0.2s ease
+		&:hover
+			img
+				transform: scale(1.1)
+	&__slider
+		width: 1170px
+		margin: 0 auto
+		&__block
+			margin-left: 24px
+			margin-right: 24px
+			height: 630px
+			padding-top: 40px
+			h3
+				font-family: $font
+				font-size: 30px
+				text-align: center
+				position: relative
+				letter-spacing: normal
+				line-height: 77px
+				width: 100%
+				color: $main
+				text-shadow: $form
+				text-transform: uppercase
+				margin-top: 25px
+				font-weight: normal
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					background-image: url('../img/photocards/title_bg.png')
+					width: 325px
+					height: 77px
+					top: 0
+					left: 29px
+					z-index: -1	
+			&-img
+				transition: all 0.5s ease
+				background-image: url('../img/photocards/border.png')
+				background-size: cover
+				width: 345px
+				height: 467px
+				padding-top: 41px
+				img
+					transition: all 0.5s ease
+					margin-left: 44px
+					width: 259px
+					height: 389px
+					position: relative
+					z-index: -1
+	.slick-center
+		h3
+			color: $accent
+			&::after
+				left: 45px
+		.photos__slider__block-img
+			margin-top: -30px
+			width: 388px
+			height: 526px
+			img
+				width: 294px
+				height: 441px
+
+.videos
+	background-image: url('../img/videos/bg.png')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 1091px
+	margin-top: -46px
+	position: relative
+	z-index: 3
+	&__screen
+		background-image: url('../img/videos/screen.png')
+		width: 970px
+		height: 561px
+		margin-top: 247px
+		margin-left: -15px
+		padding-top: 23px
+		padding-left: 27px
+		position: relative
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: -128px
+			left: -143px
+			background-image: url('../img/videos/screen-light.png')
+			width: 1256px
+			height: 817px
+			z-index: -1
+			animation: screenLight 5s linear infinite
+		&-item
+			position: relative
+			img
+				width: 916px
+				height: 516px
+				position: absolute
+				z-index: 9999
+			video
+				width: 916px
+				height: 516px
+	&__controls
+		display: flex
+		&__next
+			margin-left: 130px
+			&-btn
+				background-image: url('../img/videos/controls/next.png')
+				width: 204px
+				height: 62px
+				display: inline-block
+				line-height: 62px
+				text-align: center
+				padding-left: 53px
+				font-size: 35px
+				font-family: $font
+				color: #000000
+				transition: all 0.2s ease
+				&:hover
+					text-decoration: none
+					color: #000000
+					font-size: 40px
+					transform: translateX(3px)
+		&__playpause
+			background-image: url('../img/videos/controls/controls-bg.png')
+			background-repeat: no-repeat
+			width: 237px
+			height: 77px
+			margin-left: 350px
+			display: flex
+			justify-content: center
+			align-items: center
+			&-stop
+				background-image: url('../img/videos/controls/stop-bg.png')
+				width: 39px
+				height: 39px
+				display: inline-block
+				padding-left: 14px
+				line-height: 38px
+				margin-top: 28px
+				border-radius: 50%
+				transition: all 0.2s ease
+				&:hover
+					transform: scale(1.05)
+					box-shadow: 0 0 7px rgba(255,255,255, 0.3)
+			&-play
+				background-image: url('../img/videos/controls/play-bg.png')
+				width: 99px
+				height: 105px
+				display: inline-block
+				padding-left: 19px
+				padding-top: 41px
+				margin-left: 2px
+				img
+					border-radius: 50%
+					transition: all 0.3s ease
+				&:hover
+					img
+						transform: scale(1.05)
+						box-shadow: 0 0 10px rgba(255,255,255, 0.5)
+			&-mute
+				background-image: url('../img/videos/controls/mute-bg.png')
+				width: 39px
+				height: 39px
+				display: inline-block
+				padding-left: 13px
+				line-height: 38px
+				margin-left: -11px
+				margin-top: 28px
+				border-radius: 50%
+				transition: all 0.2s ease
+				&:hover
+					transform: scale(1.05)
+					box-shadow: 0 0 7px rgba(255,255,255, 0.3)
+
 @import "media" // Always at the end
