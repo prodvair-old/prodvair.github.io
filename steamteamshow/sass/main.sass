@@ -326,6 +326,7 @@ a
 		position: relative
 		top: -190px
 
+// Секция преимущества
 .features
 	background-image: url("../img/features/bg.png")
 	background-position: center
@@ -496,6 +497,98 @@ a
 	align-items: center
 	justify-content: center
 	padding-top: 190px
+	&__popup
+		background-color: #1c0e0b
+		background-size: cover
+		background-position: center
+		width: 100vw
+		height: 100vh
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 999999
+		transform: scale(0)
+		transition: all 0.5s ease
+		visibility: hidden
+		&-active
+			visibility: visible
+			transform: scale(1)
+		&__preload
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			z-index: 99999999
+		&-btn-form
+			display: inline-block
+			background-image: url('../img/features/popup/form.png')
+			width: 285px
+			height: 46px
+			float: right
+			margin-right: 10px
+			margin-top: 50px
+			text-align: center
+			font-family: $p_font-bold
+			font-size: 22px
+			color: $main
+			line-height: 46px
+			letter-spacing: 2px
+			text-shadow: $form
+			padding-left: 10px
+			transition: all 0.2s ease
+			text-transform: uppercase
+			&:hover
+				color: $main
+				text-decoration: none
+				font-size: 24px
+		&-btn-close
+			float: right
+			margin-right: 70px
+			margin-top: 50px
+			transition: all 0.2s ease
+			&:hover
+				transform: rotateZ(10deg) scale(1.1)
+		&__slider
+			width: 1170px
+			margin: 0 auto
+			margin-top: 80px
+			display: flex
+			align-items: center
+			&__block
+				width: 1170px
+				height: 780px
+				position: relative
+				&-next
+					position: absolute
+					top: 50%
+					right: 40px
+					transform: translateY(-50%)
+					&:hover
+						transform: translateY(-50%) scale(1.1)
+				&-prev
+					position: absolute
+					top: 50%
+					left: 40px
+					transform: translateY(-50%)
+					&:hover
+						transform: translateY(-50%) scale(1.1)
+				&-title
+					text-align: center
+					width: 1170px
+					text-transform: uppercase
+					color: $main
+					font-size: 30px
+					font-family: $font
+					margin-top: -7px
+				img
+					position: absolute
+					z-index: 3
+					left: 50%
+					top: 30px
+					transform: translateX(-50%)
+					max-width: 1170px
+					max-height: 720px
+					box-shadow: 0 0 50px rgba($main, 0.7)
 	&__btn-next
 		width: 100%
 		img
@@ -515,13 +608,44 @@ a
 			img
 				transform: scale(1.1)
 	&__slider
+		overflow: visible
 		width: 1170px
 		margin: 0 auto
 		&__block
 			margin-left: 24px
 			margin-right: 24px
-			height: 630px
+			height: 640px
 			padding-top: 40px
+			a
+				text-decoration: none
+				outline: none
+				&:hover
+					h3
+						position: relative
+						&::before
+							position: absolute
+							left: 15%
+							bottom: 20%
+							z-index: -1
+							content: ''
+							display: block
+							width: 70%
+							height: 60%
+							box-shadow: 0px 0px 20px rgba($main, 1)
+					.photos__slider__block-img
+						position: relative
+						&::before
+							position: absolute
+							left: 5%
+							bottom: 5%
+							z-index: -1
+							content: ''
+							display: block
+							width: 90%
+							height: 90%
+							box-shadow: 0px 0px 60px rgba($main, 1)
+			.disable
+				cursor: not-allowed
 			h3
 				font-family: $font
 				font-size: 30px
@@ -552,6 +676,9 @@ a
 				width: 345px
 				height: 467px
 				padding-top: 41px
+				&::before
+					transition: all 3s ease
+					box-shadow: 0 0 0 rgba($main, 1)
 				img
 					transition: all 0.5s ease
 					margin-left: 44px
@@ -572,6 +699,7 @@ a
 				width: 294px
 				height: 441px
 
+// Секция Видео
 .videos
 	background-image: url('../img/videos/bg.png')
 	background-position: center
@@ -603,6 +731,32 @@ a
 			animation: screenLight 5s linear infinite
 		&-item
 			position: relative
+			h3
+				width: 100%
+				text-align: center
+				font-family: $font
+				font-size: 50px
+				font-weight: normal
+				color: $main
+				position: absolute
+				top: 50%
+				left: 50%
+				z-index: 999999
+				transform: translate(-50%, -50%)
+				opacity: 0.25
+				letter-spacing: 9px
+				text-transform: uppercase
+				text-shadow: 0px 1px 0 rgb(249,186,5),0px -1px 0 rgb(249,186,5),1px 0px 0 rgb(249,186,5),-1px 0px 0 rgb(249,186,5),1px 1px 0 rgb(249,186,5),1px -1px 0 rgb(249,186,5),-1px 1px 0 rgb(249,186,5),-1px -1px 0 rgb(249,186,5)
+				&::after
+					content: ''
+					display: block
+					background-image: url('../img/videos/title-bg.png')
+					width: 590px
+					height: 202px
+					z-index: -1
+					position: absolute
+					top: -70px
+					left: -150px
 			img
 				width: 916px
 				height: 516px
@@ -683,5 +837,107 @@ a
 				&:hover
 					transform: scale(1.05)
 					box-shadow: 0 0 7px rgba(255,255,255, 0.3)
+
+.instagram
+	background-image: url('../img/instargam/bg.png')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 1208px
+	margin-top: -28px
+	position: relative
+	z-index: 3
+	display: flex
+	align-items: center
+	.container
+		display: flex
+		align-items: center
+		position: relative
+	&__plan
+		position: absolute
+		top: 80px
+		left: -320px
+		z-index: -1
+	&__link
+		a
+			display: block
+			transition: all 0.3s ease
+			&:hover
+				transform: scale(1.05) rotateZ(5deg)
+	&__text
+		width: 397px
+		p
+			font-size: 17px
+
+.plane1 
+	animation: plane1 2s linear
+
+@keyframes plane1
+	0%
+		transform: rotate(35deg) scale(0.2)
+		top: -100%        
+		left: -50%
+	100%
+		transform: rotate(0) scale(1)
+		top: 80px
+		left: -320px
+        
+.comments
+	background-image: url('../img/comments/bg.png')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 1066px
+	margin-top: -249px
+	position: relative
+	z-index: 3
+	display: flex
+	align-items: center
+	.container
+		position: relative
+	&__plane
+		position: absolute
+		top: -210px
+		left: -345px
+	&__text
+		&__block-1
+		&__block-2
+			float: right
+			margin-right: 190px
+			&__slider
+				margin-top: 290px
+				height: 404px
+				max-width: 314px
+				&__items
+
+			&__more
+				margin-top: -20px
+				&-btn
+					font-family: $p_font-regular
+					color: #000000
+					float: right
+					font-size: 14px
+					transform: translate(20%, -170%) rotateZ(-9deg) rotateX(22deg)
+					text-decoration: none
+					img
+						margin-top: -7px
+					&:hover
+						text-decoration: none
+						color: #000000
+						transform: translate(20%, -170%) rotateZ(-9deg) rotateX(22deg) scale(1.1)
+
+@keyframes plane2
+    0%
+        transform: rotate(25deg) scale(0.7) translateX(200%) skewX(30deg) skewY(20deg)
+    30%
+        transform: rotate(18deg) scale(0.7) translateX(180%) translateY(-50%) skewX(15deg) skewY(1deg)
+    70%
+        transform: rotate(-10deg) scale(0.9) translateX(70%) translateY(-40%) skewX(0deg) skewY(2deg)
+    100%
+        transform: rotate(0) scale(1) skewX(0) skewY(0)
+
+.plane2
+    animation: plane2 2s none 0s linear
+
 
 @import "media" // Always at the end
