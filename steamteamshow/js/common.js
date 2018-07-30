@@ -109,6 +109,7 @@ $(function() {
 		$('.features__popup').removeClass('features__popup-active');
 	});
 
+
 	// Видео
 	$('.videos__screen').slick({
 		dots: false,
@@ -117,6 +118,7 @@ $(function() {
 		speed: 700,
 		arrows: false,
 		autoplay: false,
+		fade: true
 	});
 
 	$('.videos__controls__next-btn').click(function(e){
@@ -127,8 +129,8 @@ $(function() {
 	});
 
 
-	function playVideo(){
-		$('.videos__screen-item img').hide();
+	function playVideo() {
+		$('.videos__screen-item-poster').hide();
 		$('.videos__controls__playpause-play').data("video","play");
 		$('.videos__controls__playpause-play img').attr('src', 'img/videos/controls/pause.png');
 		$('.videos__screen .slick-active video').get(0).play();
@@ -142,7 +144,7 @@ $(function() {
 
 	function stopVideo() {
 		pauseVideo();
-		$('.videos__screen-item img').show();
+		$('.videos__screen-item-poster').show();
 		$(".videos__screen .slick-active video").get(0).currentTime = 0;
 	}
 
@@ -157,6 +159,18 @@ $(function() {
 		$('.videos__controls__playpause-mute img').attr('src', 'img/videos/controls/sound.png');
 		$('.videos__screen .slick-active video').get(0).muted = false;
 	}
+	// addEventListener('ended',myHandler,false)
+	function replayVideo() {
+		$('.videos__screen .slick-active video').get(0).addEventListener('ended', function () {
+			stopVideo();
+			$('.videos__screen').slick('slickNext');
+			$('.videos__controls__next-btn').html($('.videos__screen').slick('slickCurrentSlide') + 1);
+			playVideo();
+			replayVideo();
+		}, false);
+	}
+
+	replayVideo();
 
 	$('.videos__controls__playpause-mute').on('click', function(e){
 		e.preventDefault();
@@ -183,6 +197,78 @@ $(function() {
 		}
 	});
 	
+	//попап загрузка картинок
+
+	function loadImages(i,src){
+		i = i || 1;
+		var img = new Image();    
+		img.onload = function () {
+			$('.photos__popup__slider').append('<div class="photos__popup__slider__block"><img src="photo/' + src + '/' + i + '.jpg" class="photos__popup__slider__block-img" alt=""></div>');
+			loadImages(++i,src);
+		};
+		img.onerror = function(){
+			$('.photos__popup__preload').hide();
+			$('.photos__popup .container').show();
+			$('.photos__popup__slider').slick({
+				dots: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				speed: 700,
+				arrows: false,
+				autoplay: true,
+				autoplaySpeed: 5000
+			});
+			exit();
+		}
+		img.src = '../photo/' + src + '/' + i + '.jpg';
+	}
+	
+	$('.photos__slider__block a').on('click', function (e) {
+		e.preventDefault();
+		if ($(this).hasClass('disable')) {
+			return false;
+		}
+		var src = $(this).data("photos-src");
+		var title = $(this).data("photos-title");
+		
+		$('.photos__popup .container').hide();
+		$('.photos__popup__preload').show();
+		loadImages(1,src);
+
+		$('.photos__popup__slider__block-title').html(title);
+		$('.photos__popup').addClass('photos__popup-active');
+	});
+
+	$('.photos__popup-btn-close').on('click', function (e) {
+		e.preventDefault();
+		$('.photos__popup__slider').slick('unslick');
+		$('.photos__popup__slider').html('');
+		$('.photos__popup__slider__block-title').html('');
+		$('.photos__popup').removeClass('photos__popup-active');
+	});
+
+	$('.photos__popup__slider__block-next').click(function(e){
+		e.preventDefault();
+		$('.photos__popup__slider').slick('slickNext');
+	});
+	$('.photos__popup__slider__block-prev').click(function(e){
+		e.preventDefault();
+		$('.photos__popup__slider').slick('slickPrev');
+	});
+
+	// Секция отзывов
+	$('.comments__text__block-2__slider').slick({
+		dots: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		speed: 700,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 25000,
+		fade: true
+	});
+
+
 	// var videobackground = new $.backgroundVideo($('.header'), {
 	// 	"align": "centerXY",
 	// 	"width": 1280,
