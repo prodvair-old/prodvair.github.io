@@ -746,7 +746,7 @@ a
 				opacity: 0.25
 				letter-spacing: 9px
 				text-transform: uppercase
-				text-shadow: 0px 1px 0 rgb(249,186,5),0px -1px 0 rgb(249,186,5),1px 0px 0 rgb(249,186,5),-1px 0px 0 rgb(249,186,5),1px 1px 0 rgb(249,186,5),1px -1px 0 rgb(249,186,5),-1px 1px 0 rgb(249,186,5),-1px -1px 0 rgb(249,186,5)
+				text-shadow: $text-shadow2
 				&::after
 					content: ''
 					display: block
@@ -893,6 +893,108 @@ a
 	z-index: 3
 	display: flex
 	align-items: center
+	&__popup
+		background-color: rgba(#1c0e0b, 0.93)
+		background-size: cover
+		background-position: center
+		width: 100vw
+		height: 100vh
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 999999
+		transform: scale(0)
+		transition: all 0.5s ease
+		visibility: hidden
+		&-active
+			visibility: visible
+			transform: scale(1)
+		&-btn-form
+			display: inline-block
+			background-image: url('../img/features/popup/form.png')
+			width: 285px
+			height: 46px
+			float: right
+			margin-right: 10px
+			margin-top: 50px
+			text-align: center
+			font-family: $p_font-bold
+			font-size: 22px
+			color: $main
+			line-height: 46px
+			letter-spacing: 2px
+			text-shadow: $form
+			padding-left: 10px
+			transition: all 0.2s ease
+			text-transform: uppercase
+			&:hover
+				color: $main
+				text-decoration: none
+				font-size: 24px
+		&-btn-close
+			float: right
+			margin-right: 70px
+			margin-top: 50px
+			transition: all 0.2s ease
+			&:hover
+				transform: rotateZ(10deg) scale(1.1)
+		&__bg
+			width: 1449px
+			height: 954px
+			margin: 0 auto
+			background-image: url('../img/comments/popup/bg.png')
+		&__slider
+			width: 890px
+			float: right
+			&__block
+				width: 450px
+				height: 580px
+				margin-top: 200px
+				margin-left: 100px
+				position: relative
+				z-index: 9999999
+				&:nth-child(even)
+					margin-left: 60px
+					p
+						width: 340px
+					.comments__popup__slider__block-number
+						font-family: $otziv
+						font-size: 22px
+						position: absolute
+						bottom: 0
+						left: 320px
+						text-shadow: 2px -2px 6px rgba(0, 0, 0, 0.8)
+				&-number
+					font-family: $otziv
+					font-size: 22px
+					position: absolute
+					bottom: 0
+					left: 0px
+					text-shadow: 2px -2px 6px rgba(0, 0, 0, 0.8)
+				&-text
+					margin-right: 15px
+					p
+						margin: auto
+						width: 340px
+						font-family: $otziv
+						font-size: 30px
+						line-height: 30px
+						transform: rotate(3deg)
+				&-next
+					position: absolute
+					top: 50%
+					right: 40px
+					transform: translateY(-50%)
+					&:hover
+						transform: translateY(-50%) scale(1.1)
+				&-prev
+					position: absolute
+					top: 50%
+					left: 40px
+					transform: translateY(-50%)
+					&:hover
+						transform: translateY(-50%) scale(1.1)
+				
 	.container
 		position: relative
 	&__plane
@@ -903,13 +1005,12 @@ a
 		&__block-1
 		&__block-2
 			float: right
-			margin-right: 190px
+			margin-right: 180px
 			&__slider
 				margin-top: 290px
 				height: 404px
 				max-width: 314px
 				&__items
-
 			&__more
 				margin-top: -20px
 				&-btn
@@ -937,7 +1038,118 @@ a
         transform: rotate(0) scale(1) skewX(0) skewY(0)
 
 .plane2
-    animation: plane2 2s none 0s linear
+    animation: plane2 2s none 0s ease-in
 
+.order
+	background-image: url('../img/order/bg.png')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 1254px
+	margin-top: -142px
+	padding-top: 350px
+	position: relative
+	z-index: 3
+	&__text
+		width: 484px
+		font-size: 17px
+		font-weight: 600
+	&__phone
+		font-family: $font
+		font-size: 40px
+		color: $accent
+		text-shadow: 0px 1px 0 rgb(43,32,2),0px -1px 0 rgb(43,32,2),1px 0px 0 rgb(43,32,2),-1px 0px 0 rgb(43,32,2),1px 1px 0 rgb(43,32,2),1px -1px 0 rgb(43,32,2),-1px 1px 0 rgb(43,32,2),-1px -1px 0 rgb(43,32,2),0px 2px 0 rgb(43,32,2),0px -2px 0 rgb(43,32,2),2px 0px 0 rgb(43,32,2),-2px 0px 0 rgb(43,32,2),2px 2px 0 rgb(43,32,2),2px -2px 0 rgb(43,32,2),-2px 2px 0 rgb(43,32,2),-2px -2px 0 rgb(43,32,2)
+		letter-spacing: 3px
+		margin-top: 90px
+	&__city
+		margin-top: -10px
+		width: 380px
+		text-align: center
+		text-shadow: $text-shadow2
+		font-family: $font
+		font-size: 20px
+		letter-spacing: 3px
+
+.footer
+	background-image: url('../img/footer/bg.png')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 674px
+	width: 100vw
+	padding-top: 0px
+	position: relative
+	top: 135px
+	&__menu
+		margin-top: 247px
+		margin-left: 55px
+		ul
+			list-style-type: none
+			margin: 0
+			padding: 0
+			
+			li
+				.active
+					&::after
+						content: ''
+						display: block
+						width: 231px
+						height: 37px
+						background-image: url(../img/footer/active.png)
+						background-position: center
+						margin-top: -30px
+						margin-left: -35px
+				a
+					font-size: 18px
+					font-family: $p_font-regular
+					color: #000
+					text-decoration: none
+					transform: scale(1)
+					display: block
+					transition: all 0.1s ease
+					&:hover
+						transform: scale(1.05)
+	&__text
+		margin-top: 318px
+		text-transform: uppercase
+		font-family: $font
+		letter-spacing: 2px
+		font-size: 18px
+		text-align: left
+		letter-spacing: -1px
+		&__instagram
+			margin-left: 45px
+		&__phone
+			margin-left: 30px
+			font-size: 30px
+			line-height: 30px
+			letter-spacing: -3px
+		&__mail
+			margin-top: 3px
+			margin-left: 30px	
+			font-family: $h_font
+			letter-spacing: 2px
+
+.srcoll-up
+	position: fixed
+	bottom: 70px
+	right: 20%
+	z-index: 99999
+	a
+		transform: scale(0)
+		visibility: hidden
+		position: relative
+		display: block
+		transform: translateY(100%)
+		opacity: 0
+		transition: all 0.7s ease
+	.active
+		visibility: visible
+		opacity: 0.6
+		transform: translateY(0)
+		transform: scale(0.9)
+		&:hover
+			opacity: 1
+			transform: scale(1)
 
 @import "media" // Always at the end
