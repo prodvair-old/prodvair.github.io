@@ -59,6 +59,12 @@
       ]
     },
     {
+      "uid": "9f7e588c66cfd6891f6f507cf6f6596b",
+      "css": "phone",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
       "uid": "9bf5f364b2a8e30cf6bef05043c7d3b9",
       "css": "phone-call",
       "code": 59392,

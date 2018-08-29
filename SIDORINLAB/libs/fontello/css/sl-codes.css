@@ -1,5 +1,6 @@
 
 .slab-down-open:before { content: '\e800'; } /* '' */
+.slab-phone:before { content: '\e801'; } /* '' */
 .slab-up-open:before { content: '\e805'; } /* '' */
 .slab-right-arrow:before { content: '\e807'; } /* '' */
 .slab-magnifying-glass:before { content: '\e80a'; } /* '' */

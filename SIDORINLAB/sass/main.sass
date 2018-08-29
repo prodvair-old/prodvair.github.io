@@ -184,8 +184,10 @@ input
 			h1
 				text-transform: uppercase
 				font-size: 40px
+				font-weight: 900
 			span
 				color: $text-w
+				font-weight: 300
 	&__top
 		padding-top: 40px
 		padding-left: 75px
@@ -324,6 +326,7 @@ input
 .service
 	background-color: #ffffff
 	background-image: url('../img/bg-service.png')
+	background-size: cover
 	padding-bottom: 60px
 	position: relative
 	&__next
@@ -360,6 +363,7 @@ input
 		&__text
 			margin-left: 50px
 			margin-bottom: 80px
+			position: relative
 			a
 				margin-top: 65px
 				display: block
@@ -378,6 +382,11 @@ input
 				&:hover
 					transform: scale(1.02)
 					box-shadow: 0 8px 91px rgba(#e30613, 0.3)
+			img
+				position: absolute
+				bottom: -70px
+				right: 0
+				z-index: -1
 			p
 				margin-top: 75px
 				font-size: 20px
@@ -603,30 +612,12 @@ input
 				display: block
 				margin-top: -75px
 	&__text
-		a
-			font-weight: 500
-			font-size: 24px
-			text-transform: lowercase
-			text-decoration: none
-			color: $text-w
-			&::after
-				content: ''
-				display: block
-				background-color: $text-w
-				height: 1px
-				width: 120px
-				transition: all 0.3s ease
-			&:hover
-				&::after
-					width: 20px
-		p
-			margin-top: 50px
-			color: $text-w
-			font-size: 20px
-			overflow-y: hidden
-			display: block
-			height: 166px
-			position: relative
+		position: relative
+		z-index: 9
+		&__block
+			height: 490px
+			overflow-y: scroll
+			transition: all 0.5s ease
 			&::after
 				content: ''
 				display: block
@@ -634,19 +625,66 @@ input
 				height: 166px
 				border: 1ps solid #000000
 				position: absolute
-				top: 0px
 				left: 0
+				bottom: 40px
+				z-index: -1
 				background: -moz-linear-gradient(top, rgba(228,54,48,0.2) 0%, rgba(228,54,48,1) 100%)
 				background: -webkit-linear-gradient(top, rgba(228,54,48,0.2) 0%,rgba(228,54,48,1) 100%)
 				background: linear-gradient(to bottom, rgba(228,54,48,0.2) 0%,rgba(228,54,48,1) 100%)
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33e43630', endColorstr='#e43630',GradientType=0 )
-		h1
+			&::-webkit-scrollbar-thumb
+				background-color: #ffffff
+				border-radius: 4px
+			&::-webkit-scrollbar-track
+				border-radius: 4px
+			&::-webkit-scrollbar
+				background: rgba(#000, 0.2)
+				width: 6px
+				border-radius: 4px
+				height: 90%
+			p
+				margin-top: 50px
+				color: $text-w
+				font-size: 20px
+				display: block
+				position: relative
+				z-index: -2
+			h1
+				color: $text-w
+				font-size: 60px
+				font-weight: 300
+				line-height: 73px
+				position: relative
+				z-index: -2
+				b
+					color: $text
+		a
+			font-weight: 500
+			font-size: 24px
+			text-transform: lowercase
+			text-decoration: none
 			color: $text-w
-			font-size: 60px
-			font-weight: 300
-			line-height: 73px
-			b
-				color: $text
+			display: block
+			width: 120px
+			&::after
+				content: ''
+				display: block
+				background-color: $text-w
+				height: 1px
+				width: 100%
+				transition: all 0.3s ease
+			&:hover
+				&::after
+					width: 20%
+		&-active
+			a
+				width: 80px
+			.about__text__block
+				height: auto
+				&::-webkit-scrollbar
+					width: 0
+				&::after
+					display: none
 
 .comments
 	overflow-x: hidden
