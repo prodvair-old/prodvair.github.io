@@ -1,0 +1,698 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1590px
++media-breakpoint-down(lg)
+    .header
+        &__content
+            &__form
+                h3
+                    width: 320px
+                input[type="submit"]
+                    width: 186px
+                .puls
+                    width: 186px
+                input[type="text"]
+                    width: 320px
+        &__top
+            padding-left: 40px
+            &__phone
+                right: 30px
+
+            &__search
+                margin-left: 210px
+                a
+                    i
+                        margin-right: 10px
+            &__menu
+                &-nav
+                    ul
+                        .slab-drop
+                            padding-bottom: 40px
+                            &__block
+                                &__more
+                                    height: 330px
+                                    &-img
+                                        width: 365px
+                                    &__text
+                                        h3
+                                            width: 300px
+                                &__link
+                                    margin-top: 40px
+                                    margin-left: 40px
+                                .last
+                                    margin-left: 0px
+                        li
+                            margin-left: 25px
+                            &:first-child
+                                margin-left: 40px
+    .service
+        &__next
+            width: 55px
+            a
+                width: 70px
+                height: 70px
+                line-height: 70px
+        &__slider
+            margin-left: -30px
+            &__text
+                margin-left: 40px
+                p
+                    margin-top: 55px
+                    width: 595px
+                h3
+                    width: 615px
+    .case
+        &__block
+            width: 1170px
+            margin: 0 auto
+    .order
+        padding-top: 100px
+        padding-bottom: 100px
+        &__form
+            form
+                display: block
+                input
+                    margin-bottom: 30px
+        &__text
+            margin-top: 100px
+            h2
+                width: auto
+    .footer
+        padding-top: 40px
+        padding-bottom: 40px
+        padding-left: 40px
+        &__phone
+            right: 60px
+        &__copy
+            margin-left: 77px
+        &__menu
+            &-nav
+                ul
+                    li
+                        margin-left: 40px
+                        &:first-child
+                            margin-left: 40px
+    .search-fild
+        &__form
+            &__close
+                right: 40px
+                top: 40px
+            form
+                justify-content: flex-start
+                input[type="text"]
+                    width: 1000px
+                    height: 90px
+
+// ≥1200px
++media-breakpoint-down(md)
+    html,body
+        overflow-x: hidden
+    .header
+        &__content
+            &__form
+                float: none
+                width: 380px
+                height: 490px
+                padding: 30px
+                background-color: rgba(#c91b15, 0.5)
+                margin-left: 40px
+                box-shadow: 0 75px 122px rgba(#000000, 0.39)
+                h3
+                    width: 320px
+                input[type="submit"]
+                    background-color: #951915
+                    width: 186px
+                    border: none
+                label
+                    float: left
+                .puls
+                    width: 186px
+                input[type="text"]
+                    width: 320px
+            &__text
+                width: 610px
+                margin: 0 auto
+                margin-top: 50px
+                h1
+                    color: $text-w
+        &__top
+            padding-top: 30px
+            padding-left: 30px
+            height: 70px
+            &__mmenu-btn
+                display: block
+                margin-right: 60px
+                a
+                    display: block
+                    height: 8px
+                    width: 37px
+                    background-color: #8d1915
+                    margin-top: 15px
+                    position: relative
+                    transition: all 0.3s ease
+                    &::after
+                        transform-origin: left top
+                        position: absolute
+                        top: 18px
+                        content: ''
+                        height: 8px
+                        display: block
+                        background-color: #8d1915
+                        width: 53px
+                        transition: all 0.3s ease
+                    &::before
+                        transform-origin: left bottom
+                        position: absolute
+                        top: -18px
+                        content: ''
+                        height: 8px
+                        display: block
+                        background-color: #8d1915
+                        width: 53px
+                        transition: all 0.3s ease
+                .active
+                    background: transparent
+                    &::after
+                        background-color: #e00815
+                        transform: rotateZ(-45deg)
+                        width: 48px
+                    &::before
+                        background-color: #e00815
+                        transform: rotateZ(45deg)
+                        width: 48px
+            &__phone
+                display: none
+            &__search
+                display: none
+            &__menu
+                display: none
+            &__mmenu
+                display: block
+                position: fixed
+                top: 0
+                left: 0
+                height: 100vh
+                overflow-y: scroll
+                overflow-x: hidden
+                background-color: #fff
+                z-index: 9999
+                transition: all 0.3s ease
+                &__collaps
+                    width: 100vw
+                    margin-top: 50px
+                    &__card
+                        &__text
+                            >div
+                                display: flex
+                                a
+                                    display: block
+                                    font-size: 20px
+                                    font-weight: 500
+                                    float: none
+                                    color: #777777
+                                    &:after
+                                        display: none
+                        &__btn
+                            a
+                                i
+                                    color: $accent
+                                    float: none
+                                    margin-left: 10px
+                .collaps
+                    display: block
+                .collaps__card-active
+                    .header__top__mmenu__collaps__card__text
+                        >form
+                            margin-top: 0
+                            p
+                                color: #989898
+                .header__top__logo
+                    display: none
+                .header__top__phone
+                    display: block
+                    color: $text
+                    position: absolute
+                    font-size: 30px
+                    top: 35px
+                    right: 30px
+                    font-size: 20px
+    .service
+        background-position-y: bottom
+        background-position-x: right
+        background-repeat: no-repeat
+        padding-bottom: 40px
+        &__left
+            display: flex
+            justify-content: center
+        &__next
+            display: none
+        &__slider
+            margin-top: 730px
+            margin-left: -30px
+            .slick-dots
+                display: flex
+                list-style-type: none
+                li
+                    button
+                        background-color: #ffffff
+                        border: none
+                        border-radius: 50%
+                        width: 24px
+                        height: 24px
+                        margin-right: 40px
+                        box-shadow: 0 0 80px rgba(#000000, 0.1)
+                .slick-active
+                    button
+                        display: block
+                        transform: scale(1.6)
+                        background-color: $accent
+                        border: 5px solid #ffffff
+            &__text
+                margin-left: 40px
+                p
+                    margin-top: 55px
+                    width: 100%
+                h3
+                    width: 100%
+    .comments
+        background-color: $text
+        h2
+            padding-top: 70px
+            padding-bottom: 30px
+            font-size: 40px
+            font-weight: 900
+            color: $text-w
+        &__slider
+            position: relative
+            z-index: 2
+            &-img
+                width: 100vw
+                margin-top: -100px
+                .slick-track
+                    transition: all 0.3s ease
+                &__block
+                    width: 90vw
+                    height: 430px
+                    position: relative
+                    transition: all 0.3s ease
+                    overflow: visible
+                    &-img
+                        display: block
+                        height: 450px
+                        width: 330px
+                        z-index: -9
+                        position: absolute
+                        overflow: hidden
+                        right: 0px
+                        bottom: 0
+                        img
+                            left: auto
+                            z-index: -1
+                            transform: translateX(0%)
+                            min-width: 100%
+                            max-height: 450px
+                            opacity: 0.4
+                    &__inf
+                        visibility: visible
+                        bottom: 50px
+                        z-index: 2
+                        transform: scaleY(1)		
+                        text-align: left
+                        background: transparent
+                        &-firstname
+                            color: $accent
+            &__text
+                p
+                    color: $text-w
+                    font-size: 20px
+                    padding-right: 10px
+    .case
+        padding-top: 95px
+        padding-bottom: 40px
+        &__block
+            width: 700px
+            p
+                margin-top: 50px
+    .order
+        padding-top: 0px
+        padding-bottom: 100px
+        &__form
+            margin-top: 50px
+            float: none
+            display: flex
+            justify-content: center
+            form
+                display: block
+                input
+                    margin-bottom: 30px
+                    margin-left: 0
+        &__text
+            margin-top: 100px
+            h2
+                width: auto
+    .footer
+        padding-top: 40px
+        padding-bottom: 40px
+        padding-left: 40px
+        &__logo
+            position: absolute
+            bottom: 40px
+            right: 70px
+        &__phone
+            right: auto
+            left: 70px
+        &__copy
+            margin-top: 50px
+            margin-left: 30px
+        &__menu
+            &-nav
+                display: none
+
+// ≥768px
++media-breakpoint-down(sm)
+    .collaps
+        width: 100vw
+    .header
+        background-image: url('../img/bg-header-m.png')
+        background-size: cover
+        &__content
+            &__text
+                width: 550px
+                margin: 0 auto
+                margin-top: 30px
+                h1
+                    color: $text-w
+    .service
+        padding-bottom: 40px
+        &__left
+            display: flex
+            width: 100vw
+            justify-content: center
+            &__order
+                width: 100vw
+                &__card
+                    &__text
+                        >form
+                            .license
+                                width: 450px
+                                margin: 0 auto
+                            input[type="text"],input[type="email"]
+                                display: block
+                                margin: 0 auto
+                                margin-top: 36px
+                            select
+                                width: 100vw
+        &__next
+            display: none
+        &__slider
+            margin-top: 650px
+    .trust
+        &__img
+            display: block
+            padding: 0 30px
+            img
+                max-width: 100%
+    .about
+        &__file
+            margin-top: 40px
+            display: flex
+            align-items: flex-end
+            justify-content: center
+            height: 100%
+            &__align
+                width: 480px
+                height: 120px
+                background-color: #fff
+                border-radius: 4px
+                text-align: left
+                color: $text
+                font-size: 17px
+                bottom: 0
+                padding: 30px
+                display: flex
+                &::after
+                    display: none
+                &__title
+                    display: none
+                &__link
+                    display: block
+                    margin-left: 0px
+                    &::before
+                        display: none
+                &__desc
+                    text-align: center
+                    text-transform: uppercase
+                    margin-top: 3px
+                    margin-left: 20px
+        &__text
+            p
+                height: 360px
+                &::after
+                    height: 360px
+                    background: -moz-linear-gradient(top, rgba(228,54,48,0) 0%, rgba(228,54,48,1) 100%)
+                    background: -webkit-linear-gradient(top, rgba(228,54,48,0) 0%,rgba(228,54,48,1) 100%)
+                    background: linear-gradient(to bottom, rgba(228,54,48,0) 0%,rgba(228,54,48,1) 100%)
+            h1
+                font-size: 58px
+                b
+                    color: $text-w
+    .comments
+        &__slider
+            &-img
+                &__block
+                    width: 100%
+                    &-img
+                        right: 30px
+    .case
+        padding-top: 40px
+        padding-bottom: 40px
+        &__block
+            width: 500px
+            p
+                margin-top: 30px
+    .order
+        padding-bottom: 50px
+        &__form
+            margin-top: 40px
+            form
+                #company
+                    display: none
+        &__text
+            margin-top: 50px
+            margin-left: 0
+            h2
+                width: auto
+    .footer
+        &__logo
+            right: 40px
+        &__phone
+            left: 40px
+        &__copy
+            margin-left: 0px
+            width: 300px
+
+// ≥576px
++media-breakpoint-down(xs)
+    .collaps
+        &__card
+            &__text
+                >div
+                    margin-top: -170%
+    input
+        border-radius: 30px
+        height: 60px
+        background: transparent
+        border: 1px solid $text-w
+        font-size: 16px
+        padding-left: 20px
+        width: 100vw
+    .header
+        &__content
+            &__form
+                width: 300px
+                height: 400px
+                padding: 20px
+                margin-left: -5px
+                h3
+                    width: 100%
+                    font-size: 20px
+                input[type="submit"]
+                    background-color: #951915
+                    width: 186px
+                    border: none
+                label
+                    float: left
+                .puls
+                    width: 186px
+                input[type="text"]
+                    margin-bottom: 30px
+                    width: 100%
+            &__text
+                width: 100%
+                margin-top: 0px
+                margin-bottom: 30px
+                h1
+                    font-size: 28px
+        &__top
+            &__mmenu
+                &__collaps
+                    &__card
+                        &__text
+                            >div
+                                margin-top: -170%
+                                img
+                                    display: none
+    .service
+        padding-bottom: 40px
+        &__left
+            display: flex
+            justify-content: center
+            width: 100vw
+            margin-left: 15px
+            &__order
+                top: 555px
+                &__card
+                    &__text
+                        margin: 0
+                        width: 100vw
+                        >form
+                            margin-top: -330%
+                            .license
+                                width: 100vw
+                                margin: 0
+                                margin-left: 0px
+                                input
+                                    width: 0
+                                span
+                                    width: 100%
+                                    margin-left: 10px
+                                    margin-right: 0
+                            input[type="text"],input[type="email"]
+                                display: block
+                                margin: 0 auto
+                                margin-top: 36px
+                                width: 300px!important
+                            select
+                                width: 100vw
+        &__slider
+            width: 320px
+            margin-top: 720px
+            &__text
+                margin-left: 40px
+                p
+                    font-size: 16px
+                    margin-top: 45px
+                h3
+                    font-size: 28px
+    .about
+        &__file
+            margin-top: 40px
+            display: flex
+            align-items: flex-end
+            justify-content: center
+            height: 100%
+            &__align
+                width: 300px
+                height: 100px
+                background-color: #fff
+                border-radius: 4px
+                text-align: left
+                color: $text
+                font-size: 14px
+                bottom: 0
+                padding: 30px
+                display: flex
+                align-items: center
+                &::after
+                    display: none
+                &__title
+                    display: none
+                &__link
+                    display: block
+                    margin-left: 0px
+                    img
+                        width: 60px
+                    &::before
+                        display: none
+                &__desc
+                    margin-top: 15px
+                    margin-left: 20px
+        &__text
+            p
+                font-size: 16px
+                height: 360px
+                &::after
+                    height: 360px
+                    background: -moz-linear-gradient(top, rgba(228,54,48,0) 0%, rgba(228,54,48,1) 100%)
+                    background: -webkit-linear-gradient(top, rgba(228,54,48,0) 0%,rgba(228,54,48,1) 100%)
+                    background: linear-gradient(to bottom, rgba(228,54,48,0) 0%,rgba(228,54,48,1) 100%)
+            h1
+                font-size: 33px
+                line-height: 38px
+    .comments
+        &__slider
+            &-img
+                &__block
+                    width: 100%
+                    &-img
+                        right: 30px
+            &__text
+                p
+                    font-size: 16px
+    .case
+        padding-top: 40px
+        padding-bottom: 40px
+        &__block
+            width: 300px
+            h2
+                font-size: 25px
+                line-height: 29px
+            p
+                margin-top: 20px
+                width: 300px
+                font-size: 16px
+    .order
+        padding-bottom: 40px
+        &__form
+            margin-top: 40px
+            form
+                input
+                    width: 300px
+                input[type="submit"]
+                    font-size: 16px
+        &__text
+            margin-top: 50px
+            margin-left: 0
+            p
+                font-size: 16px
+            h2
+                font-size: 30px
+                line-height: 37px
+                width: auto
+    .footer
+        &__logo
+            right: auto
+            left: 40px
+            top: 40px
+        &__phone
+            top: 95px
+        &__copy
+            margin-top: 100px
+            width: 280px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

@@ -1,0 +1,7 @@
+
+.slab-down-open:before { content: '\e800'; } /* '' */
+.slab-up-open:before { content: '\e805'; } /* '' */
+.slab-right-arrow:before { content: '\e807'; } /* '' */
+.slab-magnifying-glass:before { content: '\e80a'; } /* '' */
+.slab-angle-up:before { content: '\f106'; } /* '' */
+.slab-angle-down:before { content: '\f107'; } /* '' */
