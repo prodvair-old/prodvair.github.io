@@ -35,6 +35,7 @@ $(function() {
 	$('.service__left__order__card__text select').on('click', function(){
 		$('.service__left__order__card__text i').toggleClass("slab-down-open");
 		$('.service__left__order__card__text i').toggleClass("slab-up-open");
+		$('.service__left__order__card__text i').toggleClass("fisrt");
 	});
 
 	$('.comments__slider').slick({
@@ -46,7 +47,7 @@ $(function() {
 		autoplay: true,
 		fade: true,
 		arrows: false,
-		autoplaySpeed: 10000,
+		autoplaySpeed: 5000,
 		asNavFor: '.comments__slider-img'
 	});
 
@@ -134,6 +135,15 @@ $(function() {
 		e.preventDefault();
 		$('.header__top__mmenu-btn a').toggleClass('active');
 		$('.header__top').toggleClass('header__top__mmenu');
+	});
+
+	var $select = $('.service__left__order__card__text select');
+	$select.each(function() {
+		var clas = $(this).children(':selected').val();
+		$(this).parent().addClass(clas);
+	}).on('change', function(ev) {
+		var clas = $(this).children(':selected').val();
+		$(this).parent().attr('class', '').addClass(clas);
 	});
 
 });
