@@ -198,7 +198,7 @@
                 overflow-y: scroll
                 overflow-x: hidden
                 background-color: #fff
-                z-index: 9999
+                z-index: 999999
                 transition: all 0.3s ease
                 &__collaps
                     width: 100vw
@@ -397,8 +397,8 @@
 +media-breakpoint-down(sm)
     .collaps
         width: 540px
-        left: auto
-        right: auto
+        left: 0
+        margin-left: -15px
     .header
         background-image: url('../img/bg-header-m.png')
         background-size: cover
@@ -409,6 +409,34 @@
                 margin-top: 30px
                 h1
                     color: $text-w
+        &__top
+            &__mmenu
+                &__collaps
+                    width: 100vw
+                    margin-top: 50px
+                    margin-left: 0
+                    &__card
+                        &__text
+                            >div
+                                display: flex
+                                margin-top: -200%
+                                img
+                                    filter: url('../img/gray.svg#gray')
+                                    opacity: 0.8
+                                a
+                                    display: block
+                                    font-size: 20px
+                                    font-weight: 500
+                                    float: none
+                                    color: #777777
+                                    &:after
+                                        display: none
+                        &__btn
+                            a
+                                i
+                                    color: $accent
+                                    float: none
+                                    margin-left: 10px
     .service
         padding-bottom: 40px
         &__left
@@ -416,7 +444,7 @@
             width: 100vw
             justify-content: center
             &__order
-                width: 100vw
+                width: 540px
                 &__card
                     &__text
                         >form
@@ -433,6 +461,7 @@
             display: none
         &__slider
             margin-top: 650px
+            width: 100%
             &__text
                 img
                     filter: url('../img/gray.svg#gray')
