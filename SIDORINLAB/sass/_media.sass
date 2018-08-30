@@ -276,26 +276,30 @@
             .slick-dots
                 display: flex
                 list-style-type: none
+                appearance: none
                 li
+                    display: block
+                    height: 50px!important
+                    appearance: none
                     button
                         appearance: none
                         background-color: #ffffff
                         border: none
                         border-radius: 50%
                         width: 24px
-                        height: 24px
+                        max-width: none
+                        height: 24px!important
                         margin-right: 40px
+                        display: block!important
                         box-shadow: 0 0 80px rgba(#000000, 0.1)
                         transition: all 0.3s ease
+                        padding: 0
                 .slick-active
                     button
-                        display: block
-                        width: 34px
-                        height: 34px
-                        margin-right: 35px
-                        margin-top: -5px
+                        transform: scale(1.5)
                         background-color: $accent
-                        border: 7px solid #ffffff
+                        border: 5px solid #ffffff
+                        border-radius: 50%
             &__text
                 margin-left: 40px
                 p
