@@ -156,4 +156,21 @@ $(function() {
 		$(this).parent().attr('class', '').addClass(clas);
 	});
 
+	$('.dictionary__block').hide();
+	var id = $('.dictionary__first__content__items a.active').attr('href');
+	var str = $('.dictionary__first__content__items a.active').html();
+	$('.dictionary__block' + id).show();
+	$('.dictionary__block' + id + ' h3').html(str);
+
+	$('.dictionary__first__content__items a').on('click', function(e) {
+		e.preventDefault();
+		$('.dictionary__first__content__items a').removeClass('active');
+		$(this).addClass('active');
+		$('.dictionary__block').hide();
+		var id = $(this).attr('href');
+		var str = $(this).html();
+		$('.dictionary__block' + id).show();
+		$('.dictionary__block' + id + ' h3').html(str);
+	});
+
 });
