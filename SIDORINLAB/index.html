@@ -28,7 +28,7 @@
 
 </head>
 
-<body>
+<body class="isDictionary">
 
 	<!-- Custom HTML -->
 
@@ -208,26 +208,78 @@
 		<div class="header__content">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-lg-8">
 						<div class="header__content__text">
 							<h1>
-								<span>Либо вы платите за репутацию сейчас,</span>
-								либо расплачиваетесь за неё потом
+								Словарь 
+								<br>Digital–маркетолога
 							</h1>
+							<p>(введите запрос или воспользуйтесь буквенной навигацией ниже)</p>
+							<form action="#" method="POST"><input type="search" name="searchDictionary" id="searchDictionary" placeholder="Введите запрос"></form>
 						</div>
 					</div>
-					<div class="col-lg-6">
-						<div class="header__content__form">
-							<h3>Заказать бесплатную Консультацию:</h3>
-							<form action="#" method="post">
-								<input type="text" name="name" id="name" placeholder="Ваше имя" required>
-								<input type="text" name="tel" id="tel" placeholder="+7(___) ___-__-__" required>
-								<label for="">
-									<div class="puls"></div>
-									<input type="submit" value="Отправить">
-								</label>
+					<div class="col-lg-4">
+						<div class="header__content__menu">
 
-							</form>
+							<nav class="header__content__menu__nav">
+								<ul>
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Вакансийй</a></li>
+									<li><a href="#">Блог</a></li>
+									<li><a href="#">Отзывы</a></li>
+									<li><a href="#">Книга</a></li>
+									<li><a href="#">Франшиза</a></li>
+									<li><a href="#">Руководство</a></li>
+									<li><a href="#">Обучение</a></li>
+									<li><a href="#" class="active">it Словарь</a></li>
+									<li><a href="#">Сми о нас</a></li>
+								</ul>
+							</nav>
+
+							<div class="service__left__order collaps">
+								<div class="service__left__order__card collaps__card">
+									<div class="service__left__order__card__btn collaps__card__btn">
+										<a href="#">
+											Заявка на услуги <i class="demo-icon slab-down-open"></i>
+										</a>
+									</div>
+									<div class="service__left__order__card__text collaps__card__text">
+										<form action="#" method="post">
+											<input type="text" name="name" id="name" placeholder="Ваше имя" required>
+											<input type="text" name="adress" id="adress" placeholder="Адрес сайта" required>
+											<label for="service">
+												<select name="service" id="service" required>
+													<option value="fisrt" hidden disabled selected>Выберите услугу</option>
+													<option value="1">Управление репутацией</option>
+													<option value="2">Продвижение сайтов (SEO)</option>
+													<option value="3">Разработка сайтов</option>
+													<option value="4">Техническая поддержка</option>
+													<option value="5">SEO Аудит</option>
+													<option value="6">Аудит Юзабилити</option>
+													<option value="7">Разработка фирменного стиля</option>
+													<option value="8">Взрывной PR</option>
+													<option value="9">Serm управление репутацией </option>
+													<option value="10">Репутационный менеджмент персоны</option>
+													<option value="11">Услуги</option>
+												</select>
+												<i class="demo-icon slab-down-open"></i>
+											</label>
+											<input type="text" name="phone" id="phone" placeholder="+7(___) ___-__-__" required>
+											<input type="email" name="email" id="email" placeholder="adress@mail.ru" required>
+											<input type="text" name="comment" id="comment" placeholder="Комментарий">
+											<div class="license">
+												<label for="checkbox">
+													<div class="checkbox__dot"></div>
+												</label>
+												<input type="checkbox" name="checkbox" id="checkbox" class="checkbox" required>
+												<span>Даю согласие на обработку персональных данных. <a href="#">Пользовательское соглашение</a></span>
+											</div>
+											<input type="submit" value="Отправить">
+										</form>
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -235,325 +287,141 @@
 		</div>
 	</header>	
 
-	<section class="service" id="service">
+	<section class="dictionary" id="dictionary">
 		<div class="container">
-			<h2>Услуги:</h2>
-			<div class="row">
-				<div class="col-xl-4 col-lg-5">
-					<div class="service__left">
+			<div class="bread-crumb">
+				<a href="#">Главная</a>
+				<a href="#">Компания</a>
+				<a href="#" class="active">Блог</a>
+			</div>
+			<div class="dictionary__first">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="dictionary__first__content">
 
-						<div class="service__left__collaps collaps">
-							<div class="service__left__collaps__card collaps__card">
-								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
-									<a href="#">
-										Управление репутацией <i class="demo-icon slab-down-open"></i>
-									</a>
-								</div>
-								<div class="service__left__collaps__card__text collaps__card__text">
-									<div>
-										<p>
-											Компания Sidorin Lab предоставляет услуги репутационного менеджмента персон, бренда, продуктов, услуг и других объектов на ваш выбор. Более 7 лет мы работаем с репутационными проблемами любой сложности.
-										</p>
-										<a href="#">Подробнее</a>
-									</div>
-								</div>
+							<div class="dictionary__first__content__items">
+								<a href="#">A</a>
 							</div>
-							<div class="service__left__collaps__card collaps__card">
-								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
-									<a href="#">
-										seo–аудит <i class="demo-icon slab-down-open"></i>
-									</a>
-								</div>
-								<div class="service__left__collaps__card__text collaps__card__text">
-									<div>
-										<p>
-											Аудит призван показать проблемы сайта, его слабые и сильные места, задать вектор для его улучшения.
-											<br>Хороший аудит занимает много времени, но порой нужно принять решение, нужно ли его проведение, будь то юзабилити аудит или SEO аудит в принципе
-										</p>
-										<a href="#">Подробнее</a>
-									</div>
-								</div>
-							</div>
-							<div class="service__left__collaps__card collaps__card">
-								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
-									<a href="#">
-										Продвижение <i class="demo-icon slab-down-open"></i>
-									</a>
-								</div>
-								<div class="service__left__collaps__card__text collaps__card__text">
-									<div>
-										<p>
-											Мы предлагаем своим заказчикам поисковое продвижение (SEO) по большому списку запросов с заранее оговоренным ссылочным бюджетом и стоимостью наших услуг.
-										</p>
-										<a href="#">Подробнее</a>
-									</div>
-								</div>
-							</div>
-							<div class="service__left__collaps__card collaps__card">
-								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
-									<a href="#">
-										Юзабилити <i class="demo-icon slab-down-open"></i>
-									</a>
-								</div>
-								<div class="service__left__collaps__card__text collaps__card__text">
-									<div>
-										<p>
-											Задача аудита юзабилити - выявить проблемные и узкие места сайта.
-										</p>
-										<a href="#">Подробнее</a>
-									</div>
-								</div>
-							</div>
-							<div class="service__left__collaps__card collaps__card">
-								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
-									<a href="#">
-										Контекстная реклама	<i class="demo-icon slab-down-open"></i>
-									</a>
-								</div>
-								<div class="service__left__collaps__card__text collaps__card__text">
-									<div>
-										<p>
-											Индивидуальный подход и оперативность обеспечат первые продажи уже через 1-2 дня после обращения.
-										</p>
-										<a href="#">Подробнее</a>
-									</div>
-								</div>
-							</div>
-							<div class="service__left__collaps__card collaps__card">
-								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
-									<a href="#">
-										разработка <i class="demo-icon slab-down-open"></i>
-									</a>
-								</div>
-								<div class="service__left__collaps__card__text collaps__card__text">
-									<div>
-										<p>
-											В пакет входит создание сайта на выбор интернет-магазина или корпоративного сайта, так же услуги по продвижению в социальных сетях и контекстная реклама.
-										</p>
-										<a href="#">Подробнее</a>
-									</div>
-								</div>
-							</div>
-						</div>
-								
-						<div class="service__left__order collaps">
-							<div class="service__left__order__card collaps__card">
-								<div class="service__left__order__card__btn collaps__card__btn">
-									<a href="#">
-										Заявка на услуги <i class="demo-icon slab-down-open"></i>
-									</a>
-								</div>
-								<div class="service__left__order__card__text collaps__card__text">
-									<form action="#" method="post">
-										<input type="text" name="name" id="name" placeholder="Ваше имя" required>
-										<input type="text" name="adress" id="adress" placeholder="Адрес сайта" required>
-										<label for="service">
-											<select name="service" id="service" required>
-												<option value="fisrt" hidden disabled selected>Выберите услугу</option>
-												<option value="1">Управление репутацией</option>
-												<option value="2">Продвижение сайтов (SEO)</option>
-												<option value="3">Разработка сайтов</option>
-												<option value="4">Техническая поддержка</option>
-												<option value="5">SEO Аудит</option>
-												<option value="6">Аудит Юзабилити</option>
-												<option value="7">Разработка фирменного стиля</option>
-												<option value="8">Взрывной PR</option>
-												<option value="9">Serm управление репутацией </option>
-												<option value="10">Репутационный менеджмент персоны</option>
-												<option value="11">Услуги</option>
-											</select>
-											<i class="demo-icon slab-down-open"></i>
-										</label>
-										<input type="text" name="phone" id="phone" placeholder="+7(___) ___-__-__" required>
-										<input type="email" name="email" id="email" placeholder="adress@mail.ru" required>
-										<input type="text" name="comment" id="comment" placeholder="Комментарий">
-										<div class="license">
-											<label for="checkbox">
-												<div class="checkbox__dot"></div>
-											</label>
-											<input type="checkbox" name="checkbox" id="checkbox" class="checkbox" required>
-											<span>Даю согласие на обработку персональных данных. <a href="#">Пользовательское соглашение</a></span>
-										</div>
-										<input type="submit" value="Отправить">
-									</form>
-								</div>
-							</div>
-						</div>
 
-					</div>
-				</div>
-				<div class="col-xl-8 col-lg-7">
-					<div class="service__slider">
-						<div class="service__slider__text">
-							<h3>
-								<span>Свой учебный центр</span> репутационного менеджмента 
-								и интернет маркетинга
-							</h3>
-							<p>
-								Интернет-пространство растет со значительной скоростью, и у нашей компании есть мастерство и достаточно современных знаний, чтобы делится бессценым опытом 
-								со своими студентами
-							</p>
-							<img src="img/service/1.png" alt="">
-							<a href="" class="service__slider__text-btn">Учебный центр</a>
-						</div>
-						<div class="service__slider__text">
-							<h3>
-								агентство 
-								<span>с центральным офисом в Москве </span>
-								и офисом разработки и технического внедрения в наукограде Дубне
-							</h3>
-							<p>
-								Компания состоит из нескольких подразделений, каждое из которых играет уникальную и важную роль в разработке и реализации маркетинговых инициатив, направленных на создание эффективной рекламной кампании.
-							</p>
-							<img src="img/service/1.png" alt="">
-							<a href="" class="service__slider__text-btn">Контакты</a>
-						</div>
-						<div class="service__slider__text">
-							<h3>
-								Проекты <span>любой степени сложности</span> от самых простых 
-								до самых сложных
-							</h3>
-							<p>
-								Вне зависимости от того, стартап вы или крупный бренд, наше агентство поможет вам увеличить трафик, оптимизировать веб-сайт и убрать репутационные риски. 
-							</p>
-							<img src="img/service/1.png" alt="">
-							<a href="" class="service__slider__text-btn">Контакты</a>
+							<div class="dictionary__first__content__items">
+								<a href="#">B</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#" class="active">C</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">D</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">E</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">F</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">G</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">H</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">I</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">J</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">K</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">L</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">M</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">N</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">O</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">P</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">Q</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">R</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">T</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">U</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">V</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">W</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">X</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">Y</a>
+							</div>
+
+							<div class="dictionary__first__content__items">
+								<a href="#">Z</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="service__next"><a href="#"><i class="demo-icon slab-right-arrow"></i></a></div>
-	</section>
-
-	<section class="trust" id="trust">
-		<div class="container">
-			<h2>Нам доверяют:</h2>
-		</div>
-		<div class="trust__img">
-			<img src="img/trust.png" alt="">
-		</div>
-	</section>
-
-	<section class="about" id="about">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="about__text">
-						<div class="about__text__block">
-							<h1>
-								<b>SIDORIN LAB — </b>
-								АГЕНТСТВО №1 
-								ПО УПРАВЛЕНИЮ 
-								РЕПУТАЦИЕЙ
-							</h1>
-							<p>
-								Интернет-маркетинг является необходимым элементом, который играет важную роль в продвижении вашего бизнеса. Наше агентство является лидером в создании успешного бизнеса. Компания состоит из нескольких подразделений, каждое из которых играет уникальную и важную роль в разработке и реализации маркетинговых инициатив, направленных на создание эффективной реклам
-								ной кампании.
-								Вне зависимости от того, стартап вы или крупный бренд, наше агентство поможет вам увеличить трафик, оптимизировать веб-сайт и убрать репутационные риски. Интернет-пространство растет со значительной скоростью, и у нашей компании есть мастерство и достаточно современных знаний, чтобы сделать ваш бизнес максимально прибыльным.
-								Используя как традиционные, так и новаторские методы маркетинга, мы постоянно находим новые способы для увеличения потока ваших клиентов. Одним из важных аспектов успеха нашей компании является построение долгосрочных отношений с клиентами, в чем вы можете убедиться, работая с нами.
-							</p>
-						</div>
-						<!-- <a href="#">Подробнее</a> -->
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="about__file">
-						<div class="about__file__align">
-							<span class="about__file__align__title">Скачать</span>
-							<a href="#" class="about__file__align__link">
-								<img src="img/pdf.png" alt="file">
-							</a>
-							<p class="about__file__align__desc">
-								Приглашаем ознакомиться с презентацией компании
-							</p>
+		<div class="dictionary__block">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="dictionary__block__title">
+							<h3>C</h3>
+							<span>Алфавитные обозначения</span>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="comments" id="comments">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-4 col-lg-5">
-					<h2>Отзывы:</h2>
-					<div class="comments__slider">
-						<div class="comments__slider__text">
-							<p>
-								«Мне приятно рекомендовать Дмитрия и его Компанию Sidorin.Lab в качестве отличных партнеров по комплексному продвижению Ваших интернет ресурсов и управлению репутацией Вашей Компании в digital пространстве. Дима невероятно вовлечен в те вопросы, которыми занимается. Сочетает в себе математическую логику, творческий подход к решению задач, аккуратность и результативность. Особо отмечу прекрасный account management и консалтинг по вопросам SEO & SMM..»
-							</p>
-						</div>
-						<div class="comments__slider__text">
-							<p>
-								2«Мне приятно рекомендовать Дмитрия и его Компанию Sidorin.Lab в качестве отличных партнеров по комплексному продвижению Ваших интернет ресурсов и управлению репутацией Вашей Компании в digital пространстве. Дима невероятно вовлечен в те вопросы, которыми занимается. Сочетает в себе математическую логику, творческий подход к решению задач, аккуратность и результативность. Особо отмечу прекрасный account management и консалтинг по вопросам SEO & SMM..»
-							</p>
-						</div>
-						<div class="comments__slider__text">
-							<p>
-								3«Мне приятно рекомендовать Дмитрия и его Компанию Sidorin.Lab в качестве отличных партнеров по комплексному продвижению Ваших интернет ресурсов и управлению репутацией Вашей Компании в digital пространстве. Дима невероятно вовлечен в те вопросы, которыми занимается. Сочетает в себе математическую логику, творческий подход к решению задач, аккуратность и результативность. Особо отмечу прекрасный account management и консалтинг по вопросам SEO & SMM..»
-							</p>
-						</div>
-						<div class="comments__slider__text">
-							<p>
-								4«Мне при1232ятно рекомендовать Дмитрия и его Компанию Sidorin.Lab в качестве отличных партнеров по комплексному продвижению Ваших интернет ресурсов и управлению репутацией Вашей Компании в digital пространстве. Дима невероятно вовлечен в те вопросы, которыми занимается. Сочетает в себе математическую логику, творческий подход к решению задач, аккуратность и результативность. Особо отмечу прекрасный account management и консалтинг по вопросам SEO & SMM..»
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="offset-xl-1"></div>
-				<div class="col-lg-7">
-					<div class="comments__slider-img">
-						<div class="comments__slider-img__block comments__slider-img__block-active">
-							<div class="comments__slider-img__block-img">
-								<img src="img/comments/1.png" alt="">
-							</div>
-							<div class="comments__slider-img__block__inf">
-								<span class="comments__slider-img__block__inf-name">николай</span>
-								<br><span class="comments__slider-img__block__inf-firstname">козак</span>
+					<div class="col-lg-8">
+						<div class="dictionary__block__text">
+							<div class="dictionary__block__text-gradient">
+								<h4><b>Cost per acquisition</b>, Затраты на приобретение</h4>
 								<p>
-									«Спортмастер», 
-									<br><span class="comments__slider-img__block__inf-company">Deputy E Commerce Director</span>
+									Метрика, которая измеряет затраты на приобретение определенного целевого действия, то есть конвертации интернет-ресурса. Целевым действием может быть, например, регистрация аккаунта, подписка на рассылку, приобретение товара и т.д. Данный показатель обычно используется для определения стоимости страницы.
 								</p>
-							</div>
-						</div>
-						<div class="comments__slider-img__block">
-							<div class="comments__slider-img__block-img">
-								<img src="img/comments/2.png" alt="">
-							</div>
-							<div class="comments__slider-img__block__inf">
-								<span class="comments__slider-img__block__inf-name">николай</span>
-								<br><span class="comments__slider-img__block__inf-firstname">козак</span>
+								<h4><b>CPC, Cost per Click</b>, Цена за клик</h4>
 								<p>
-									«Спортмастер», 
-									<br><span class="comments__slider-img__block__inf-company">Deputy E Commerce Director</span>
-								</p>
-							</div>
-						</div>
-						<div class="comments__slider-img__block">
-							<div class="comments__slider-img__block-img">
-								<img src="img/comments/1.png" alt="">
-							</div>
-							<div class="comments__slider-img__block__inf">
-								<span class="comments__slider-img__block__inf-name">николай</span>
-								<br><span class="comments__slider-img__block__inf-firstname">козак</span>
-								<p>
-									«Спортмастер», 
-									<br><span class="comments__slider-img__block__inf-company">Deputy E Commerce Director</span>
-								</p>
-							</div>
-						</div>
-						<div class="comments__slider-img__block">
-							<div class="comments__slider-img__block-img">
-								<img src="img/comments/2.png" alt="">
-							</div>
-							<div class="comments__slider-img__block__inf">
-								<span class="comments__slider-img__block__inf-name">николай</span>
-								<br><span class="comments__slider-img__block__inf-firstname">козак</span>
-								<p>
-									«Спортмастер», 
-									<br><span class="comments__slider-img__block__inf-company">Deputy E Commerce Director</span>
+									Способ оплаты рекламы в интернете, когда рекламодатель выплачивает определенную сумму за каждый клик посетителя по объявлению, баннеру или в рекламному блоку в Яндекс Директ и Google AdWords. Оплата переводится на счет владельца сайта, на котором было размещено объявление. СРС сам по себе используется 
 								</p>
 							</div>
 						</div>
@@ -563,51 +431,6 @@
 		</div>
 	</section>
 
-	<section class="case" id="case">
-		<div class="container">
-			<div class="case__block">
-				<h2>производительное  программное обеспечение лишь инструмент, <b>только настоящие специалисты способны достичь успеха</b> в сфере управления вашей репутацией</h2>
-				<p>
-					Онлайн-менеджмент репутации, 
-					<br>а не просто программное обеспечение
-				</p>
-				<a href="">Наши кейсы</a>
-			</div>
-		</div>
-	</section>
-
-	<section class="order" id="order">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-5 col-lg-7">
-					<div class="order__text">
-						<h2>
-							Индивидуальней подход: <b>подбираем необходимый пакет услуг под каждого клиента</b>
-						</h2>
-						<p>
-							Анализируя сферу вашей специализации учитываем 
-							<br>все факторы для гарантированного роста вашего бизнеса.
-						</p>
-					</div>
-				</div>
-				<div class="col-xl-7 col-lg-5">
-					<div class="order__form">
-						<form action="#" method="POST">
-							<div class="order__form-left">
-								<input type="text" name="name" id="name" placeholder="Ваше имя" required>
-								<input type="text" name="phone" id="phone2" placeholder="+7(___) ___-__-__" required>
-							</div>
-							<div class="order__form-right">
-								<input type="text" name="company" id="company" placeholder="Компания" required>
-								<input type="email" name="email" id="email" placeholder="imya@mail.ru" required>
-								<input type="submit" value="заказать бесплатную консультацию">
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<footer class="footer" id="footer">
 		<div class="footer__logo">

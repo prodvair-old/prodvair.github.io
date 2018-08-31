@@ -62,6 +62,45 @@ input
     -moz-filter: blur(5px)
     filter: blur(5px)
     filter: url('../img/blur.svg#blur')
+	
+.btn
+	display: block
+	background-color: $accent
+	border-radius: 38px
+	width: 196px
+	height: 75px
+	text-align: center
+	font-size: 20px
+	font-weight: 700
+	color: $text-w
+	text-decoration: none
+	line-height: 75px
+	box-shadow: 0 8px 81px rgba(#e30613, 0.22)
+	transition: all 0.3s ease
+	&:hover
+		transform: scale(1.02)
+		text-decoration: none
+		color: $text-w
+		box-shadow: 0 8px 91px rgba(#e30613, 0.3)
+
+.btnWhite
+	display: block
+	background-color: #fff
+	border-radius: 38px
+	width: 196px
+	height: 75px
+	text-align: center
+	font-size: 20px
+	font-weight: 700
+	color: $text
+	line-height: 75px
+	box-shadow: 0 8px 81px rgba(#fff, 0.22)
+	transition: all 0.3s ease
+	&:hover
+		transform: scale(1.02)
+		text-decoration: none
+		color: $text
+		box-shadow: 0 8px 91px rgba(#fff, 0.3)
 
 .collaps
 	background-color: #ffffff
@@ -135,6 +174,39 @@ input
 			padding-bottom: 100px
 			&__text
 				margin-top: 70px
+.isDictionary
+	.header
+		background-image: url('../img/bg-dictionary.png')
+		&__content
+			padding-bottom: 100px
+			&__text
+				margin-top: 70px
+				width: 750px
+				a
+					margin-top: 55px
+				h1
+					text-transform: none
+					color: $text-w
+					font-size: 40px
+					line-height: 45px
+					font-weight: 400
+				p
+					margin-top: 20px
+					color: $text-w
+					font-size: 20px
+				form
+					padding-top: 110px
+					input
+						border: none
+						border-radius: 0px
+						padding: 30px 0
+						width: 100%
+						font-size: 90px
+						font-weight: 900
+						color: #ffffff
+						&::placeholder
+							color: #cd0612
+
 .header
 	background-color: $bg
 	background-image: url('../img/bg-header.png')
@@ -143,6 +215,45 @@ input
 	&__content
 		padding-top: 45px
 		padding-bottom: 60px
+		position: relative
+		&__menu
+			margin-top: 100px
+			position: absolute
+			right: -30px
+			&__nav
+				width: 475px
+				background-color: #fff
+				box-shadow: 0 0 109px rgba(#000000, 0.05)
+				ul
+					list-style-type: none
+					padding: 0
+					li
+						&:last-child
+							a
+								border-bottom: none
+						a
+							display: block
+							padding: 16px 0
+							padding-left: 30px
+							text-decoration: none
+							color: $text
+							border-bottom: 1px solid #e5e5e5
+							text-transform: uppercase
+							font-weight: 500
+							font-size: 24px
+							transition: all 0.5s ease
+							&:hover
+								color: $accent
+						.active
+							background-color: #f6f6f6
+							pointer-events: none
+							cursor: default
+			.service__left__order
+				box-shadow: 0 0 109px rgba(#000000, 0.05)
+				width: 475px
+				position: relative
+				top: 0
+				margin-left: 0
 		&__form
 			float: right
 			h3
@@ -189,22 +300,7 @@ input
 			margin-top: 100px
 			a
 				margin-top: 55px
-				display: block
-				background-color: #fff
-				border-radius: 38px
-				width: 196px
-				height: 75px
-				text-align: center
-				font-size: 20px
-				font-weight: 700
-				color: $text
-				text-decoration: none
-				line-height: 75px
-				box-shadow: 0 8px 81px rgba(#fff, 0.22)
-				transition: all 0.3s ease
-				&:hover
-					transform: scale(1.02)
-					box-shadow: 0 8px 91px rgba(#fff, 0.3)
+				
 			h1
 				text-transform: uppercase
 				font-size: 40px
@@ -951,38 +1047,234 @@ input
 				border: none
 				&::placeholder
 					color: #b90914
-	
+
+.red
+	color: $accent	
+	font-weight: 900
+
+.bread-crumb
+	padding-top: 50px
+	padding-bottom: 40px
+	display: flex
+	justify-content: flex-start
+	a
+		color: $text
+		font-size: 20px
+		position: relative
+		text-decoration: none
+		display: block
+		margin-right: 50px
+		&::before
+			content: ' '
+			background-color: $text
+			display: block
+			position: absolute
+			left: 0
+			bottom: 0
+			height: 1px
+			width: 100%
+			transition: all 0.3s ease
+		&::after
+			position: absolute
+			right: -50px
+			display: inline-block
+			content: '-'
+			width: 50px
+			text-align: center
+		&:hover
+			&::before
+				width: 20px
+	.active
+		color: $accent
+		font-weight: 700
+		pointer-events: none
+		cursor: default
+		&::before
+			display: none
+		&::after
+			display: none
+
 .blog
 	&__first
-		&__links
-			padding-top: 50px
-			padding-bottom: 40px
-			a
-				color: $text
+		background-image: url('../img/bg-blog-first.png')
+		background-color: $bg-gray
+		background-repeat: no-repeat
+		background-size: cover
+		&__content
+			padding-top: 35px
+			padding-bottom: 80px
+			h3
+				font-weight: 300
+				font-size: 60px
+				line-height: 65px
+				width: 720px
+				text-transform: uppercase
+			p
+				margin-top: 30px
 				font-size: 20px
-				position: relative
-				text-decoration: none
-				width: 100%
-				&::before
-					content: ' '
-					background-color: $text
-					display: block
+				padding-right: 70px
+			a
+				margin-top: 65px
+	&__smallBlogs
+		height: auto
+		&__content
+			position: relative
+			padding-bottom: 250px
+			padding-top: 125px
+			h3
+				font-size: 40px
+				font-weight: 900
+				line-height: 65px
+			p
+				margin-top: 48px
+				font-size: 20px
+			a
+				position: absolute
+				bottom: 110px
+			&-leftBig
+				height: 65%
+				img
+					max-height: 100%
+					width: 50vw
 					position: absolute
+					right: -15px
+					bottom: 0
+					z-index: -1
+				h3
+					font-size: 60px
+					width: 390px
+				p
+					padding-right: 90px
+				
+			&-leftSmall
+				padding-bottom: 230px
+				height: 35%
+				padding-top: 85px
+				img
+					height: 100%
+					width: 50vw
+					position: absolute
+					right: -15px
+					top: 0
+					z-index: -1
+				a
+					bottom: 75px
+			&-rightSmall
+				padding-bottom: 230px
+				height: 35%
+				padding-left: 130px
+				padding-top: 85px
+			&-rightBig
+				background-color: $accent
+				height: 65%
+				padding-left: 130px
+			&-white
+				h3
+					color: $text-w
+				p
+					color: $text-w
+
+.dictionary
+	&__block
+		background-color: #dcdcdc
+		&__title
+			position: relative
+			h3
+				font-size: 636px
+				line-height: 636px
+				color: #bbbbbb
+				padding-top: 30px
+				padding-bottom: 20px
+			span
+				position: absolute
+				top: 135px
+				color: $text-w
+				font-size: 40px
+				font-weight: 900
+		&__text
+			margin-top: 120px
+			margin-left: 100px
+			font-weight: 600
+			position: relative
+			z-index: 9
+			&-gradient
+				padding-top: 40px
+				height: 500px
+				overflow-y: scroll
+				&::-webkit-scrollbar-thumb
+					background-color: #ffffff
+					border-radius: 4px
+				&::-webkit-scrollbar-track
+					border-radius: 4px
+				&::-webkit-scrollbar
+					background: rgba(#000, 0.2)
+					width: 6px
+					border-radius: 4px
+					height: 90%
+				&::after
+					content: ''
+					display: block
+					background: -moz-linear-gradient(top, rgba(220,220,220,0) 0%, rgba(220,220,220,1) 100%)
+					background: -webkit-linear-gradient(top, rgba(220,220,220,0) 0%,rgba(220,220,220,1) 100%)
+					background: linear-gradient(to bottom, rgba(220,220,220,0) 0%,rgba(220,220,220,1) 100%)
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00dcdcdc', endColorstr='#dcdcdc',GradientType=0 )
+					height: 290px
+					width: 99%
+					position: absolute
+					bottom: 0
 					left: 0
-					height: 1px
-					width: calc(100%-50px)
-				&::after
-					display: inline-block
-					content: '-'
-					width: 50px
-					text-align: center
-			.active
-				color: $accent
-				font-weight: 700
-				&::before
-					display: none
-				&::after
-					display: none
+					z-index: 0
+			h4
+				font-size: 24px
+				padding-bottom: 30px
+			p
+				font-size: 20px
+				padding-bottom: 50px
+				&:last-child
+					padding-bottom: 290px
+	&__first
+		background-color: #fff
+		&__content
+			padding-top: 80px
+			padding-bottom: 90px
+			&__items
+				display: inline-block
+				width: 70px
+				margin-right: 15px
+				padding-bottom: 30px
+				a
+					font-size: 60px
+					font-weight: 900
+					color: #cecece
+					text-decoration: none
+					display: block
+					transition: all 0.3s ease
+					position: relative
+					width: 100%
+					&::after
+						content: ''
+						display: block
+						visibility: hidden
+						height: 6px
+						width: 0px
+						background-color: $accent
+						position: absolute
+						bottom: -10px
+						transition: all 0.3s ease
+					&:hover
+						color: $text
+						transform: translateY(-20px)
+						&::after
+							visibility: visible
+							width: 45px
+				.active
+					color: $text
+					transform: translateY(-20px)
+					pointer-events: none
+					cursor: default
+					&::after
+						visibility: visible
+						width: 45px
 
 
 
