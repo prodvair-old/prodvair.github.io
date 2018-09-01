@@ -147,6 +147,12 @@ $(function() {
 		$('.header__top').toggleClass('header__top__mmenu');
 	});
 
+	$('.bread-crumb__mobile__burger a').on('click', function (e) {
+		e.preventDefault();
+		$('.header__top__mmenu-btn a').toggleClass('active');
+		$('.header__top').toggleClass('header__top__mmenu');
+	});
+
 	var $select = $('.service__left__order__card__text select');
 	$select.each(function() {
 		var clas = $(this).children(':selected').val();
@@ -171,6 +177,12 @@ $(function() {
 		var str = $(this).html();
 		$('.dictionary__block' + id).show();
 		$('.dictionary__block' + id + ' h3').html(str);
+	});
+
+	$('.header__content__text__down a').on('click', function (e){
+		e.preventDefault();
+		var h = $('.header').height();
+		$('html,body').stop().animate({ scrollTop: h }, 1000);
 	});
 
 });

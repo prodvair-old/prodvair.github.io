@@ -196,6 +196,8 @@ input
 					font-size: 20px
 				form
 					padding-top: 110px
+					input[type="submit"]
+						display: block
 					input
 						border: none
 						border-radius: 0px
@@ -337,6 +339,8 @@ input
 		color: $text-w
 		width: 100vw
 		position: relative
+		&__mobile
+			display: none
 		.collaps
 			display: none
 		&__mmenu-btn
@@ -997,6 +1001,8 @@ input
 	color: $text-w
 	width: 100vw
 	position: relative
+	&__mobile
+		display: none
 	&__phone
 		position: absolute
 		right: 135px
@@ -1079,7 +1085,9 @@ input
 	padding-bottom: 40px
 	display: flex
 	justify-content: flex-start
-	a
+	&__mobile
+		display: none
+	>a
 		color: $text
 		font-size: 20px
 		position: relative
