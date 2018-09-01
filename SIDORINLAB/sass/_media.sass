@@ -114,6 +114,7 @@
     .isDictionary
         .header
             background-image: url('../img/bg-dictionary-m.png')
+            background-size: cover
             &__content
                 padding-bottom: 60px
                 &__text
@@ -156,12 +157,15 @@
                             -moz-osx-font-smoothing: grayscale
                             cursor: pointer
                         input
+                            border: none
                             display: block
                             border-radius: 0px
                             padding: 0px
+                            height:  100px
                             font-size: 30px
                             font-weight: 900
                             color: #ffffff
+                            text-transform: uppercase
                             &::placeholder
                                 color: #a52721
     .header
@@ -195,7 +199,8 @@
                 h1
                     color: $text-w
                 &__down
-                    margin-top: 240px
+                    display: block
+                    margin-top: 220px
                     a
                         color: $text-w
                         display: block
@@ -853,6 +858,10 @@
                     width: 100%
                     form
                         margin-top: 40px
+                        padding: 10px 20px
+                        input
+                            height:  70px
+                            font-size: 24px
     .collaps
         width: 100vw
         margin-left: -30px
