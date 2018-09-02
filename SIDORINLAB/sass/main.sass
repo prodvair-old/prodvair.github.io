@@ -9,7 +9,7 @@
 	background-color: $accent
 	color: #fff
 
-body
+body, html
 	font-size: 16px
 	min-width: 320px
 	position: relative
@@ -167,6 +167,7 @@ input
 					margin-top: 0
 					p
 						color: #989898
+
 .isBlog
 	.header
 		background-image: url('../img/bg-blog.png')
@@ -358,7 +359,9 @@ input
 			font-size: 20px
 			margin-top: -2px
 		&__search
-			margin-left: 390px
+			position: absolute
+			right: 430px
+			// margin-left: 390px
 			text-transform: lowercase
 			a
 				color: $text-w
@@ -699,6 +702,7 @@ input
 							color: #989898
 
 .trust
+	padding: 0 30px
 	h2
 		padding: 30px 0
 		font-size: 40px
@@ -708,6 +712,8 @@ input
 		justify-content: center
 		margin-top: 20px
 		margin-bottom: 85px
+		img
+			max-width: 100%
 
 .about
 	background-color: $bg
