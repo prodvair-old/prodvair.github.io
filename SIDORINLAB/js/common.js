@@ -190,7 +190,7 @@ $(function() {
 			$.each($('.book__block__advantage__item'), function(i, el) {
 				setTimeout(function() {
 				  $(el).addClass("book__block__advantage__item-active");
-				}, 900 + (i * 900));
+				}, 700 + (i * 900));
 			});
 		}
 	});
