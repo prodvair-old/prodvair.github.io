@@ -209,6 +209,9 @@ input
 						font-size: 90px
 						font-weight: 900
 						color: #ffffff
+						transition: all 0.3s ease
+						&:focus
+							border-left-color: rgba(#fff, 0)
 						&::placeholder
 							color: #cd0612
 .isBook
@@ -1525,6 +1528,7 @@ input
 					display: block
 					width: 49px
 					height: 49px
+					transition: all 0.5s ease
 				&-active
 					&::before
 						background-image: url('../img/circle-checked.png')
