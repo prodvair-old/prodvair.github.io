@@ -28,7 +28,7 @@
 
 </head>
 
-<body class="isDictionary">
+<body>
 
 	<!-- Custom HTML -->
 
@@ -116,7 +116,7 @@
 				<div class="header__top__mmenu__collaps__card collaps__card">
 					<div class="header__top__mmenu__collaps__card__btn collaps__card__btn collaps__card__btn">
 						<a href="#">
-							Контакты <i class="demo-icon slab-down-open"></i>
+								Контакты <i class="demo-icon slab-down-open"></i>
 						</a>
 					</div>
 					<div class="header__top__mmenu__collaps__card__text collaps__card__text">
@@ -222,93 +222,26 @@
 		<div class="header__content">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-8">
+					<div class="col-lg-6">
 						<div class="header__content__text">
 							<h1>
-								Словарь 
-								<br>Digital–маркетолога
+								<span>Либо вы платите за репутацию сейчас,</span>
+								либо расплачиваетесь за неё потом
 							</h1>
-							<p>(введите запрос или воспользуйтесь буквенной навигацией ниже)</p>
-							<form action="#" method="POST">
-								<input type="search" name="searchDictionary" id="searchDictionary" placeholder="Введите запрос">
-								<input type="submit" value="&#xe803;">
-							</form>
-							<div class="header__content__text__down">
-								<a href="#">
-									<i class="demo-icon slab-down-open"></i>
-								</a>
-							</div>
 						</div>
 					</div>
-					<div class="col-lg-4">
-						<div class="header__content__menu">
+					<div class="col-lg-6">
+						<div class="header__content__form">
+							<h3>Заказать бесплатную Консультацию:</h3>
+							<form action="#" method="post">
+								<input type="text" name="name" id="name" placeholder="Ваше имя" required>
+								<input type="text" name="tel" id="tel" placeholder="+7 (___) ___-__-__" required>
+								<label for="">
+									<div class="puls"></div>
+									<input type="submit" value="Отправить">
+								</label>
 
-							<nav class="header__content__menu__nav">
-								<ul>
-									<li><a href="#">О нас</a></li>
-									<li><a href="#">Вакансии</a></li>
-									<li><a href="#">Блог</a></li>
-									<li><a href="#">Отзывы</a></li>
-									<li><a href="#">Книга</a></li>
-									<li><a href="#">Франшиза</a></li>
-									<li><a href="#">Руководство</a></li>
-									<li><a href="#">Обучение</a></li>
-									<li><a href="#" class="active">it Словарь</a></li>
-									<li><a href="#">Сми о нас</a></li>
-								</ul>
-							</nav>
-
-							<div class="service__left__order collaps">
-								<div class="service__left__order__card collaps__card">
-									<div class="service__left__order__card__btn collaps__card__btn">
-										<a href="#">
-											Заявка на услуги <i class="demo-icon slab-down-open"></i>
-										</a>
-									</div>
-									<div class="service__left__order__card__text collaps__card__text">
-										<form action="#" method="post">
-											<input type="text" name="name" id="name" placeholder="Ваше имя" required>
-											<input type="text" name="adress" id="adress" placeholder="Адрес сайта" required>
-											<label for="service">
-												<select name="service" id="service" required>
-													<option value="fisrt" hidden disabled selected>Выберите услугу</option>
-													<option value="1">Управление репутацией</option>
-													<option value="2">Продвижение сайтов (SEO)</option>
-													<option value="3">Разработка сайтов</option>
-													<option value="4">Техническая поддержка</option>
-													<option value="5">SEO Аудит</option>
-													<option value="6">Аудит Юзабилити</option>
-													<option value="7">Разработка фирменного стиля</option>
-													<option value="8">Взрывной PR</option>
-													<option value="9">Serm управление репутацией </option>
-													<option value="10">Репутационный менеджмент персоны</option>
-													<option value="11">Услуги</option>
-												</select>
-												<i class="demo-icon slab-down-open"></i>
-											</label>
-											<input type="text" name="phone" id="phone" placeholder="+7(___) ___-__-__" required>
-											<input type="email" name="email" id="email" placeholder="adress@mail.ru" required>
-											<input type="text" name="comment" id="comment" placeholder="Комментарий">
-											<div class="license">
-												<label for="checkbox">
-													<div class="checkbox__dot"></div>
-												</label>
-												<input type="checkbox" name="checkbox" id="checkbox" class="checkbox" required>
-												<span>Даю согласие на обработку персональных данных. <a href="#">Пользовательское соглашение</a></span>
-											</div>
-											<input type="submit" value="Отправить">
-										</form>
-									</div>
-								</div>
-							</div>
-
-							<div class="header__content__menu__file">
-								<a href="#">
-									<img src="img/pdf-2.png" alt=""> 
-									<span>Скачать презентацию</span>
-								</a>
-							</div>
-
+							</form>
 						</div>
 					</div>
 				</div>
@@ -316,227 +249,324 @@
 		</div>
 	</header>	
 
-	<section class="dictionary" id="dictionary">
+	<section class="service" id="service">
 		<div class="container">
-			<div class="bread-crumb">
-				<a href="#">Главная</a>
-				<a href="#">Компания</a>
-				<a href="#" class="active">It Словарь</a>
-				<div class="bread-crumb__mobile">
-					<div class="bread-crumb__mobile__link">
-						<a href="/"><i class="demo-icon slab-angle-left"></i> Главная</a>
-					</div>
-					<div class="bread-crumb__mobile__burger">
-						<a href="#"></a>
-					</div>
-				</div>
-			</div>
-			<div class="dictionary__first">
-				<div class="row">
-					<div class="col-lg-7 col-xl-8">
-						<div class="dictionary__first__content">
+			<h2>Услуги:</h2>
+			<div class="row">
+				<div class="col-xl-4 col-lg-5">
+					<div class="service__left">
 
-							<div class="dictionary__first__content__items">
-								<a href="#A">A</a>
+						<div class="service__left__collaps collaps">
+							<div class="service__left__collaps__card collaps__card">
+								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
+									<a href="#">
+										Управление репутацией <i class="demo-icon slab-down-open"></i>
+									</a>
+								</div>
+								<div class="service__left__collaps__card__text collaps__card__text">
+									<div>
+										<p>
+											Компания Sidorin Lab предоставляет услуги репутационного менеджмента персон, бренда, продуктов, услуг и других объектов на ваш выбор. Более 7 лет мы работаем с репутационными проблемами любой сложности.
+										</p>
+										<a href="#">Подробнее</a>
+									</div>
+								</div>
 							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#B">B</a>
+							<div class="service__left__collaps__card collaps__card">
+								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
+									<a href="#">
+										seo–аудит <i class="demo-icon slab-down-open"></i>
+									</a>
+								</div>
+								<div class="service__left__collaps__card__text collaps__card__text">
+									<div>
+										<p>
+											Аудит призван показать проблемы сайта, его слабые и сильные места, задать вектор для его улучшения.
+											<br>Хороший аудит занимает много времени, но порой нужно принять решение, нужно ли его проведение, будь то юзабилити аудит или SEO аудит в принципе
+										</p>
+										<a href="#">Подробнее</a>
+									</div>
+								</div>
 							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#C" class="active">C</a>
+							<div class="service__left__collaps__card collaps__card">
+								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
+									<a href="#">
+										Продвижение <i class="demo-icon slab-down-open"></i>
+									</a>
+								</div>
+								<div class="service__left__collaps__card__text collaps__card__text">
+									<div>
+										<p>
+											Мы предлагаем своим заказчикам поисковое продвижение (SEO) по большому списку запросов с заранее оговоренным ссылочным бюджетом и стоимостью наших услуг.
+										</p>
+										<a href="#">Подробнее</a>
+									</div>
+								</div>
 							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#D">D</a>
+							<div class="service__left__collaps__card collaps__card">
+								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
+									<a href="#">
+										Юзабилити <i class="demo-icon slab-down-open"></i>
+									</a>
+								</div>
+								<div class="service__left__collaps__card__text collaps__card__text">
+									<div>
+										<p>
+											Задача аудита юзабилити - выявить проблемные и узкие места сайта.
+										</p>
+										<a href="#">Подробнее</a>
+									</div>
+								</div>
 							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#E">E</a>
+							<div class="service__left__collaps__card collaps__card">
+								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
+									<a href="#">
+										Контекстная реклама	<i class="demo-icon slab-down-open"></i>
+									</a>
+								</div>
+								<div class="service__left__collaps__card__text collaps__card__text">
+									<div>
+										<p>
+											Индивидуальный подход и оперативность обеспечат первые продажи уже через 1-2 дня после обращения.
+										</p>
+										<a href="#">Подробнее</a>
+									</div>
+								</div>
 							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#F">F</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#G">G</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#H">H</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#I">I</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#J">J</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#K">K</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#L">L</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#M">M</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#N">N</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#O">O</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#P">P</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#Q">Q</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#R">R</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#T">T</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#U">U</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#V">V</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#W">W</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#X">X</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#Y">Y</a>
-							</div>
-
-							<div class="dictionary__first__content__items">
-								<a href="#Z">Z</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="dictionary__block" id="D">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4">
-							<div class="dictionary__block__title">
-								<h3></h3>
-								<span>Алфавитные обозначения</span>
-							</div>
-						</div>
-						<div class="col-lg-8">
-							<div class="dictionary__block__text">
-								<div class="dictionary__block__text-gradient">
-									<h4><b>Discus, crestfish arapaima Japanese</b>, Затраты на приобретение</h4>
-									<p>
-										Современные технологии достигли такого уровня, что курс на социально-ориентированный национальный проект создает необходимость включения в производственный план целого ряда внеочередных мероприятий с учетом комплекса благоприятных перспектив. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности играет определяющее значение для новых принципов формирования материально-технической и кадровой базы. Задача организации, в особенности же разбавленное изрядной долей эмпатии, рациональное мышление влечет за собой процесс внедрения и модернизации глубокомысленных рассуждений.
-									</p>
-									<h4><b>Darter Manta Ray arowana</b>, Цена за клик</h4>
-									<p>
-										Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: существующая теория прекрасно подходит для реализации системы обучения кадров, соответствующей насущным потребностям. Учитывая ключевые сценарии поведения, постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании поэтапного и последовательного развития общества. Но существующая теория однозначно фиксирует необходимость приоретизации разума над эмоциями.
-									</p>
+							<div class="service__left__collaps__card collaps__card">
+								<div class="service__left__collaps__card__btn collaps__card__btn collaps__card__btn">
+									<a href="#">
+										разработка <i class="demo-icon slab-down-open"></i>
+									</a>
+								</div>
+								<div class="service__left__collaps__card__text collaps__card__text">
+									<div>
+										<p>
+											В пакет входит создание сайта на выбор интернет-магазина или корпоративного сайта, так же услуги по продвижению в социальных сетях и контекстная реклама.
+										</p>
+										<a href="#">Подробнее</a>
+									</div>
 								</div>
 							</div>
 						</div>
+								
+						<div class="service__left__order collaps">
+							<div class="service__left__order__card collaps__card">
+								<div class="service__left__order__card__btn collaps__card__btn">
+									<a href="#">
+										Заявка на услуги <i class="demo-icon slab-down-open"></i>
+									</a>
+								</div>
+								<div class="service__left__order__card__text collaps__card__text">
+									<form action="#" method="post">
+										<input type="text" name="name" id="name" placeholder="Ваше имя" required>
+										<input type="text" name="adress" id="adress" placeholder="Адрес сайта" required>
+										<label for="service">
+											<select name="service" id="service" required>
+												<option value="fisrt" hidden disabled selected>Выберите услугу</option>
+												<option value="1">Управление репутацией</option>
+												<option value="2">Продвижение сайтов (SEO)</option>
+												<option value="3">Разработка сайтов</option>
+												<option value="4">Техническая поддержка</option>
+												<option value="5">SEO Аудит</option>
+												<option value="6">Аудит Юзабилити</option>
+												<option value="7">Разработка фирменного стиля</option>
+												<option value="8">Взрывной PR</option>
+												<option value="9">Serm управление репутацией </option>
+												<option value="10">Репутационный менеджмент персоны</option>
+												<option value="11">Услуги</option>
+											</select>
+											<i class="demo-icon slab-down-open"></i>
+										</label>
+										<input type="text" name="phone" id="phone" placeholder="+7 (___) ___-__-__" required>
+										<input type="email" name="email" id="email" placeholder="adress@mail.ru" required>
+										<input type="text" name="comment" id="comment" placeholder="Комментарий">
+										<div class="license">
+											<label for="checkbox">
+												<div class="checkbox__dot"></div>
+											</label>
+											<input type="checkbox" name="checkbox" id="checkbox" class="checkbox" required>
+											<span>Даю согласие на обработку персональных данных. <a href="#">Пользовательское соглашение</a></span>
+										</div>
+										<input type="submit" value="Отправить">
+									</form>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
-			</div>
-		<div class="dictionary__block" id="C">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="dictionary__block__title">
-							<h3></h3>
-							<span>Алфавитные обозначения</span>
+				<div class="col-xl-8 col-lg-7">
+					<div class="service__slider">
+						<div class="service__slider__text">
+							<h3>
+								<span>Свой учебный центр</span> репутационного менеджмента 
+								и интернет маркетинга
+							</h3>
+							<p>
+								Интернет-пространство растет со значительной скоростью, и у нашей компании есть мастерство и достаточно современных знаний, чтобы делится бессценым опытом 
+								со своими студентами
+							</p>
+							<img src="img/service/1.png" alt="">
+							<a href="" class="service__slider__text-btn">Учебный центр</a>
 						</div>
-					</div>
-					<div class="col-lg-8">
-						<div class="dictionary__block__text">
-							<div class="dictionary__block__text-gradient">
-								<h4><b>Cost per acquisition</b>, Затраты на приобретение</h4>
-								<p>
-									Метрика, которая измеряет затраты на приобретение определенного целевого действия, то есть конвертации интернет-ресурса. Целевым действием может быть, например, регистрация аккаунта, подписка на рассылку, приобретение товара и т.д. Данный показатель обычно используется для определения стоимости страницы.
-								</p>
-								<h4><b>CPC, Cost per Click</b>, Цена за клик</h4>
-								<p>
-									Способ оплаты рекламы в интернете, когда рекламодатель выплачивает определенную сумму за каждый клик посетителя по объявлению, баннеру или в рекламному блоку в Яндекс Директ и Google AdWords. Оплата переводится на счет владельца сайта, на котором было размещено объявление. СРС сам по себе используется 
-								</p>
-							</div>
+						<div class="service__slider__text">
+							<h3>
+								агентство 
+								<span>с центральным офисом в Москве </span>
+								и офисом разработки и технического внедрения в наукограде Дубне
+							</h3>
+							<p>
+								Компания состоит из нескольких подразделений, каждое из которых играет уникальную и важную роль в разработке и реализации маркетинговых инициатив, направленных на создание эффективной рекламной кампании.
+							</p>
+							<img src="img/service/1.png" alt="">
+							<a href="" class="service__slider__text-btn">Контакты</a>
+						</div>
+						<div class="service__slider__text">
+							<h3>
+								Проекты <span>любой степени сложности</span> от самых простых 
+								до самых сложных
+							</h3>
+							<p>
+								Вне зависимости от того, стартап вы или крупный бренд, наше агентство поможет вам увеличить трафик, оптимизировать веб-сайт и убрать репутационные риски. 
+							</p>
+							<img src="img/service/1.png" alt="">
+							<a href="" class="service__slider__text-btn">Контакты</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="dictionary__block" id="B">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="dictionary__block__title">
-							<h3></h3>
-							<span>Алфавитные обозначения</span>
+		<div class="service__next"><a href="#"><i class="demo-icon slab-right-arrow"></i></a></div>
+	</section>
+
+	<section class="trust" id="trust">
+		<div class="container">
+			<h2>Нам доверяют:</h2>
+		</div>
+		<div class="trust__img">
+			<img src="img/trust.png" alt="">
+		</div>
+	</section>
+
+	<section class="about" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="about__text">
+						<h1>
+							<b>SIDORIN LAB — </b>
+							АГЕНТСТВО №1 
+							ПО УПРАВЛЕНИЮ 
+							РЕПУТАЦИЕЙ
+						</h1>
+						<div class="about__text__block">
+							<p>
+								Интернет-маркетинг является необходимым элементом, который играет важную роль в продвижении вашего бизнеса. Наше агентство является лидером в создании успешного бизнеса. Компания состоит из нескольких подразделений, каждое из которых играет уникальную и важную роль в разработке и реализации маркетинговых инициатив, направленных на создание эффективной реклам
+								ной кампании.
+								Вне зависимости от того, стартап вы или крупный бренд, наше агентство поможет вам увеличить трафик, оптимизировать веб-сайт и убрать репутационные риски. Интернет-пространство растет со значительной скоростью, и у нашей компании есть мастерство и достаточно современных знаний, чтобы сделать ваш бизнес максимально прибыльным.
+								Используя как традиционные, так и новаторские методы маркетинга, мы постоянно находим новые способы для увеличения потока ваших клиентов. Одним из важных аспектов успеха нашей компании является построение долгосрочных отношений с клиентами, в чем вы можете убедиться, работая с нами.
+							</p>
 						</div>
+						<!-- <a href="#">Подробнее</a> -->
 					</div>
-					<div class="col-lg-8">
-						<div class="dictionary__block__text">
-							<div class="dictionary__block__text-gradient">
-								<h4><b>Barred danio, "taimen,"</b>, Затраты на приобретение</h4>
-								<p>
-									Задача организации, в особенности же базовый вектор развития требует от нас анализа глубокомысленных рассуждений. В своем стремлении улучшить пользовательский опыт мы упускаем, что представители современных социальных резервов обнародованы. Не следует, однако, забывать, что убежденность некоторых оппонентов позволяет выполнить важные задания по разработке своевременного выполнения сверхзадачи. Не следует, однако, забывать, что сложившаяся структура организации представляет собой интересный эксперимент проверки первоочередных требований.
-								</p>
-								<h4><b>Black swallower bent-tooth</b>, Цена за клик</h4>
-								<p>
-									Разбавленное изрядной долей эмпатии, рациональное мышление предоставляет широкие возможности для существующих финансовых и административных условий. И нет сомнений, что явные признаки победы институциализации, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут заблокированы в рамках своих собственных рациональных ограничений. В целом, конечно, семантический разбор внешних противодействий прекрасно подходит для реализации благоприятных перспектив. Значимость этих проблем настолько очевидна, что внедрение современных методик влечет за собой процесс внедрения и модернизации поэтапного и последовательного развития общества. Действия представителей оппозиции объединены в целые кластеры себе подобных.
-								</p>
-							</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="about__file">
+						<div class="about__file__align">
+							<span class="about__file__align__title">Скачать</span>
+							<a href="#" class="about__file__align__link">
+								<img src="img/pdf.png" alt="file">
+							</a>
+							<p class="about__file__align__desc">
+								Приглашаем ознакомиться с презентацией компании
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="dictionary__block" id="A">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="dictionary__block__title">
-							<h3>A</h3>
-							<span>Алфавитные обозначения</span>
+	</section>
+
+	<section class="comments" id="comments">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-5 col-lg-5">
+					<h2>Отзывы:</h2>
+					<div class="comments__slider">
+						<div class="comments__slider__text">
+							<p>
+								«Мне приятно рекомендовать Дмитрия и его Компанию Sidorin.Lab в качестве отличных партнеров по комплексному продвижению Ваших интернет ресурсов и управлению репутацией Вашей Компании в digital пространстве. Дима невероятно вовлечен в те вопросы, которыми занимается. Сочетает в себе математическую логику, творческий подход к решению задач, аккуратность и результативность. Особо отмечу прекрасный account management и консалтинг по вопросам SEO & SMM..»
+							</p>
+						</div>
+						<div class="comments__slider__text">
+							<p>
+								2«Мне приятно рекомендовать Дмитрия и его Компанию Sidorin.Lab в качестве отличных партнеров по комплексному продвижению Ваших интернет ресурсов и управлению репутацией Вашей Компании в digital пространстве. Дима невероятно вовлечен в те вопросы, которыми занимается. Сочетает в себе математическую логику, творческий подход к решению задач, аккуратность и результативность. Особо отмечу прекрасный account management и консалтинг по вопросам SEO & SMM..»
+							</p>
+						</div>
+						<div class="comments__slider__text">
+							<p>
+								3«Мне приятно рекомендовать Дмитрия и его Компанию Sidorin.Lab в качестве отличных партнеров по комплексному продвижению Ваших интернет ресурсов и управлению репутацией Вашей Компании в digital пространстве. Дима невероятно вовлечен в те вопросы, которыми занимается. Сочетает в себе математическую логику, творческий подход к решению задач, аккуратность и результативность. Особо отмечу прекрасный account management и консалтинг по вопросам SEO & SMM..»
+							</p>
+						</div>
+						<div class="comments__slider__text">
+							<p>
+								4«Мне при1232ятно рекомендовать Дмитрия и его Компанию Sidorin.Lab в качестве отличных партнеров по комплексному продвижению Ваших интернет ресурсов и управлению репутацией Вашей Компании в digital пространстве. Дима невероятно вовлечен в те вопросы, которыми занимается. Сочетает в себе математическую логику, творческий подход к решению задач, аккуратность и результативность. Особо отмечу прекрасный account management и консалтинг по вопросам SEO & SMM..»
+							</p>
 						</div>
 					</div>
-					<div class="col-lg-8">
-						<div class="dictionary__block__text">
-							<div class="dictionary__block__text-gradient">
-								<h4><b>Armoured catfish hairtail firefish</b>, Затраты на приобретение</h4>
+				</div>
+				<div class="col-lg-7">
+					<div class="comments__slider-img">
+						<div class="comments__slider-img__block comments__slider-img__block-active">
+							<div class="comments__slider-img__block-img">
+								<img src="img/comments/1.png" alt="">
+							</div>
+							<div class="comments__slider-img__block__inf">
+								<span class="comments__slider-img__block__inf-name">николай</span>
+								<br><span class="comments__slider-img__block__inf-firstname">козак</span>
 								<p>
-									Принимая во внимание показатели успешности, высокотехнологичная концепция общественного уклада обеспечивает актуальность анализа существующих паттернов поведения. Для современного мира постоянный количественный рост и сфера нашей активности напрямую зависит от новых принципов формирования материально-технической и кадровой базы. Как уже неоднократно упомянуто, независимые государства и по сей день остаются уделом либералов, которые жаждут быть обнародованы.
+									«Спортмастер», 
+									<br><span class="comments__slider-img__block__inf-company">Deputy E Commerce Director</span>
 								</p>
-								<h4><b>Atlantic eel Oriental loach</b>, Цена за клик</h4>
+							</div>
+						</div>
+						<div class="comments__slider-img__block">
+							<div class="comments__slider-img__block-img">
+								<img src="img/comments/2.png" alt="">
+							</div>
+							<div class="comments__slider-img__block__inf">
+								<span class="comments__slider-img__block__inf-name">николай</span>
+								<br><span class="comments__slider-img__block__inf-firstname">козак</span>
 								<p>
-									Внезапно, интерактивные прототипы формируют глобальную экономическую сеть и при этом - заблокированы в рамках своих собственных рациональных ограничений. В целом, конечно, убежденность некоторых оппонентов позволяет выполнить важные задания по разработке стандартных подходов. Принимая во внимание показатели успешности, постоянный количественный рост и сфера нашей активности предполагает независимые способы реализации позиций, занимаемых участниками в отношении поставленных задач. Но высокое качество позиционных исследований позволяет выполнить важные задания по разработке глубокомысленных рассуждений. Значимость этих проблем настолько очевидна, что сплоченность команды профессионалов однозначно фиксирует необходимость глубокомысленных рассуждений. Прежде всего, перспективное планирование представляет собой интересный эксперимент проверки экспериментов, поражающих по своей масштабности и грандиозности.
+									«Спортмастер», 
+									<br><span class="comments__slider-img__block__inf-company">Deputy E Commerce Director</span>
+								</p>
+							</div>
+						</div>
+						<div class="comments__slider-img__block">
+							<div class="comments__slider-img__block-img">
+								<img src="img/comments/1.png" alt="">
+							</div>
+							<div class="comments__slider-img__block__inf">
+								<span class="comments__slider-img__block__inf-name">николай</span>
+								<br><span class="comments__slider-img__block__inf-firstname">козак</span>
+								<p>
+									«Спортмастер», 
+									<br><span class="comments__slider-img__block__inf-company">Deputy E Commerce Director</span>
+								</p>
+							</div>
+						</div>
+						<div class="comments__slider-img__block">
+							<div class="comments__slider-img__block-img">
+								<img src="img/comments/2.png" alt="">
+							</div>
+							<div class="comments__slider-img__block__inf">
+								<span class="comments__slider-img__block__inf-name">николай</span>
+								<br><span class="comments__slider-img__block__inf-firstname">козак</span>
+								<p>
+									«Спортмастер», 
+									<br><span class="comments__slider-img__block__inf-company">Deputy E Commerce Director</span>
 								</p>
 							</div>
 						</div>
@@ -546,6 +576,49 @@
 		</div>
 	</section>
 
+	<section class="case" id="case">
+		<div class="container">
+			<div class="case__block">
+				<h2>производительное  программное обеспечение лишь инструмент, <b>только настоящие специалисты способны достичь успеха</b> в сфере управления вашей репутацией</h2>
+				<p>
+					Онлайн-менеджмент репутации, а не просто программное обеспечение
+				</p>
+				<a href="">Наши кейсы</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="order" id="order">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-5 col-lg-7">
+					<div class="order__text">
+						<h2>
+							Индивидуальней подход: <b>подбираем необходимый пакет услуг под каждого клиента</b>
+						</h2>
+						<p>
+							Анализируя сферу вашей специализации учитываем все факторы для гарантированного роста вашего бизнеса.
+						</p>
+					</div>
+				</div>
+				<div class="col-xl-7 col-lg-5">
+					<div class="order__form">
+						<form action="#" method="POST">
+							<div class="order__form-left">
+								<input type="text" name="name" id="name" placeholder="Ваше имя" required>
+								<input type="text" name="phone" id="phone2" placeholder="+7 (___) ___-__-__" required>
+							</div>
+							<div class="order__form-right">
+								<input type="text" name="company" id="company" placeholder="Компания" required>
+								<input type="email" name="email" id="email" placeholder="imya@mail.ru" required>
+								<input type="submit" value="заказать бесплатную консультацию">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<footer class="footer" id="footer">
 		<div class="footer__logo">
