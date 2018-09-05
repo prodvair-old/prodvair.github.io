@@ -5,6 +5,24 @@
 
 // ≥1590px
 +media-breakpoint-down(lg)
+    .isBlog
+        .header
+            &__content
+                padding-bottom: 100px
+                &__menu
+                    margin-top: 90px
+                &__text
+                    margin-top: 70px
+                    h1
+                        width: 630px
+    .isDictionary
+        .header
+            &__content
+                &__text
+                    form
+                        input
+                            height: 140px
+                            font-size: 70px
     .header
         &__content
             &__menu
@@ -106,6 +124,68 @@
                 input[type="text"]
                     width: 1000px
                     height: 90px
+    .blog
+        &__first
+            position: relative
+            z-index: 1
+            background-color: #eeeeee
+        &__smallBlogs
+            &__content
+                padding-top: 70px
+                h3
+                    font-size: 40px
+                    font-weight: 900
+                    line-height: 45px
+                p
+                    margin-top: 48px
+                    font-size: 20px
+                    min-height: 160px
+                a
+                    margin-top: 60px
+                img
+                    max-height: 100%
+                    right: -15px
+                    bottom: 0
+                    z-index: -1
+                    width: 100%
+                &-leftBig
+                    height: 65%
+                    &-bg
+                        height: 100%
+                        width: 50vw
+                        right: -15px
+                        bottom: 0
+                        z-index: -2
+                    h3
+                        width: 390px
+                    p
+                        padding-right: 70px
+                    
+                &-leftSmall
+                    padding-bottom: 150px
+                    padding-top: 85px
+                &-rightSmall
+                    padding-bottom: 150px
+                    padding-left: 70px
+                    padding-top: 85px
+                &-rightBig
+                    padding-left: 70px
+        &__bigBlogs
+            &__content
+                h3
+                    font-size: 35px
+                    line-height: 45px
+                p
+                    font-size: 20px
+            &:nth-child(2)
+                .blog__bigBlogs__content
+                    padding-top: 35px
+                    background-color: $accent
+                    h3
+                        width: 630px
+                    p
+                        width: 630px
+
 
 // ≥1200px
 +media-breakpoint-down(md)
@@ -513,6 +593,7 @@
             a
                 display: none
     .case
+        display: none
         padding-top: 95px
         padding-bottom: 40px
         &__block
@@ -663,7 +744,7 @@
     .dictionary
         &__block
             background-color: #ffffff
-            margin-top: 70px
+            margin-top: 0px
             margin-bottom: 50px
             &__title
                 display: none
@@ -692,19 +773,20 @@
                         padding-bottom: 0px
         &__first
             background-color: #f8f8f8
-            position: absolute
+            position: relative
             width: 100vw
+            top: 0
             left: 0
             z-index: 3
-            overflow-x: scroll
-            &::-webkit-scrollbar
-                display: none
-                height: 0
             &__content
                 padding-top: 0px
                 padding-bottom: 0px
                 margin: 0 20px
                 display: flex
+                overflow-x: scroll
+                &::-webkit-scrollbar
+                    display: none
+                    height: 0
                 &__items
                     margin-right: 20px
                     margin-left: 20px
@@ -720,9 +802,172 @@
                         transform: translateY(0px)
                         &::after
                             width: 45px
+    .blog
+        &__first
+            position: relative
+            z-index: 1
+            background-color: #eeeeee
+            &-red
+                background-color: #FC1A20
+                .bread__link
+                    a
+                        color: $text-w
+        &__popup__mobile
+            display: block
+            visibility: hidden
+            position: fixed
+            left: 0
+            top: 0
+            z-index: 999999
+            width: 100vw
+            height: 0vh
+            background-color: #ffffff
+            padding-bottom: 50px
+            transition: all 0.3s ease
+            &-active
+                visibility: visible
+                height: 100vh
+            .container
+                height: 80%
+            &__text
+                height: 100%
+                overflow-y: scroll
+                padding-left: 60px
+                padding-right: 5px
+                &::-webkit-scrollbar-thumb
+                    background-color: #bfbfbf
+                    border-radius: 4px
+                &::-webkit-scrollbar-track
+                    border-radius: 4px
+                &::-webkit-scrollbar
+                    background: #e5e5e5
+                    width: 6px
+                    border-radius: 4px
+                    height: 90%
+                h3
+                    font-size: 24px
+                    font-weight: 900
+                    color: $accent
+                    margin-bottom: 50px
+                    margin-top: 80px
+                    letter-spacing: 100
+                    text-transform: uppercase
+                    span
+                        color: $text
+                    &:nth-child(1)
+                        margin-top: 0
+                p
+                    font-size: 22px
+                ul
+                    list-style-type: none
+                    li
+                        font-size: 22px
+                        position: relative
+                        margin-bottom: 5px
+                        &::after
+                            content: ''
+                            display: block
+                            height: 12px
+                            width: 12px
+                            background-color: $accent
+                            border-radius: 50%
+                            position: absolute
+                            top: 13px
+                            left: -40px
+        &__mobile
+            display: block
+            position: relative
+            background-color: #efefef
+            &__bg
+                width: 100vw
+                position: absolute
+                right: 0
+                bottom: 0
+                z-index: 0
+                &__items
+                    img
+                        height: 100%
+            &__slider
+                position: relative
+                z-index: 1
+                .slick-dots
+                    position: relative
+                    display: flex
+                    list-style-type: none
+                    justify-content: center
+                    padding: 0
+                    margin: 0
+                    padding-bottom: 50px
+                    .slick-active
+                        button
+                            background-color: $accent
+                            border-color: $accent
+                    li
+                        button
+                            padding: 0
+                            height: 24px
+                            width: 24px
+                            border-radius: 50%
+                            border: 5px solid #d2d2d2
+                            background-color: transparent
+                            margin: 0 30px
+                    &-red
+                        .slick-active
+                            button
+                                background-color: #ffffff
+                                border-color: #ffffff
+                        li
+                            button
+                                border: 5px solid #823632
+                .red
+                    h3
+                        color: $text-w
+                    p
+                        color: $text-w
+                    .next
+                        color: $text-w
+                &__content
+                    padding-bottom: 130px
+                    h3
+                        font-size: 45px
+                        font-weight: 900
+                        color: $accent
+                        line-height: 60px
+                        width: 100%
+                        text-transform: uppercase
+                    p
+                        font-size: 24px
+                        margin-top: 48px
+                        margin-bottom: 100px
+                        padding: 0
+                        min-height: 220px
+                        line-height: 29px
+                        color: #4d4d4d
+                    a
+                        margin: 0 auto
+                    .next
+                        margin-top: 35px
+                        font-size: 24px
+                        text-align: center
+                        color: #4d4d4d
+                        display: block
+                        width: 100%
+                        text-decoration: none
+        &__smallBlogs
+            display: none
+        &__bigBlogs
+            display: none
+    .more
+        display: none
 
 // ≥768px
 +media-breakpoint-down(sm)
+    .isBlog
+        .header
+            &__content
+                &__text
+                    h1
+                        width: 100%
     .collaps
         width: 540px
         left: 0
@@ -881,7 +1126,64 @@
             margin-left: 0
             h2
                 width: auto
-
+    .dictionary
+        &__block
+            &__title
+                display: none
+            &__text
+                margin-top: 70px
+                margin-left: 0px
+                &-gradient
+                    padding-top: 0px
+                    height: auto
+                    max-height: 800px
+                    &::-webkit-scrollbar-thumb
+                        background-color: #bfbfbf
+                    &::-webkit-scrollbar
+                        background: rgba(#000, 0.1)
+                    &::after
+                        display: none
+                h4
+                    font-size: 24px
+                    padding-bottom: 30px
+                    padding-right: 50px
+                p
+                    padding-right: 50px
+                    font-size: 20px
+                    padding-bottom: 50px
+                    &:last-child
+                        padding-bottom: 0px
+        &__first
+            background-color: #f8f8f8
+            position: relative
+            width: 100vw
+            top: 0
+            left: 0
+            z-index: 3
+            overflow-x: scroll
+            &::-webkit-scrollbar
+                display: none
+                height: 0
+            &__content
+                padding-top: 0px
+                padding-bottom: 0px
+                margin: 0 20px
+                display: flex
+                &__items
+                    margin-right: 20px
+                    margin-left: 20px
+                    padding-bottom: 0px
+                    a
+                        &::after
+                            bottom: 0px
+                        &:hover
+                            transform: translateY(0px)
+                            &::after
+                                width: 45px
+                    .active
+                        transform: translateY(0px)
+                        &::after
+                            width: 45px
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -1149,6 +1451,57 @@
                     padding-right: 5px
                 p
                     padding-right: 5px
+    .blog
+        &__popup__mobile
+            &__text
+                padding-left: 20px
+                h3
+                    font-size: 20px
+                    margin-bottom: 50px
+                    margin-top: 80px
+                p
+                    font-size: 16px
+                ul
+                    li
+                        font-size: 16px
+                        &::after
+                            height: 10px
+                            width: 10px
+                            top: 9px
+        &__mobile
+            &__bg
+                width: 100vw
+                position: absolute
+                right: 0
+                bottom: 0
+                z-index: 0
+                &__items
+                    img
+                        margin-left: 50%
+                        transform: translateX(-50%)
+                        height: 100%
+            &__slider
+                .slick-dots
+                    width: 90vw
+                    overflow-x: scroll
+                    li
+                        button
+                            margin: 0 15px
+                &__content
+                    padding-bottom: 130px
+                    h3
+                        font-size: 30px
+                        line-height: 35px
+                    p
+                        font-size: 18px
+                        margin-top: 40px
+                        margin-bottom: 70px
+                        min-height: 180px
+                        line-height: 22px
+                    a
+                        margin: 0 auto
+                    .next
+                        font-size: 18px
 
 /*==========  Mobile First  ==========*/
 
