@@ -1,0 +1,1542 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: $text-w
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body, html
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: 900
+
+@keyframes pulse
+	0%
+		-moz-box-shadow: 0 0 0 0 rgba(#ffffff, 0.4)
+		box-shadow: 0 0 0 0 rgba(#ffffff, 0.4)
+	70%
+		-moz-box-shadow: 0 0 0 20px rgba(#ffffff, 0)
+		box-shadow: 0 0 0 20px rgba(#ffffff, 0)
+	100%
+		-moz-box-shadow: 0 0 0 0 rgba(#ffffff, 0)
+		box-shadow: 0 0 0 0 rgba(#ffffff, 0)
+
+input
+	border-radius: 47px
+	height: 70px
+	background: transparent
+	border: 1px solid $text-w
+	font-size: 18px
+	padding-left: 30px
+
+.blur
+	-webkit-filter: blur(5px)
+    -moz-filter: blur(5px)
+    filter: blur(5px)
+    filter: url('../img/blur.svg#blur')
+	
+.btn
+	display: block
+	background-color: $accent
+	border-radius: 38px
+	width: 196px
+	height: 75px
+	text-align: center
+	font-size: 20px
+	font-weight: 700
+	color: $text-w
+	text-decoration: none
+	line-height: 75px
+	box-shadow: 0 8px 81px rgba(#e30613, 0.22)
+	transition: all 0.3s ease
+	&:hover
+		transform: scale(1.02)
+		text-decoration: none
+		color: $text-w
+		box-shadow: 0 8px 91px rgba(#e30613, 0.3)
+
+.btnWhite
+	display: block
+	background-color: #fff
+	border-radius: 38px
+	width: 196px
+	height: 75px
+	text-align: center
+	font-size: 20px
+	font-weight: 700
+	color: $text
+	line-height: 75px
+	box-shadow: 0 8px 81px rgba(#fff, 0.22)
+	transition: all 0.3s ease
+	&:hover
+		transform: scale(1.02)
+		text-decoration: none
+		color: $text
+		box-shadow: 0 8px 91px rgba(#fff, 0.3)
+
+.collaps
+	background-color: #ffffff
+	width: 430px
+	box-shadow: 0 0 109px rgba(#000000, 0.05)
+	border-radius: 3px
+	position: absolute
+	z-index: 9999
+	margin-left: -30px
+	&__card
+		width: 100%
+		&:last-child
+			.collaps__card__text
+				a
+					padding-bottom: 30px
+		&__text
+			height: auto
+			overflow: hidden
+			transition: all 0.3s ease
+			padding: 0 30px
+			>div
+				margin-top: -90%
+				transition: all 0.3s ease
+				a
+					font-size: 20px
+					font-weight: 500
+					float: right
+					color: $accent
+					text-decoration: none
+					&:after
+						content: ''
+						width: 103px
+						height: 1px
+						display: block
+						background-color: $accent
+						transition: all 0.3s ease
+					&:hover
+						&:after
+							width: 20px
+				p
+					font-size: 20px
+					color: #777777
+		&__btn
+			border-bottom: 1px solid #e5e5e5
+			padding: 17px 30px
+			a
+				display: block
+				text-transform: uppercase
+				color: $text
+				text-decoration: none
+				font-weight: 500
+				font-size: 22px
+				i
+					font-size: 18px
+					margin-top: 5px
+					float: right
+		&-active
+			.collaps__card__btn
+				border-bottom: none
+				a
+					color: #989898
+			.collaps__card__text
+				>div
+					margin-top: 0
+					p
+						color: #989898
+
+.isBlog
+	.header
+		background-image: url('../img/bg-blog.png')
+		&__content
+			padding-bottom: 100px
+			&__text
+				margin-top: 70px
+.isDictionary
+	.header
+		background-image: url('../img/bg-dictionary.png')
+		&__content
+			padding-bottom: 100px
+			&__text
+				margin-top: 70px
+				width: 750px
+				a
+					margin-top: 55px
+				h1
+					text-transform: none
+					color: $text-w
+					font-size: 40px
+					line-height: 45px
+					font-weight: 400
+				p
+					margin-top: 20px
+					color: $text-w
+					font-size: 20px
+				form
+					padding-top: 110px
+					input[type="submit"]
+						display: none
+					input
+						border: none
+						border-left: 1px solid #fff
+						border-radius: 0px
+						padding: 30px 0
+						width: 100%
+						height: 159px
+						font-size: 90px
+						font-weight: 900
+						color: #ffffff
+						transition: all 0.3s ease
+						&:focus
+							border-left-color: rgba(#fff, 0)
+						&::placeholder
+							color: #cd0612
+.isBook
+	.header
+		background-image: url('../img/bg-book.png')
+		&__content
+			&__text
+				margin-top: 70px
+				width: 750px
+				a
+					margin-top: 45px
+				h1
+					font-size: 40px
+					line-height: 75px
+					text-transform: uppercase
+					width: 910px
+				span
+					font-weight: 400
+
+.header
+	background-color: $bg
+	background-image: url('../img/bg-header.png')
+	background-position-x: center
+	background-repeat: no-repeat
+	&__content
+		padding-top: 45px
+		padding-bottom: 60px
+		position: relative
+		&__menu
+			margin-top: 100px
+			position: absolute
+			right: -30px
+			z-index: 9
+			&__file
+				margin-top: -50px
+				margin-left: -60px
+				position: absolute
+				top: 810px
+				z-index: 0
+				a
+					display: flex
+					align-items: center
+					color: $accent
+					img
+						transition: all 0.3s ease
+					span
+						font-size: 24px
+						font-weight: 900
+						width: 70px
+						margin-left: -50px
+						line-height: 28px
+						display: block
+					&:hover
+						img
+							transform: scale(1.1)
+			&__nav
+				width: 475px
+				background-color: #fff
+				box-shadow: 0 0 109px rgba(#000000, 0.05)
+				ul
+					list-style-type: none
+					padding: 0
+					li
+						&:last-child
+							a
+								border-bottom: none
+						a
+							display: block
+							padding: 16px 0
+							padding-left: 30px
+							text-decoration: none
+							color: $text
+							border-bottom: 1px solid #e5e5e5
+							text-transform: uppercase
+							font-weight: 500
+							font-size: 24px
+							transition: all 0.5s ease
+							&:hover
+								color: $accent
+						.active
+							background-color: #f6f6f6
+							pointer-events: none
+							cursor: default
+			.service__left__order
+				box-shadow: 0 0 109px rgba(#000000, 0.05)
+				width: 475px
+				position: relative
+				top: 0
+				margin-left: 0
+		&__form
+			float: right
+			h3
+				color: $text-w
+				text-transform: uppercase
+				font-size: 20px
+				width: 370px
+				margin-bottom: 40px
+			input[type="submit"]
+				width: 206px
+				border: 1px solid $text-w
+				display: block
+				padding: 0
+				text-align: center
+				color: $text-w
+				margin-bottom: 45px
+				box-shadow: 0 0 0 0 rgba(#ffffff, 0)
+				animation: pulse 2s infinite
+				cursor: pointer
+				position: relative
+				z-index: 2
+			label
+				position: relative
+				float: right
+			.puls
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 206px
+				height: 70px
+				display: block
+				border-radius: 47px
+				animation: pulse 2s infinite
+				animation-delay: 0.3s
+			input[type="text"]
+				width: 360px
+				color: $text-w
+				border: 1px solid $text-w
+				display: block
+				margin-bottom: 45px
+		&__text
+			width: 600px
+			margin-top: 100px
+			&__down
+				display: none
+			a
+				margin-top: 55px
+				
+			h1
+				text-transform: uppercase
+				font-size: 33px
+				font-weight: 900
+			span
+				color: $text-w
+				font-weight: 400
+	&__top
+		padding-top: 40px
+		padding-left: 75px
+		display: flex
+		color: $text-w
+		width: 100vw
+		position: relative
+		&__mobile
+			display: none
+		.collaps
+			display: none
+		&__mmenu-btn
+			display: none
+		&__mmenu
+			display: none
+		&__phone
+			position: absolute
+			right: 135px
+			font-size: 20px
+			margin-top: -2px
+		&__search
+			position: absolute
+			right: 430px
+			// margin-left: 390px
+			text-transform: lowercase
+			a
+				color: $text-w
+				text-decoration: none
+				transition: all 0.5s ease
+				&:hover
+					opacity: 0.4
+				i
+					margin-right: 30px
+		&__menu
+			&-nav
+				ul
+					.slab-drop
+						padding-bottom: 40px
+						&__block
+							visibility: hidden
+							position: absolute
+							left: 0
+							margin-top: 40px
+							width: 100vw
+							height: 0px
+							overflow: hidden
+							background-color: #ffffff
+							z-index: 9999
+							transition: all 0.3s ease
+							&__more
+								background-color: $bg-gray
+								display: flex
+								height: 330px
+								&-img
+									display: flex
+									align-items: center
+									justify-content: center
+									width: 365px
+								&__text
+									margin-top: 70px
+									a
+										font-size: 20px
+										text-decoration: none
+										font-weight: 900
+										color: $accent
+										margin-top: 30px
+										&:after
+											content: ''
+											width: 80px
+											height: 1px
+											display: block
+											background-color: $accent
+											transition: all 0.3s ease
+										&:hover
+											&:after
+												width: 20px
+									h3
+										color: $text
+										font-size: 24px
+										font-weight: 400
+										text-transform: uppercase
+										width: 390px
+										line-height: 27px
+										span
+											font-weight: 900
+							&__link
+								margin-top: 60px
+								margin-left: 115px
+								a
+									font-size: 20px
+									margin-bottom: 15px
+									display: block
+									color: $text
+									text-decoration: none
+									transition: all 0.3s ease
+									&:hover
+										color: $accent
+							.last
+								margin-left: 5px
+						>a
+							&:after
+								font-family: "sl"
+								font-style: normal
+								font-weight: normal
+								speak: none
+								display: inline-block
+								text-decoration: inherit
+								width: 1em
+								margin-right: .2em
+								text-align: center
+								font-variant: normal
+								text-transform: none
+								line-height: 1em
+								margin-left: .2em
+								-webkit-font-smoothing: antialiased
+								-moz-osx-font-smoothing: grayscale
+								content: '\f107'
+						&:hover
+							>div
+								visibility: visible
+								height: 330px
+							>a
+								opacity: 1
+								&:after
+									content: '\f106'
+					li
+						display: inline-block
+						margin-left: 85px
+						&:first-child
+							margin-left: 60px
+						>a
+							font-weight: 900
+							color: $text-w
+							text-decoration: none
+							text-transform: uppercase
+							transition: all 0.3s ease
+							&:hover
+								opacity: 0.4
+
+.service
+	background-color: #ffffff
+	background-image: url('../img/bg-service.png')
+	background-size: cover
+	padding-bottom: 60px
+	position: relative
+	&__next
+		position: absolute
+		right: 0
+		top: 0
+		height: 100%
+		width: 85px
+		opacity: 0.5
+		background-color: #f2f2f2
+		display: flex
+		align-items: center
+		a
+			display: block
+			width: 80px
+			height: 80px
+			text-align: center
+			line-height: 80px
+			background-color: #ffffff
+			font-size: 28px
+			color: #797b83
+			border-radius: 50%
+			margin-left: -40px
+			transition: all 0.3s ease
+			&:hover
+				transform: scale(1.1)
+				box-shadow: 0 0 10px rgba(#000000, 0.1)
+	h2
+		padding: 30px 0
+		font-size: 35px
+		font-weight: 900
+	&__slider
+		margin-left: 50px
+		&__text
+			margin-left: 50px
+			margin-bottom: 80px
+			position: relative
+			a
+				margin-top: 65px
+				display: block
+				background-color: $accent
+				border-radius: 38px
+				width: 196px
+				height: 70px
+				text-align: center
+				font-size: 20px
+				font-weight: 700
+				color: $text-w
+				text-decoration: none
+				line-height: 70px
+				box-shadow: 0 8px 81px rgba(#e30613, 0.22)
+				transition: all 0.3s ease
+				&:hover
+					transform: scale(1.02)
+					box-shadow: 0 8px 91px rgba(#e30613, 0.3)
+			img
+				position: absolute
+				bottom: -70px
+				right: 0
+				z-index: -1
+			p
+				margin-top: 75px
+				font-size: 16px
+				width: 630px
+			h3
+				font-size: 35px
+				font-weight: 300
+				line-height: 52px
+				text-transform: uppercase
+				width: 630px
+				span
+					font-weight: 900
+	&__left
+		position: relative
+		&__order
+			width: 430px
+			box-shadow: 0 0 109px rgba(#000000, 0.05)
+			margin-top: 30px
+			z-index: 999
+			top: 465px
+			&__card
+				width: 100%
+				&__text
+					height: auto
+					overflow: hidden
+					transition: all 0.3s ease
+					padding: 0
+					>form
+						margin-top: -210%
+						transition: all 0.3s ease
+						input[type="submit"]
+							float: right
+							margin-right: 30px
+							margin-bottom: 30px
+							margin-top: 40px
+							background-color: $accent
+							border: none
+							color: $text-w
+							width: 190px
+							font-size: 24px
+							font-weight: 700
+							text-align: center
+							padding: 0
+							transition: all 0.3s ease
+							cursor: pointer
+							&:hover
+								transform: scale(1.02)
+								box-shadow: 0 8px 91px rgba(#e30613, 0.3)
+						.license
+							display: flex
+							span
+								font-size: 16px
+								margin-top: 37px
+								margin-right: 30px
+								line-height: 22px
+								a
+									color: $text
+									text-decoration: underline
+						.checkbox__dot
+							width: 32px
+							height: 32px
+							border: 1px solid #d2d2d2
+							border-radius: 50%
+							margin-left: 30px
+							margin-top: 36px
+							position: relative
+							background-color: #ffffff
+							cursor: pointer
+							&::after
+								content: ''
+								display: block
+								position: absolute
+								background-color: $accent
+								width: 16px
+								height: 16px
+								border-radius: 50%
+								left: 50%
+								top: 50%
+								transform: translate(-50%, -50%)
+								opacity: 0
+								transition: all 0.3s ease
+								cursor: pointer
+							&:hover
+								&::after
+									opacity: 0.3
+						.active
+							&::after
+								opacity: 1
+							&:hover
+								&::after
+									opacity: 0.8
+						.checkbox
+							visibility: hidden
+						label
+							position: relative
+						i
+							position: absolute
+							right: 30px
+							top: 63px
+							font-size: 18px
+							color: $text
+						select
+							appearance: none
+							outline: 0
+							background-color: #eeeeee
+							display: block
+							width: 430px
+							height: 80px
+							margin-top: 36px
+							border: none
+							font-size: 24px
+							padding-left: 30px
+							box-shadow: 0 0 70px rgba(#000000, 0.01)
+							round-color: $accent
+							color: $text
+							option
+								font-size: 20px
+								color: $text
+						.fisrt
+							select,i
+								color: #d2d2d2
+						input[type="text"],input[type="email"]
+							width: 370px
+							margin: 0 30px
+							margin-top: 36px
+							border-color: #d2d2d2
+							font-size: 24px
+							&::placeholder
+								color: #d2d2d2
+						a
+							color: $text-w
+						p
+							font-size: 20px
+							color: #777777
+				&__btn
+					background-color: $accent
+					border-bottom: none
+					border-radius: 3px
+					padding: 15px 30px
+					a
+						display: block
+						text-transform: uppercase
+						color: $text-w
+						text-decoration: none
+						font-weight: 500
+						font-size: 22px
+						i
+							font-size: 18px
+							margin-top: 5px
+							float: right
+			.collaps__card-active
+				.service__left__order__card__btn
+					a
+						color: $text-w
+				.service__left__order__card__text
+					>form
+						margin-top: 0
+						p
+							color: #989898
+
+.trust
+	padding: 0 30px
+	h2
+		padding: 30px 0
+		font-size: 40px
+		font-weight: 900
+	&__img
+		margin: 0 auto
+		margin-top: 20px
+		margin-bottom: 85px
+		width: 1140px
+		img
+			max-width: 100%
+
+.about
+	background-color: $bg
+	padding: 80px 0
+	&__file
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 100%
+		&__align
+			width: 260px
+			height: 285px
+			text-align: center
+			color: $text-w
+			font-size: 16px
+			position: relative
+			z-index: 2
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				background-image: url('../img/file-puls.png')
+				width: 942px
+				height: 942px
+				z-index: -1
+			&__title
+				display: block
+				margin-top: 17px
+				margin-bottom: -85px
+				position: relative
+				z-index: 2
+			&__link
+				display: block
+				margin-left: -40px
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					left: 50%
+					top: -123px
+					transform: translateX(-50%)
+					background-image: url('../img/file-arrow.png')
+					width: 20px
+					height: 0px
+					transition: all 0.3s ease
+				&:hover
+					&::before
+						height: 121px
+			&__desc
+				display: block
+				margin-top: -75px
+	&__text
+		position: relative
+		z-index: 9
+		h1
+				color: $text-w
+				font-size: 50px
+				font-weight: 300
+				line-height: 73px
+				position: relative
+				z-index: -2
+				b
+					color: $text
+		&__block
+			height: 400px
+			overflow-y: scroll
+			transition: all 0.5s ease
+			&::after
+				content: ''
+				display: block
+				width: 100%
+				height: 166px
+				border: 1ps solid #000000
+				position: absolute
+				left: 0
+				bottom: 0px
+				z-index: -1
+				background: -moz-linear-gradient(top, rgba(228,54,48,0.2) 0%, rgba(228,54,48,1) 100%)
+				background: -webkit-linear-gradient(top, rgba(228,54,48,0.2) 0%,rgba(228,54,48,1) 100%)
+				background: linear-gradient(to bottom, rgba(228,54,48,0.2) 0%,rgba(228,54,48,1) 100%)
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33e43630', endColorstr='#e43630',GradientType=0 )
+			&::-webkit-scrollbar-thumb
+				background-color: #ffffff
+				border-radius: 4px
+			&::-webkit-scrollbar-track
+				border-radius: 4px
+			&::-webkit-scrollbar
+				background: rgba(#000, 0.2)
+				width: 6px
+				border-radius: 4px
+				height: 90%
+			p
+				margin-top: 50px
+				color: $text-w
+				font-size: 16px
+				display: block
+				position: relative
+				height: auto
+				z-index: -2
+				padding-bottom: 166px
+		a
+			font-weight: 500
+			font-size: 24px
+			text-transform: lowercase
+			text-decoration: none
+			color: $text-w
+			display: block
+			width: 120px
+			&::after
+				content: ''
+				display: block
+				background-color: $text-w
+				height: 1px
+				width: 100%
+				transition: all 0.3s ease
+			&:hover
+				&::after
+					width: 20%
+		&-active
+			a
+				width: 80px
+			.about__text__block
+				height: auto
+				&::-webkit-scrollbar
+					width: 0
+				&::after
+					display: none
+
+.comments
+	overflow-x: hidden
+	h2
+		padding-top: 70px
+		padding-bottom: 50px
+		font-size: 35px
+		font-weight: 900
+	&__slider
+		&-img
+			width: 100vw
+			.slick-track
+				transition: all 0.3s ease
+			&__block
+				width: 330px
+				height: 650px
+				position: relative
+				background-color: rgba(#000000, 0.8)
+				transition: all 0.3s ease
+				overflow: hidden
+				&-img
+					height: 730px
+					z-index: -1
+					position: relative
+					img
+						position: absolute
+						left: 50%
+						transform: translateX(-50%)
+						min-width: 100%
+						max-height: 650px
+				&__inf
+					visibility: hidden
+					position: absolute
+					bottom: 0px
+					width: 650px
+					height: 510px	
+					transform: scaleY(0)		
+					transform-origin: bottom
+					text-align: center
+					color: $text-w
+					background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%)
+					background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%)
+					background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%)
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 )
+					padding-top: 265px
+					transition: all 0.3s ease
+					transition-delay: 0.3s
+					&-name
+						text-transform: uppercase
+						font-size: 24px
+						line-height: 24px
+					&-firstname
+						line-height: 24px
+						text-transform: uppercase
+						font-size: 24px
+						font-weight: 900
+						margin-bottom: 30px
+						display: block
+					p
+						font-size: 16px
+						font-weight: 700
+						span
+							font-weight: 400
+				&-active
+					width: 650px
+					transition: width 0.3s ease
+					.comments__slider-img__block-img
+						transform: translateX(0)
+						z-index: 0
+					.comments__slider-img__block__inf
+						visibility: visible
+						transform: scaleY(1)		
+		&__text
+			p
+				font-size: 20px
+				padding-right: 10px
+
+.case
+	background-color: $bg-gray
+	background-image: url('../img/bg-case.png')
+	background-size: cover
+	background-repeat: no-repeat
+	padding-top: 100px
+	padding-bottom: 100px
+	&__block
+		width: 1140px
+		margin: 0 auto
+		h2
+			font-size: 35px
+			font-weight: 300
+			text-align: center
+			line-height: 45px
+			text-transform: uppercase
+		p
+			margin: 0 auto
+			display: block
+			margin-top: 70px
+			font-size: 20px
+			font-weight: 500
+			text-align: center
+			width: 360px
+		a
+			margin: 0 auto
+			margin-top: 40px
+			display: block
+			background-color: $accent
+			border-radius: 38px
+			width: 196px
+			height: 70px
+			text-align: center
+			font-size: 18px
+			font-weight: 700
+			color: $text-w
+			text-decoration: none
+			line-height: 70px
+			box-shadow: 0 8px 81px rgba(#e30613, 0.22)
+			transition: all 0.3s ease
+			&:hover
+				transform: scale(1.02)
+				box-shadow: 0 8px 91px rgba(#e30613, 0.3)
+
+.order
+	padding-top: 100px
+	padding-bottom: 100px
+	&__form
+		float: right
+		form
+			display: flex
+			margin-right: -30px
+			input
+				display: block
+				width: 300px
+				margin-bottom: 20px
+				margin-left: 10px
+				border-color: #d2d2d2
+				&::placeholder
+					color: #d2d2d2
+			input[type="submit"]
+				display: block
+				background-color: $accent
+				text-align: center
+				font-size: 16px
+				font-weight: 700
+				color: $text-w
+				padding: 0
+				box-shadow: 0 8px 81px rgba(#e30613, 0.22)
+				transition: all 0.3s ease
+				&:hover
+					transform: scale(1.02)
+					box-shadow: 0 8px 91px rgba(#e30613, 0.3)
+	&__text
+		margin-left: -30px
+		p
+			font-size: 16px
+			display: block
+			margin-top: 20px
+		h2
+			font-size: 35px
+			line-height: 50px
+			font-weight: 300
+			text-transform: uppercase
+			width: 580px
+			b
+				color: $accent
+
+.footer
+	background-color: #000000
+	padding-top: 45px
+	padding-bottom: 45px
+	padding-left: 75px
+	display: flex
+	color: $text-w
+	width: 100vw
+	position: relative
+	&__mobile
+		display: none
+	&__phone
+		position: absolute
+		right: 135px
+		font-size: 20px
+		margin-top: -2px
+	&__copy
+		margin-left: 97px
+		margin-top: 35px
+		width: 380px
+		font-weight: 700
+	&__menu
+			&-nav
+				ul
+					li
+						display: inline-block
+						margin-left: 85px
+						&:first-child
+							margin-left: 60px
+						>a
+							font-weight: 900
+							color: $text-w
+							text-decoration: none
+							text-transform: uppercase
+							transition: all 0.3s ease
+							&:hover
+								opacity: 0.4
+
+.search-fild
+	visibility: hidden
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 0vh
+	z-index: 999999
+	background-color: rgba(#000000, 0.68)
+	transition: all 0.3s ease
+	&-active
+		visibility: visible
+		height: 100vh
+		.search-fild__form
+			transform: translateY(0%)
+	&__form
+		transform: translateY(-100%)
+		transition: all 0.3s ease
+		transition-delay: 0.15s
+		background-color: #ff0000
+		position: relative
+		z-index: 1000
+		&__close
+			position: absolute
+			right: 50px
+			top: 60px
+			div
+				background-color: $text
+				width: 45px
+				height: 1px
+				transform-origin: center center
+			&-div1
+				transform: rotateZ(45deg)
+			&-div2
+				transform: rotateZ(-45deg)
+		form
+			display: flex
+			justify-content: center
+			input[type="text"]
+				width: 1530px
+				height: 125px
+				font-size: 24px
+				border: none
+				&::placeholder
+					color: #b90914
+
+.red
+	color: $accent	
+	font-weight: 900
+
+.bread-crumb
+	padding-top: 50px
+	padding-bottom: 40px
+	display: flex
+	justify-content: flex-start
+	&__mobile
+		display: none
+	>a
+		color: $text
+		font-size: 20px
+		position: relative
+		text-decoration: none
+		display: block
+		margin-right: 50px
+		&::before
+			content: ' '
+			background-color: $text
+			display: block
+			position: absolute
+			left: 0
+			bottom: 0
+			height: 1px
+			width: 100%
+			transition: all 0.3s ease
+		&::after
+			position: absolute
+			right: -50px
+			display: inline-block
+			content: '-'
+			width: 50px
+			text-align: center
+		&:hover
+			&::before
+				width: 20px
+	.active
+		color: $accent
+		font-weight: 700
+		pointer-events: none
+		cursor: default
+		&::before
+			display: none
+		&::after
+			display: none
+
+.blog
+	overflow: hidden
+	&__first
+		position: relative
+		z-index: 1
+	&__smallBlogs
+		height: auto
+		&__content
+			position: relative
+			padding-top: 110px
+			h3
+				font-size: 40px
+				font-weight: 900
+				line-height: 45px
+				text-transform: uppercase
+			p
+				margin-top: 48px
+				font-size: 20px
+				min-height: 160px
+			a
+				margin-top: 60px
+			img
+				max-height: 100%
+				position: absolute
+				right: -15px
+				bottom: 0
+				z-index: -1
+			&-leftBig
+				height: 65%
+				&-bg
+					display: block
+					height: 100%
+					width: 50vw
+					position: absolute
+					right: -15px
+					bottom: 0
+					z-index: -2
+					background-color: #fff
+				h3
+					width: 390px
+				p
+					padding-right: 90px
+				
+			&-leftSmall
+				padding-bottom: 230px
+				height: 35%
+				padding-top: 85px
+				&-bg
+					display: block
+					height: 100%
+					width: 50vw
+					position: absolute
+					right: -15px
+					bottom: 0
+					z-index: -2
+					background-color: #e5e5e5
+			&-rightSmall
+				padding-bottom: 230px
+				height: 35%
+				padding-left: 130px
+				padding-top: 85px
+				img
+					left: 50vw
+					margin-left: -15px
+					transform: translateX(-100%)
+				&-bg
+					height: 100%
+					width: 50vw
+					position: absolute
+					left: -15px
+					bottom: 0
+					z-index: -2
+					background-color: #e5e5e5
+			&-rightBig
+				height: 65%
+				padding-left: 130px
+				img
+					left: 50vw
+					margin-left: -15px
+					transform: translateX(-100%)
+				&-bg
+					height: 100%
+					width: 50vw
+					position: absolute
+					left: -15px
+					bottom: 0
+					z-index: -2
+					background-color: #e43630
+			&-white
+				h3
+					color: $text-w
+				p
+					color: $text-w
+	&__bigBlogs
+		&__content
+			position: relative
+			padding-bottom: 75px
+			padding-top: 110px
+			width: 100%
+			z-index: 0
+			h3
+				font-size: 40px
+				font-weight: 900
+				line-height: 45px
+				text-transform: uppercase
+				width: 750px
+			p
+				margin-top: 48px
+				margin-bottom: 0
+				font-size: 20px
+				padding: 0
+				width: 850px
+			a
+				margin-top: 60px
+			img
+				position: absolute
+				left: 50%
+				bottom: 0
+				z-index: -1
+				transform: translateX(-50%)
+		&:nth-child(2)
+			.blog__bigBlogs__content
+				padding-top: 35px
+				background-color: $accent
+				h3
+					font-size: 60px
+					font-weight: 300
+					line-height: 70px
+
+.more
+	a
+		font-size: 20px
+		font-weight: 900
+		color: $text
+		margin: 0 auto
+		padding-top: 55px
+		padding-bottom: 40px
+		line-height: 25px
+		text-align: center
+		text-decoration: none
+		&::after
+			content: ''
+			display: block
+			height: 2px
+			width: 100%
+			background-color: $text
+			position: relative
+			top: -25px
+			transition: all 0.3s ease
+		&:hover
+			&::after
+				width: 20%
+			span
+				&:nth-child(3)
+					transform: translateY(10px)
+		span
+			display: inline-block
+			border-radius: 50%
+			height: 8px
+			width: 8px
+			border: 3px solid $text
+			font-size: 0
+			padding: 0
+			margin: 0 3px
+			transition: all 0.3s ease
+	
+.bigBlack				
+	font-size: 60px
+	line-height: 65px
+	font-weight: 900
+
+.bigLight			
+	font-size: 60px
+	line-height: 65px
+	font-weight: 300
+
+.dictionary
+	&__block
+		background-color: #dcdcdc
+		&__title
+			position: relative
+			h3
+				font-size: 636px
+				line-height: 636px
+				color: #bbbbbb
+				padding-top: 30px
+				padding-bottom: 20px
+			span
+				position: absolute
+				top: 135px
+				color: $text-w
+				font-size: 40px
+				font-weight: 900
+		&__text
+			margin-top: 120px
+			margin-left: 100px
+			font-weight: 600
+			position: relative
+			z-index: 9
+			&-gradient
+				padding-top: 40px
+				height: 500px
+				overflow-y: scroll
+				&::-webkit-scrollbar-thumb
+					background-color: #ffffff
+					border-radius: 4px
+				&::-webkit-scrollbar-track
+					border-radius: 4px
+				&::-webkit-scrollbar
+					background: rgba(#000, 0.2)
+					width: 6px
+					border-radius: 4px
+					height: 90%
+				&::after
+					content: ''
+					display: block
+					background: -moz-linear-gradient(top, rgba(220,220,220,0) 0%, rgba(220,220,220,1) 100%)
+					background: -webkit-linear-gradient(top, rgba(220,220,220,0) 0%,rgba(220,220,220,1) 100%)
+					background: linear-gradient(to bottom, rgba(220,220,220,0) 0%,rgba(220,220,220,1) 100%)
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00dcdcdc', endColorstr='#dcdcdc',GradientType=0 )
+					height: 290px
+					width: 99%
+					position: absolute
+					bottom: 0
+					left: 0
+					z-index: 0
+			h4
+				font-size: 24px
+				padding-bottom: 30px
+			p
+				font-size: 20px
+				padding-bottom: 50px
+				&:last-child
+					padding-bottom: 290px
+	&__first
+		background-color: #fff
+		user-select: none
+		&__content
+			padding-top: 80px
+			padding-bottom: 90px
+			&__items
+				display: inline-block
+				width: 70px
+				margin-right: 15px
+				padding-bottom: 30px
+				a
+					font-size: 60px
+					font-weight: 900
+					color: #cecece
+					text-decoration: none
+					display: block
+					transition: all 0.3s ease
+					position: relative
+					width: 100%
+					&::after
+						content: ''
+						display: block
+						visibility: hidden
+						height: 6px
+						width: 0px
+						background-color: $accent
+						position: absolute
+						bottom: -10px
+						transition: all 0.3s ease
+					&:hover
+						color: $text
+						transform: translateY(-20px)
+						&::after
+							visibility: visible
+							width: 45px
+				.active
+					color: $text
+					transform: translateY(-20px)
+					pointer-events: none
+					cursor: default
+					&::after
+						visibility: visible
+						width: 45px
+
+.book
+	&__links
+		margin: 0 auto
+		display: flex
+		padding: 63px 0
+		justify-content: center
+		h2
+			font-size: 40px
+			line-height: 75px
+			font-weight: 900
+			margin-right: 85px
+		a
+			margin-right: 60px
+			&:last-child
+				margin-right: 0
+	&__avtor
+		background-color: #eeeeee
+		position: relative
+		&__img
+			position: absolute
+			height: 100%
+			img
+				min-height: 100%
+		&__block
+			padding-top: 110px
+			padding-bottom: 130px
+			h2
+				font-size: 40px
+				line-height: 45px
+				font-weight: 900
+				margin-bottom: 40px
+			span
+				display: block
+				width: 490px
+				color: #4d4d4d
+				font-size: 20px
+				line-height: 25px
+				font-weight: 400
+				margin-bottom: 70px
+			&__text
+				display: grid
+				grid-template-columns: 1fr 1fr
+				grid-row-gap: 60px
+				p
+					font-size: 20px
+					width: 485px
+					&:nth-child(even)
+						transform: translateX(45px)
+
+	&__text
+		padding-top: 70px
+		padding-bottom: 115px
+		p
+			width: 910px
+			color: #4d4d4d
+			font-size: 20px
+			padding-bottom: 30px
+	&__block
+		padding-bottom: 125px
+		position: relative
+		&__img
+			position: absolute
+			right: -240px
+			top: 0
+			margin-top: 6px
+			z-index: 2
+		h2
+			font-size: 40px
+			font-weight: 900
+			line-height: 45px
+			width: 380px
+			color: $accent
+			padding-bottom: 100px
+		&__advantage
+			display: grid
+			grid-template-columns: 1fr 1fr
+			grid-row-gap: 60px
+			&__item
+				display: flex
+				list-style-type: none
+				padding-left: 80px
+				padding-top: 10px
+				width: 450px
+				font-size: 24px
+				line-height: 35px
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					background-image: url('../img/circle.png')
+					display: block
+					width: 49px
+					height: 49px
+					transition: all 0.5s ease
+				&-active
+					&::before
+						background-image: url('../img/circle-checked.png')
+
+@import "media" // Always at the end

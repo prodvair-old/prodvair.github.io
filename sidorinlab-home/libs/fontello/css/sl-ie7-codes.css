@@ -1,0 +1,11 @@
+
+.slab-down-open { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.slab-phone { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.slab-location { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+.slab-search { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+.slab-up-open { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe805;&nbsp;'); }
+.slab-right-arrow { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe807;&nbsp;'); }
+.slab-magnifying-glass { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80a;&nbsp;'); }
+.slab-angle-left { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf104;&nbsp;'); }
+.slab-angle-up { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf106;&nbsp;'); }
+.slab-angle-down { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf107;&nbsp;'); }
