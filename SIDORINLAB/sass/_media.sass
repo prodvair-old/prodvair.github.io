@@ -191,6 +191,12 @@
 +media-breakpoint-down(md)
     html,body
         overflow-x: hidden
+    .isBlog
+        .header
+            background-image: url('../img/bg-blog-m.png')
+            background-position-x: right
+            background-position-y: bottom
+            background-color: #ff332c
     .isDictionary
         .header
             background-image: url('../img/bg-dictionary-m.png')
@@ -1187,6 +1193,10 @@
 
 // ≥576px
 +media-breakpoint-down(xs)
+    .isBlog
+        .header
+            &__content
+                padding-bottom: 10px
     .isDictionary
         .header
             &__content
@@ -1244,8 +1254,12 @@
                 width: 100%
                 margin-top: 0px
                 margin-bottom: 30px
+                .btnWhite
+                    box-shadow: 0 8px 81px rgba(#555555, 0.22)
                 &__down
-                    margin-top: 100px
+                    margin-top: 200px
+                    a
+                        box-shadow: 0 8px 81px rgba(#555555, 0.22)
                 h1
                     font-size: 28px
         &__top
