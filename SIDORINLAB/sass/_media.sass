@@ -5,6 +5,15 @@
 
 // ≥1590px
 +media-breakpoint-down(lg)
+    .isBook
+        .header
+            &__content
+                &__text
+                    width: 630px
+                    h1
+                        font-size: 40px
+                        line-height: 55px
+                        width: 630px
     .isBlog
         .header
             &__content
@@ -185,12 +194,36 @@
                         width: 630px
                     p
                         width: 630px
-
+    .book
+        &__avtor
+            &__img
+                transform: scale(-1, 1)
+                width: 100vw
+        &__text
+            p
+                width: 630px
+        &__block
+            h2
+                padding-bottom: 70px
+            &__img
+                top: 100px
+            &__advantage
+                grid-template-columns: 1fr
+                grid-row-gap: 30px
+                &__item
+                    font-size: 22px
+                    line-height: 33px
 
 // ≥1200px
 +media-breakpoint-down(md)
     html,body
         overflow-x: hidden
+    .isBook
+        .header
+            &__content
+                &__text
+                    h1
+                        width: 100%
     .isBlog
         .header
             background-image: url('../img/bg-blog-m.png')
@@ -965,9 +998,87 @@
             display: none
     .more
         display: none
+    .book
+        &__links
+            margin: 0 auto
+            width: 720px
+            display: block
+            padding: 63px 15px
+            h2
+                font-size: 30px
+                line-height: 35px
+                font-weight: 900
+                width: 190px
+                margin-bottom: 30px
+            a
+                display: inline-block
+                margin-right: 20px
+                &:last-child
+                    margin-right: 0
+        &__avtor
+            background-color: #fff
+            &__img
+                background-color: #eeeeee
+                height: 345px
+                img
+                    height: 345px
+            &__block
+                padding-top: 50px
+                padding-bottom: 0px
+                &__recanz
+                    display: block
+                    font-size: 16px
+                    color: $accent
+                    border: 3px solid $accent
+                    padding: 10px 0
+                    text-transform: uppercase
+                    font-weight: 900
+                    text-align: center
+                    width: 145px
+                    margin-bottom: 30px
+                &__text
+                    display: grid
+                    grid-template-columns: 1fr 
+                    grid-row-gap: 20px
+                    p
+                        font-size: 20px
+                        width: 100%
+                        &:nth-child(even)
+                            transform: translateX(0px)
+        &__text
+            padding-top: 0
+            padding-bottom: 70px
+            p
+                width: 630px
+        &__block
+            h2
+                padding-bottom: 70px
+                color: $text
+            &__img
+                position: relative
+                margin-top: 0
+                right: 0
+                img
+                    position: relative
+                    left: 50%
+                    margin-left: 58px
+                    height: 410px
+                    transform: translateY(30px) translateX(-50%)
+            &__advantage
+                grid-template-columns: 1fr
+                grid-row-gap: 30px
+                justify-items: center
+                &__item
+                    font-size: 22px
+                    line-height: 33px
 
 // ≥768px
 +media-breakpoint-down(sm)
+    .isBook
+        .header
+            &__content
+                &__text
+                    width: 100%
     .isBlog
         .header
             &__content
@@ -1190,9 +1301,40 @@
                         transform: translateY(0px)
                         &::after
                             width: 45px
+    .book
+        &__links
+            width: 540px
+        &__avtor
+            &__img
+                transform: scale(-1, 1)
+                width: 100vw
+        &__text
+            p
+                width: 100%
+        &__block
+            h2
+                padding-bottom: 70px
+            &__img
+            &__advantage
+                grid-template-columns: 1fr
+                grid-row-gap: 30px
+                &__item
+                    font-size: 22px
+                    line-height: 33px
 
 // ≥576px
 +media-breakpoint-down(xs)
+    .isBook
+        .header
+            &__content
+                padding-bottom: 20px
+                &__text
+                    margin-top: 20px
+                    h1
+                        font-size: 25px
+                    &__down
+                        margin-top: 100px
+                        margin-bottom: 0px
     .isBlog
         .header
             &__content
@@ -1517,6 +1659,43 @@
                         margin: 0 auto
                     .next
                         font-size: 18px
+    .book
+        &__links
+            width: 100%
+            a
+                display: block
+                margin: 0 auto
+                &:last-child
+                    margin: 0 auto
+                    margin-top: 20px
+        &__avtor
+            &__img
+                transform: scale(-1, 1)
+                width: 100vw
+                height: 380px
+            &__block
+                span
+                    width: 100%
+                    &__text
+                        p
+                            font-size: 18px
+        &__text
+            p
+                font-size: 18px
+        &__block
+            padding-bottom: 0
+            h2
+                width: 100%
+            &__img
+                top: 30px
+            &__advantage
+                grid-template-columns: 1fr
+                grid-row-gap: 30px
+                &__item
+                    font-size: 20px
+                    line-height: 27px
+                    width: 100%
+                    padding-left: 70px
 
 /*==========  Mobile First  ==========*/
 
