@@ -17,6 +17,7 @@ body, html
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
+	zoom: 0.95
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -362,7 +363,7 @@ input
 		padding-left: 75px
 		display: flex
 		color: $text-w
-		width: 100vw
+		width: 100%
 		position: relative
 		&__mobile
 			display: none
@@ -800,14 +801,15 @@ input
 				b
 					color: $text
 		&__block
-			height: 490px
-			overflow-y: scroll
+			margin-top: 50px
+			height: 166px
+			overflow-y: hidden
 			transition: all 0.5s ease
 			&::after
 				content: ''
 				display: block
 				width: 100%
-				height: 166px
+				height: 176px
 				border: 1ps solid #000000
 				position: absolute
 				left: 0
@@ -828,15 +830,16 @@ input
 				border-radius: 4px
 				height: 90%
 			p
-				margin-top: 50px
+				margin-top: 0px
 				color: $text-w
 				font-size: 20px
 				display: block
 				position: relative
 				height: auto
 				z-index: -2
-				padding-bottom: 166px
+				padding-bottom: 30px
 		a
+			margin-top: 40px
 			font-weight: 500
 			font-size: 24px
 			text-transform: lowercase
@@ -858,9 +861,8 @@ input
 			a
 				width: 80px
 			.about__text__block
-				height: auto
-				&::-webkit-scrollbar
-					width: 0
+				overflow-y: scroll
+				height: 350px
 				&::after
 					display: none
 
@@ -883,6 +885,7 @@ input
 				background-color: rgba(#000000, 0.8)
 				transition: all 0.3s ease
 				overflow: hidden
+				cursor: pointer
 				&-img
 					height: 730px
 					z-index: -1
@@ -929,6 +932,7 @@ input
 				&-active
 					width: 650px
 					transition: width 0.3s ease
+					cursor: default
 					.comments__slider-img__block-img
 						transform: translateX(0)
 						z-index: 0
@@ -1034,7 +1038,7 @@ input
 	padding-left: 75px
 	display: flex
 	color: $text-w
-	width: 100vw
+	width: 100
 	position: relative
 	&__mobile
 		display: none

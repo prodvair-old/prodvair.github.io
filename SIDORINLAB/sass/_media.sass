@@ -5,6 +5,8 @@
 
 // ≥1590px
 +media-breakpoint-down(lg)
+    body, html
+        zoom: 0.9
     .isBook
         .header
             &__content
@@ -218,18 +220,27 @@
 +media-breakpoint-down(md)
     html,body
         overflow-x: hidden
+        zoom: 1
     .isBook
         .header
             &__content
                 &__text
+                    margin-top: 0
                     h1
                         width: 100%
+                        span
+                            font-weight: 900
     .isBlog
         .header
             background-image: url('../img/bg-blog-m.png')
             background-position-x: right
             background-position-y: bottom
             background-color: #ff332c
+            &__content
+                &__text
+                    margin-top: 0px
+                    span
+                        font-weight: 900
     .isDictionary
         .header
             background-image: url('../img/bg-dictionary-m.png')
@@ -238,20 +249,20 @@
             &__content
                 padding-bottom: 60px
                 &__text
-                    margin-top: 50px
+                    margin-top: 0px
                     width: 100%
                     a
                         margin-top: 55px
                     h1
-                        text-transform: none
+                        text-transform: uppercase
                         color: $text-w
                         font-size: 40px
                         line-height: 45px
-                        font-weight: 400
+                        font-weight: 900
                     p
                         margin-top: 20px
                         color: $text-w
-                        font-size: 20px
+                        font-size: 16px
                     form
                         margin-top: 70px
                         padding: 10px 30px
@@ -290,6 +301,7 @@
                                 color: #a52721
     .header
         &__content
+            padding-top: 30px
             &__menu
                 display: none
             &__form
@@ -668,6 +680,7 @@
                 position: absolute
                 bottom: 0
                 right: 0
+                max-width: 80vw
                 opacity: 0.4
             &__copy
                 margin-top: 70px
@@ -801,12 +814,12 @@
                     &::after
                         display: none
                 h4
-                    font-size: 24px
+                    font-size: 22px
                     padding-bottom: 30px
                     padding-right: 50px
                 p
                     padding-right: 50px
-                    font-size: 20px
+                    font-size: 16px
                     padding-bottom: 50px
                     &:last-child
                         padding-bottom: 0px
@@ -1329,9 +1342,9 @@
             &__content
                 padding-bottom: 20px
                 &__text
-                    margin-top: 20px
                     h1
                         font-size: 25px
+                        line-height: 35px
                     &__down
                         margin-top: 100px
                         margin-bottom: 0px
@@ -1564,6 +1577,8 @@
     .footer
         &__mobile
             padding-top: 100px
+            &__logo
+                max-width: 90vw
             &__copy
                 margin-top: 70px
                 font-size: 20px

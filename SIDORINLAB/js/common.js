@@ -48,6 +48,7 @@ $(function() {
 		fade: true,
 		arrows: false,
 		autoplaySpeed: 5000,
+		infinite: true,
 		asNavFor: '.comments__slider-img'
 	});
 
@@ -79,6 +80,7 @@ $(function() {
 		slidesToScroll: 1,
 		arrows: false,
 		centerPadding: '0px',
+		infinite: true,
 		responsive: [
 			{
 			  breakpoint: 1200,
@@ -181,6 +183,12 @@ $(function() {
 		$('.comments__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 			$('.comments__slider-img__block').removeClass('comments__slider-img__block-active');
 			$('.comments__slider-img__block[data-slick-index="' + nextSlide + '"]').addClass('comments__slider-img__block-active');
+		});
+		$('.comments__slider-img__block').on('click', function() {
+			if(!$(this).hasClass('comments__slider-img__block-active')) {
+				var id = $(this).attr('data-slick-index');
+				$('.comments__slider').slick('slickGoTo', id);
+			}
 		});
 	}
 
