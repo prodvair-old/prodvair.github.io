@@ -178,6 +178,10 @@ $(function() {
 		$('.header__top__logo img').attr('src', 'img/logo-m.png');
 		$('.trust__img img').attr('src', 'img/trust-m.png');
 		$('.comments__slider-img__block').removeClass('comments__slider-img__block-active');
+		$('.comments__slider-next').on('click', function(e) {
+			e.preventDefault();
+			$('.comments__slider').slick('slickNext');
+		});
 	}
 	else {
 		$('.comments__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){

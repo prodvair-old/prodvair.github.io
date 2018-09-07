@@ -94,7 +94,24 @@
                     width: 595px
                 h3
                     width: 615px
+    .comments
+        h2
+            padding-top: 70px
+        &__slider
+            &-img
+                &__block
+                    height: 630px
+                    &-img
+                        height: 630px
+                        img
+                            min-width: 100%
+                            max-height: 630px
+                    &__inf
+                        max-width: 100%
+                    &-active
+                        width: 500px
     .case
+        padding: 100px 0
         &__block
             width: 1170px
             margin: 0 auto
@@ -106,6 +123,8 @@
                 display: block
                 input
                     margin-bottom: 30px
+                    &:last-child
+                        margin-bottom: 0
         &__text
             margin-top: 100px
             h2
@@ -301,7 +320,7 @@
                                 color: #a52721
     .header
         &__content
-            padding-top: 30px
+            padding-top: 0px
             &__menu
                 display: none
             &__form
@@ -309,27 +328,39 @@
                 width: 380px
                 height: 490px
                 padding: 30px
-                background-color: rgba(#c91b15, 0.5)
+                background-color: transparent
                 margin-left: 40px
-                box-shadow: 0 75px 122px rgba(#000000, 0.39)
+                box-shadow: none
+                margin: 0 auto
                 h3
                     width: 320px
+                    color: $text
+                    font-weight: 900
+                    line-height: 25px
+                    padding-left: 10px
                 input[type="submit"]
-                    background-color: #951915
-                    width: 186px
+                    background-color: #ffffff
+                    color: $accent
+                    font-weight: 900
+                    text-transform: uppercase
+                    font-size: 18px
+                    width: 220px
                     border: none
                 label
                     float: left
                 .puls
-                    width: 186px
+                    width: 220px
                 input[type="text"]
-                    width: 320px
+                    width: 350px
             &__text
                 width: 610px
                 margin: 0 auto
-                margin-top: 50px
+                margin-top: 20px
                 h1
                     color: $text-w
+                    line-height: 50px
+                    span
+                        font-weight: 900
                 &__down
                     display: block
                     margin-top: 220px
@@ -450,19 +481,17 @@
                         &__text
                             >div
                                 display: flex
-                                img
-                                    filter: url('../img/gray.svg#gray')
-                                    opacity: 0.8
                                 a
                                     display: block
                                     font-size: 20px
-                                    font-weight: 500
+                                    font-weight: 700
                                     float: none
-                                    color: #777777
+                                    color: $text
                                     &:after
                                         display: none
                         &__btn
                             a
+                                text-transform: none
                                 font-weight: 900
                                 i
                                     color: $accent
@@ -473,6 +502,7 @@
                 .collaps__card-active
                     .header__top__mmenu__collaps__card__btn
                         a
+                            color: #000
                             i
                                 color: #777777
                 .header__top__logo
@@ -481,29 +511,10 @@
                     display: block
                     color: $text
                     position: absolute
-                    font-size: 30px
                     top: 35px
                     right: 30px
                     font-size: 20px
-                    &::before
-                        font-family: "sl"
-                        font-style: normal
-                        font-weight: normal
-                        speak: none
-                        display: inline-block
-                        text-decoration: inherit
-                        width: 1em
-                        margin-right: .2em
-                        text-align: center
-                        font-variant: normal
-                        text-transform: none
-                        line-height: 1em
-                        margin-left: .2em
-                        -webkit-font-smoothing: antialiased
-                        -moz-osx-font-smoothing: grayscale
-                        color: $accent
-                        content: '\e801'
-                        margin-right: 5px
+                    font-weight: 700
     .service
         background-position-y: bottom
         background-position-x: right
@@ -521,6 +532,9 @@
                 display: flex
                 list-style-type: none
                 appearance: none
+                padding: 0
+                justify-content: center
+                margin-left: 30px
                 li
                     display: block
                     height: 50px!important
@@ -538,6 +552,9 @@
                         box-shadow: 0 0 80px rgba(#000000, 0.1)
                         transition: all 0.3s ease
                         padding: 0
+                    &:last-child
+                        button
+                            margin-right: 0
                 .slick-active
                     button
                         transform: scale(1.5)
@@ -553,6 +570,7 @@
                     width: 100%
     .comments
         background-color: $text
+        position: relative
         h2
             padding-top: 70px
             padding-bottom: 30px
@@ -562,6 +580,24 @@
         &__slider
             position: relative
             z-index: 2
+            &-next
+                display: block
+                color: #acacac
+                font-size: 28px
+                margin-top: 50px
+                &:hover
+                    color: #acacac
+                    text-decoration: none
+                span
+                    display: inline-block
+                    background-color: $accent
+                    border-radius: 50%
+                    color: $text-w
+                    width: 65px
+                    height: 65px
+                    line-height: 65px
+                    margin-right: 20px
+                    text-align: center
             &-img
                 width: 100vw
                 margin-top: -100px
@@ -636,13 +672,6 @@
                     color: $text-w
                     font-size: 20px
                     padding-right: 10px
-    .about
-        &__text
-            &__block
-                &::after
-                    display: none
-            a
-                display: none
     .case
         display: none
         padding-top: 95px
@@ -673,6 +702,7 @@
         padding-bottom: 40px
         padding-left: 40px
         overflow: hidden
+        background-color: #151515
         &__mobile
             display: block
             padding-top: 135px
@@ -1114,6 +1144,16 @@
                 h1
                     color: $text-w
         &__top
+            &__mmenu-btn
+                a
+                    height: 6px
+                    width: 50px
+                    &::after
+                        height: 6px
+                        width: 30px
+                    &::before
+                        height: 6px
+                        width: 30px
             &__mobile
                 &__place
                     margin-right: 30px
@@ -1177,7 +1217,6 @@
             width: 100%
             &__text
                 img
-                    filter: url('../img/gray.svg#gray')
                     width: 500px
                     opacity: 0.6
     .trust
@@ -1379,6 +1418,8 @@
             &__btn
                 a
                     font-size: 17px
+                    i
+                        margin-top: 0
             &__text
                 >div
                     margin-top: -170%
@@ -1399,15 +1440,13 @@
                 margin: 0 auto
                 h3
                     width: 100%
-                    font-size: 20px
+                    font-size: 18px
                 input[type="submit"]
-                    background-color: #951915
-                    width: 186px
-                    border: none
+                    width: 200px
                 label
                     float: left
                 .puls
-                    width: 186px
+                    width: 200px
                     height: 60px
                 input[type="text"]
                     margin-bottom: 30px
@@ -1536,6 +1575,12 @@
                 line-height: 38px
     .comments
         &__slider
+            &-next
+                font-size: 18px
+                span
+                    width: 50px
+                    height: 50px
+                    line-height: 50px
             &-img
                 &__block
                     width: 100%
