@@ -17,7 +17,6 @@ body, html
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
-	zoom: 0.95
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -363,7 +362,7 @@ input
 		padding-left: 75px
 		display: flex
 		color: $text-w
-		width: 100%
+		width: 100vw
 		position: relative
 		&__mobile
 			display: none
@@ -801,21 +800,19 @@ input
 				b
 					color: $text
 		&__block
-			margin-top: 50px
-			height: 166px
-			overflow-y: hidden
+			height: 490px
+			overflow-y: scroll
 			transition: all 0.5s ease
 			&::after
 				content: ''
 				display: block
 				width: 100%
-				height: 176px
+				height: 166px
 				border: 1ps solid #000000
 				position: absolute
 				left: 0
-				bottom: 70px
+				bottom: 0px
 				z-index: -1
-				transform: all 0.3s ease
 				background: -moz-linear-gradient(top, rgba(228,54,48,0.2) 0%, rgba(228,54,48,1) 100%)
 				background: -webkit-linear-gradient(top, rgba(228,54,48,0.2) 0%,rgba(228,54,48,1) 100%)
 				background: linear-gradient(to bottom, rgba(228,54,48,0.2) 0%,rgba(228,54,48,1) 100%)
@@ -831,16 +828,15 @@ input
 				border-radius: 4px
 				height: 90%
 			p
-				margin-top: 0px
+				margin-top: 50px
 				color: $text-w
 				font-size: 20px
 				display: block
 				position: relative
 				height: auto
 				z-index: -2
-				padding-bottom: 30px
+				padding-bottom: 166px
 		a
-			margin-top: 40px
 			font-weight: 500
 			font-size: 24px
 			text-transform: lowercase
@@ -862,10 +858,11 @@ input
 			a
 				width: 80px
 			.about__text__block
-				overflow-y: scroll
-				height: 350px
+				height: auto
+				&::-webkit-scrollbar
+					width: 0
 				&::after
-					opacity: 0
+					display: none
 
 .comments
 	overflow-x: hidden
@@ -875,8 +872,6 @@ input
 		font-size: 40px
 		font-weight: 900
 	&__slider
-		&-next
-			display: none
 		&-img
 			width: 100vw
 			.slick-track
@@ -888,7 +883,6 @@ input
 				background-color: rgba(#000000, 0.8)
 				transition: all 0.3s ease
 				overflow: hidden
-				cursor: pointer
 				&-img
 					height: 730px
 					z-index: -1
@@ -929,13 +923,12 @@ input
 						display: block
 					p
 						font-size: 20px
-						font-weight: 900
+						font-weight: 700
 						span
 							font-weight: 400
 				&-active
 					width: 650px
 					transition: width 0.3s ease
-					cursor: default
 					.comments__slider-img__block-img
 						transform: translateX(0)
 						z-index: 0
@@ -1041,7 +1034,7 @@ input
 	padding-left: 75px
 	display: flex
 	color: $text-w
-	width: 100
+	width: 100vw
 	position: relative
 	&__mobile
 		display: none
@@ -1168,13 +1161,9 @@ input
 
 .blog
 	overflow: hidden
-	&__popup__mobile
-		display: none
 	&__first
 		position: relative
 		z-index: 1
-	&__mobile
-		display: none
 	&__smallBlogs
 		height: auto
 		&__content
@@ -1336,12 +1325,12 @@ input
 			margin: 0 3px
 			transition: all 0.3s ease
 	
-.bigBlack
+.bigBlack				
 	font-size: 60px
 	line-height: 65px
 	font-weight: 900
 
-.bigLight
+.bigLight			
 	font-size: 60px
 	line-height: 65px
 	font-weight: 300
@@ -1475,8 +1464,6 @@ input
 		&__block
 			padding-top: 110px
 			padding-bottom: 130px
-			&__recanz
-				display: none
 			h2
 				font-size: 40px
 				line-height: 45px
@@ -1509,7 +1496,7 @@ input
 			font-size: 20px
 			padding-bottom: 30px
 	&__block
-		padding-bottom: 75px
+		padding-bottom: 125px
 		position: relative
 		&__img
 			position: absolute
@@ -1523,7 +1510,7 @@ input
 			line-height: 45px
 			width: 380px
 			color: $accent
-			padding-bottom: 70px
+			padding-bottom: 100px
 		&__advantage
 			display: grid
 			grid-template-columns: 1fr 1fr

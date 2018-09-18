@@ -83,12 +83,6 @@
       "src": "fontawesome"
     },
     {
-      "uid": "7bf14281af5633a597f85b061ef1cfb9",
-      "css": "angle-right",
-      "code": 61701,
-      "src": "fontawesome"
-    },
-    {
       "uid": "9bf5f364b2a8e30cf6bef05043c7d3b9",
       "css": "phone-call",
       "code": 59392,
@@ -170,48 +164,6 @@
       },
       "search": [
         "right-arrow-line"
-      ]
-    },
-    {
-      "uid": "5e28be83cea26f1a954b75170cf6c5fa",
-      "css": "circle-checked",
-      "code": 59400,
-      "src": "custom_icons",
-      "selected": false,
-      "svg": {
-        "path": "",
-        "width": 1000
-      },
-      "search": [
-        "circle-checked"
-      ]
-    },
-    {
-      "uid": "e2430dd0f2e830607b3ccd1d3f7d7835",
-      "css": "circle",
-      "code": 59401,
-      "src": "custom_icons",
-      "selected": false,
-      "svg": {
-        "path": "",
-        "width": 1000
-      },
-      "search": [
-        "circle"
-      ]
-    },
-    {
-      "uid": "7a0fbf56d65a2805cd8d2a07b0c8d165",
-      "css": "circle",
-      "code": 59402,
-      "src": "custom_icons",
-      "selected": false,
-      "svg": {
-        "path": "",
-        "width": 1000
-      },
-      "search": [
-        "circle"
       ]
     }
   ]

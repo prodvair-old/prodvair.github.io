@@ -5,35 +5,6 @@
 
 // ≥1590px
 +media-breakpoint-down(lg)
-    body, html
-        zoom: 0.9
-    .isBook
-        .header
-            &__content
-                &__text
-                    width: 630px
-                    h1
-                        font-size: 40px
-                        line-height: 55px
-                        width: 630px
-    .isBlog
-        .header
-            &__content
-                padding-bottom: 100px
-                &__menu
-                    margin-top: 90px
-                &__text
-                    margin-top: 70px
-                    h1
-                        width: 630px
-    .isDictionary
-        .header
-            &__content
-                &__text
-                    form
-                        input
-                            height: 140px
-                            font-size: 70px
     .header
         &__content
             &__menu
@@ -94,24 +65,7 @@
                     width: 595px
                 h3
                     width: 615px
-    .comments
-        h2
-            padding-top: 70px
-        &__slider
-            &-img
-                &__block
-                    height: 630px
-                    &-img
-                        height: 630px
-                        img
-                            min-width: 100%
-                            max-height: 630px
-                    &__inf
-                        max-width: 100%
-                    &-active
-                        width: 500px
     .case
-        padding: 100px 0
         &__block
             width: 1170px
             margin: 0 auto
@@ -123,8 +77,6 @@
                 display: block
                 input
                     margin-bottom: 30px
-                    &:last-child
-                        margin-bottom: 0
         &__text
             margin-top: 100px
             h2
@@ -154,112 +106,11 @@
                 input[type="text"]
                     width: 1000px
                     height: 90px
-    .blog
-        &__first
-            position: relative
-            z-index: 1
-            background-color: #eeeeee
-        &__smallBlogs
-            &__content
-                padding-top: 70px
-                h3
-                    font-size: 40px
-                    font-weight: 900
-                    line-height: 45px
-                p
-                    margin-top: 48px
-                    font-size: 20px
-                    min-height: 160px
-                a
-                    margin-top: 60px
-                img
-                    max-height: 100%
-                    right: -15px
-                    bottom: 0
-                    z-index: -1
-                    width: 100%
-                &-leftBig
-                    height: 65%
-                    &-bg
-                        height: 100%
-                        width: 50vw
-                        right: -15px
-                        bottom: 0
-                        z-index: -2
-                    h3
-                        width: 390px
-                    p
-                        padding-right: 70px
-                    
-                &-leftSmall
-                    padding-bottom: 150px
-                    padding-top: 85px
-                &-rightSmall
-                    padding-bottom: 150px
-                    padding-left: 70px
-                    padding-top: 85px
-                &-rightBig
-                    padding-left: 70px
-        &__bigBlogs
-            &__content
-                h3
-                    font-size: 35px
-                    line-height: 45px
-                p
-                    font-size: 20px
-            &:nth-child(2)
-                .blog__bigBlogs__content
-                    padding-top: 35px
-                    background-color: $accent
-                    h3
-                        width: 630px
-                    p
-                        width: 630px
-    .book
-        &__avtor
-            &__img
-                transform: scale(-1, 1)
-                width: 100vw
-        &__text
-            p
-                width: 630px
-        &__block
-            h2
-                padding-bottom: 70px
-            &__img
-                top: 100px
-            &__advantage
-                grid-template-columns: 1fr
-                grid-row-gap: 30px
-                &__item
-                    font-size: 22px
-                    line-height: 33px
 
 // ≥1200px
 +media-breakpoint-down(md)
     html,body
         overflow-x: hidden
-        zoom: 1
-    .isBook
-        .header
-            &__content
-                &__text
-                    margin-top: 0
-                    h1
-                        width: 100%
-                        span
-                            font-weight: 900
-    .isBlog
-        .header
-            background-image: url('../img/bg-blog-m.png')
-            background-position-x: right
-            background-position-y: bottom
-            background-color: #ff332c
-            &__content
-                &__text
-                    margin-top: 0px
-                    span
-                        font-weight: 900
     .isDictionary
         .header
             background-image: url('../img/bg-dictionary-m.png')
@@ -268,20 +119,20 @@
             &__content
                 padding-bottom: 60px
                 &__text
-                    margin-top: 0px
+                    margin-top: 50px
                     width: 100%
                     a
                         margin-top: 55px
                     h1
-                        text-transform: uppercase
+                        text-transform: none
                         color: $text-w
                         font-size: 40px
                         line-height: 45px
-                        font-weight: 900
+                        font-weight: 400
                     p
                         margin-top: 20px
                         color: $text-w
-                        font-size: 16px
+                        font-size: 20px
                     form
                         margin-top: 70px
                         padding: 10px 30px
@@ -320,7 +171,6 @@
                                 color: #a52721
     .header
         &__content
-            padding-top: 0px
             &__menu
                 display: none
             &__form
@@ -328,39 +178,27 @@
                 width: 380px
                 height: 490px
                 padding: 30px
-                background-color: transparent
+                background-color: rgba(#c91b15, 0.5)
                 margin-left: 40px
-                box-shadow: none
-                margin: 0 auto
+                box-shadow: 0 75px 122px rgba(#000000, 0.39)
                 h3
                     width: 320px
-                    color: $text
-                    font-weight: 900
-                    line-height: 25px
-                    padding-left: 10px
                 input[type="submit"]
-                    background-color: #ffffff
-                    color: $accent
-                    font-weight: 900
-                    text-transform: uppercase
-                    font-size: 18px
-                    width: 220px
+                    background-color: #951915
+                    width: 186px
                     border: none
                 label
                     float: left
                 .puls
-                    width: 220px
+                    width: 186px
                 input[type="text"]
-                    width: 350px
+                    width: 320px
             &__text
                 width: 610px
                 margin: 0 auto
-                margin-top: 20px
+                margin-top: 50px
                 h1
                     color: $text-w
-                    line-height: 50px
-                    span
-                        font-weight: 900
                 &__down
                     display: block
                     margin-top: 220px
@@ -481,17 +319,19 @@
                         &__text
                             >div
                                 display: flex
+                                img
+                                    filter: url('../img/gray.svg#gray')
+                                    opacity: 0.8
                                 a
                                     display: block
                                     font-size: 20px
-                                    font-weight: 700
+                                    font-weight: 500
                                     float: none
-                                    color: $text
+                                    color: #777777
                                     &:after
                                         display: none
                         &__btn
                             a
-                                text-transform: none
                                 font-weight: 900
                                 i
                                     color: $accent
@@ -502,7 +342,6 @@
                 .collaps__card-active
                     .header__top__mmenu__collaps__card__btn
                         a
-                            color: #000
                             i
                                 color: #777777
                 .header__top__logo
@@ -511,10 +350,29 @@
                     display: block
                     color: $text
                     position: absolute
+                    font-size: 30px
                     top: 35px
                     right: 30px
                     font-size: 20px
-                    font-weight: 700
+                    &::before
+                        font-family: "sl"
+                        font-style: normal
+                        font-weight: normal
+                        speak: none
+                        display: inline-block
+                        text-decoration: inherit
+                        width: 1em
+                        margin-right: .2em
+                        text-align: center
+                        font-variant: normal
+                        text-transform: none
+                        line-height: 1em
+                        margin-left: .2em
+                        -webkit-font-smoothing: antialiased
+                        -moz-osx-font-smoothing: grayscale
+                        color: $accent
+                        content: '\e801'
+                        margin-right: 5px
     .service
         background-position-y: bottom
         background-position-x: right
@@ -532,9 +390,6 @@
                 display: flex
                 list-style-type: none
                 appearance: none
-                padding: 0
-                justify-content: center
-                margin-left: 30px
                 li
                     display: block
                     height: 50px!important
@@ -552,9 +407,6 @@
                         box-shadow: 0 0 80px rgba(#000000, 0.1)
                         transition: all 0.3s ease
                         padding: 0
-                    &:last-child
-                        button
-                            margin-right: 0
                 .slick-active
                     button
                         transform: scale(1.5)
@@ -570,7 +422,6 @@
                     width: 100%
     .comments
         background-color: $text
-        position: relative
         h2
             padding-top: 70px
             padding-bottom: 30px
@@ -580,24 +431,6 @@
         &__slider
             position: relative
             z-index: 2
-            &-next
-                display: block
-                color: #acacac
-                font-size: 28px
-                margin-top: 50px
-                &:hover
-                    color: #acacac
-                    text-decoration: none
-                span
-                    display: inline-block
-                    background-color: $accent
-                    border-radius: 50%
-                    color: $text-w
-                    width: 65px
-                    height: 65px
-                    line-height: 65px
-                    margin-right: 20px
-                    text-align: center
             &-img
                 width: 100vw
                 margin-top: -100px
@@ -672,8 +505,14 @@
                     color: $text-w
                     font-size: 20px
                     padding-right: 10px
+    .about
+        &__text
+            &__block
+                &::after
+                    display: none
+            a
+                display: none
     .case
-        display: none
         padding-top: 95px
         padding-bottom: 40px
         &__block
@@ -702,7 +541,6 @@
         padding-bottom: 40px
         padding-left: 40px
         overflow: hidden
-        background-color: #151515
         &__mobile
             display: block
             padding-top: 135px
@@ -710,7 +548,6 @@
                 position: absolute
                 bottom: 0
                 right: 0
-                max-width: 80vw
                 opacity: 0.4
             &__copy
                 margin-top: 70px
@@ -826,7 +663,7 @@
     .dictionary
         &__block
             background-color: #ffffff
-            margin-top: 0px
+            margin-top: 70px
             margin-bottom: 50px
             &__title
                 display: none
@@ -844,31 +681,30 @@
                     &::after
                         display: none
                 h4
-                    font-size: 22px
+                    font-size: 24px
                     padding-bottom: 30px
                     padding-right: 50px
                 p
                     padding-right: 50px
-                    font-size: 16px
+                    font-size: 20px
                     padding-bottom: 50px
                     &:last-child
                         padding-bottom: 0px
         &__first
             background-color: #f8f8f8
-            position: relative
+            position: absolute
             width: 100vw
-            top: 0
             left: 0
             z-index: 3
+            overflow-x: scroll
+            &::-webkit-scrollbar
+                display: none
+                height: 0
             &__content
                 padding-top: 0px
                 padding-bottom: 0px
                 margin: 0 20px
                 display: flex
-                overflow-x: scroll
-                &::-webkit-scrollbar
-                    display: none
-                    height: 0
                 &__items
                     margin-right: 20px
                     margin-left: 20px
@@ -884,250 +720,9 @@
                         transform: translateY(0px)
                         &::after
                             width: 45px
-    .blog
-        &__first
-            position: relative
-            z-index: 1
-            background-color: #eeeeee
-            &-red
-                background-color: #FC1A20
-                .bread__link
-                    a
-                        color: $text-w
-        &__popup__mobile
-            display: block
-            visibility: hidden
-            position: fixed
-            left: 0
-            top: 0
-            z-index: 999999
-            width: 100vw
-            height: 0vh
-            background-color: #ffffff
-            padding-bottom: 50px
-            transition: all 0.3s ease
-            &-active
-                visibility: visible
-                height: 100vh
-            .container
-                height: 80%
-            &__text
-                height: 100%
-                overflow-y: scroll
-                padding-left: 60px
-                padding-right: 5px
-                &::-webkit-scrollbar-thumb
-                    background-color: #bfbfbf
-                    border-radius: 4px
-                &::-webkit-scrollbar-track
-                    border-radius: 4px
-                &::-webkit-scrollbar
-                    background: #e5e5e5
-                    width: 6px
-                    border-radius: 4px
-                    height: 90%
-                h3
-                    font-size: 24px
-                    font-weight: 900
-                    color: $accent
-                    margin-bottom: 50px
-                    margin-top: 80px
-                    letter-spacing: 100
-                    text-transform: uppercase
-                    span
-                        color: $text
-                    &:nth-child(1)
-                        margin-top: 0
-                p
-                    font-size: 22px
-                ul
-                    list-style-type: none
-                    li
-                        font-size: 22px
-                        position: relative
-                        margin-bottom: 5px
-                        &::after
-                            content: ''
-                            display: block
-                            height: 12px
-                            width: 12px
-                            background-color: $accent
-                            border-radius: 50%
-                            position: absolute
-                            top: 13px
-                            left: -40px
-        &__mobile
-            display: block
-            position: relative
-            background-color: #efefef
-            &__bg
-                width: 100vw
-                position: absolute
-                right: 0
-                bottom: 0
-                z-index: 0
-                &__items
-                    img
-                        height: 100%
-            &__slider
-                position: relative
-                z-index: 1
-                .slick-dots
-                    position: relative
-                    display: flex
-                    list-style-type: none
-                    justify-content: center
-                    padding: 0
-                    margin: 0
-                    padding-bottom: 50px
-                    .slick-active
-                        button
-                            background-color: $accent
-                            border-color: $accent
-                    li
-                        button
-                            padding: 0
-                            height: 24px
-                            width: 24px
-                            border-radius: 50%
-                            border: 5px solid #d2d2d2
-                            background-color: transparent
-                            margin: 0 30px
-                    &-red
-                        .slick-active
-                            button
-                                background-color: #ffffff
-                                border-color: #ffffff
-                        li
-                            button
-                                border: 5px solid #823632
-                .red
-                    h3
-                        color: $text-w
-                    p
-                        color: $text-w
-                    .next
-                        color: $text-w
-                &__content
-                    padding-bottom: 130px
-                    h3
-                        font-size: 45px
-                        font-weight: 900
-                        color: $accent
-                        line-height: 60px
-                        width: 100%
-                        text-transform: uppercase
-                    p
-                        font-size: 24px
-                        margin-top: 48px
-                        margin-bottom: 100px
-                        padding: 0
-                        min-height: 220px
-                        line-height: 29px
-                        color: #4d4d4d
-                    a
-                        margin: 0 auto
-                    .next
-                        margin-top: 35px
-                        font-size: 24px
-                        text-align: center
-                        color: #4d4d4d
-                        display: block
-                        width: 100%
-                        text-decoration: none
-        &__smallBlogs
-            display: none
-        &__bigBlogs
-            display: none
-    .more
-        display: none
-    .book
-        &__links
-            margin: 0 auto
-            width: 720px
-            display: block
-            padding: 63px 15px
-            h2
-                font-size: 30px
-                line-height: 35px
-                font-weight: 900
-                width: 190px
-                margin-bottom: 30px
-            a
-                display: inline-block
-                margin-right: 20px
-                &:last-child
-                    margin-right: 0
-        &__avtor
-            background-color: #fff
-            &__img
-                background-color: #eeeeee
-                height: 345px
-                img
-                    height: 345px
-            &__block
-                padding-top: 50px
-                padding-bottom: 0px
-                &__recanz
-                    display: block
-                    font-size: 16px
-                    color: $accent
-                    border: 3px solid $accent
-                    padding: 10px 0
-                    text-transform: uppercase
-                    font-weight: 900
-                    text-align: center
-                    width: 145px
-                    margin-bottom: 30px
-                &__text
-                    display: grid
-                    grid-template-columns: 1fr 
-                    grid-row-gap: 20px
-                    p
-                        font-size: 20px
-                        width: 100%
-                        &:nth-child(even)
-                            transform: translateX(0px)
-        &__text
-            padding-top: 0
-            padding-bottom: 70px
-            p
-                width: 630px
-        &__block
-            h2
-                padding-bottom: 70px
-                color: $text
-            &__img
-                position: relative
-                margin-top: 0
-                right: 0
-                img
-                    position: relative
-                    left: 50%
-                    margin-left: 58px
-                    height: 410px
-                    transform: translateY(30px) translateX(-50%)
-            &__advantage
-                grid-template-columns: 1fr
-                grid-row-gap: 30px
-                justify-items: center
-                &__item
-                    font-size: 22px
-                    line-height: 33px
 
 // ≥768px
 +media-breakpoint-down(sm)
-    .isBook
-        .header
-            &__content
-                &__text
-                    width: 100%
-    .isBlog
-        .header
-            &__content
-                &__text
-                    h1
-                        width: 100%
     .collaps
         width: 540px
         left: 0
@@ -1144,16 +739,6 @@
                 h1
                     color: $text-w
         &__top
-            &__mmenu-btn
-                a
-                    height: 6px
-                    width: 50px
-                    &::after
-                        height: 6px
-                        width: 30px
-                    &::before
-                        height: 6px
-                        width: 30px
             &__mobile
                 &__place
                     margin-right: 30px
@@ -1217,6 +802,7 @@
             width: 100%
             &__text
                 img
+                    filter: url('../img/gray.svg#gray')
                     width: 500px
                     opacity: 0.6
     .trust
@@ -1295,109 +881,10 @@
             margin-left: 0
             h2
                 width: auto
-    .dictionary
-        &__block
-            &__title
-                display: none
-            &__text
-                margin-top: 70px
-                margin-left: 0px
-                &-gradient
-                    padding-top: 0px
-                    height: auto
-                    max-height: 800px
-                    &::-webkit-scrollbar-thumb
-                        background-color: #bfbfbf
-                    &::-webkit-scrollbar
-                        background: rgba(#000, 0.1)
-                    &::after
-                        display: none
-                h4
-                    font-size: 24px
-                    padding-bottom: 30px
-                    padding-right: 50px
-                p
-                    padding-right: 50px
-                    font-size: 20px
-                    padding-bottom: 50px
-                    &:last-child
-                        padding-bottom: 0px
-        &__first
-            background-color: #f8f8f8
-            position: relative
-            width: 100vw
-            top: 0
-            left: 0
-            z-index: 3
-            overflow-x: scroll
-            &::-webkit-scrollbar
-                display: none
-                height: 0
-            &__content
-                padding-top: 0px
-                padding-bottom: 0px
-                margin: 0 20px
-                display: flex
-                &__items
-                    margin-right: 20px
-                    margin-left: 20px
-                    padding-bottom: 0px
-                    a
-                        &::after
-                            bottom: 0px
-                        &:hover
-                            transform: translateY(0px)
-                            &::after
-                                width: 45px
-                    .active
-                        transform: translateY(0px)
-                        &::after
-                            width: 45px
-    .book
-        &__links
-            width: 540px
-        &__avtor
-            &__img
-                transform: scale(-1, 1)
-                width: 100vw
-        &__text
-            p
-                width: 100%
-        &__block
-            h2
-                padding-bottom: 70px
-            &__img
-            &__advantage
-                grid-template-columns: 1fr
-                grid-row-gap: 30px
-                &__item
-                    font-size: 22px
-                    line-height: 33px
+
 
 // ≥576px
 +media-breakpoint-down(xs)
-    .isBook
-        .header
-            &__content
-                padding-bottom: 20px
-                &__text
-                    h1
-                        font-size: 25px
-                        line-height: 35px
-                    &__down
-                        margin-top: 100px
-                        margin-bottom: 0px
-    .isBlog
-        .header
-            &__content
-                padding-bottom: 10px
-                &__text
-                    .btnWhite
-                        box-shadow: 0 8px 81px rgba(#555555, 0.22)
-                    &__down
-                        margin-top: 200px
-                        a
-                            box-shadow: 0 8px 81px rgba(#555555, 0.22)
     .isDictionary
         .header
             &__content
@@ -1418,8 +905,6 @@
             &__btn
                 a
                     font-size: 17px
-                    i
-                        margin-top: 0
             &__text
                 >div
                     margin-top: -170%
@@ -1440,13 +925,15 @@
                 margin: 0 auto
                 h3
                     width: 100%
-                    font-size: 18px
+                    font-size: 20px
                 input[type="submit"]
-                    width: 200px
+                    background-color: #951915
+                    width: 186px
+                    border: none
                 label
                     float: left
                 .puls
-                    width: 200px
+                    width: 186px
                     height: 60px
                 input[type="text"]
                     margin-bottom: 30px
@@ -1455,6 +942,8 @@
                 width: 100%
                 margin-top: 0px
                 margin-bottom: 30px
+                &__down
+                    margin-top: 100px
                 h1
                     font-size: 28px
         &__top
@@ -1575,12 +1064,6 @@
                 line-height: 38px
     .comments
         &__slider
-            &-next
-                font-size: 18px
-                span
-                    width: 50px
-                    height: 50px
-                    line-height: 50px
             &-img
                 &__block
                     width: 100%
@@ -1622,8 +1105,6 @@
     .footer
         &__mobile
             padding-top: 100px
-            &__logo
-                max-width: 90vw
             &__copy
                 margin-top: 70px
                 font-size: 20px
@@ -1668,94 +1149,6 @@
                     padding-right: 5px
                 p
                     padding-right: 5px
-    .blog
-        &__popup__mobile
-            &__text
-                padding-left: 20px
-                h3
-                    font-size: 20px
-                    margin-bottom: 50px
-                    margin-top: 80px
-                p
-                    font-size: 16px
-                ul
-                    li
-                        font-size: 16px
-                        &::after
-                            height: 10px
-                            width: 10px
-                            top: 9px
-        &__mobile
-            &__bg
-                width: 100vw
-                position: absolute
-                right: 0
-                bottom: 0
-                z-index: 0
-                &__items
-                    img
-                        margin-left: 50%
-                        transform: translateX(-50%)
-                        height: 100%
-            &__slider
-                .slick-dots
-                    width: 90vw
-                    overflow-x: scroll
-                    li
-                        button
-                            margin: 0 15px
-                &__content
-                    padding-bottom: 130px
-                    h3
-                        font-size: 30px
-                        line-height: 35px
-                    p
-                        font-size: 18px
-                        margin-top: 40px
-                        margin-bottom: 70px
-                        min-height: 180px
-                        line-height: 22px
-                    a
-                        margin: 0 auto
-                    .next
-                        font-size: 18px
-    .book
-        &__links
-            width: 100%
-            a
-                display: block
-                margin: 0 auto
-                &:last-child
-                    margin: 0 auto
-                    margin-top: 20px
-        &__avtor
-            &__img
-                transform: scale(-1, 1)
-                width: 100vw
-                height: 380px
-            &__block
-                span
-                    width: 100%
-                    &__text
-                        p
-                            font-size: 18px
-        &__text
-            p
-                font-size: 18px
-        &__block
-            padding-bottom: 0
-            h2
-                width: 100%
-            &__img
-                top: 30px
-            &__advantage
-                grid-template-columns: 1fr
-                grid-row-gap: 30px
-                &__item
-                    font-size: 20px
-                    line-height: 27px
-                    width: 100%
-                    padding-left: 70px
 
 /*==========  Mobile First  ==========*/
 
