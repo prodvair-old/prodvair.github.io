@@ -1,0 +1,446 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.red
+	color: $accent
+
+.btn
+	background-color: $accent
+	display: block
+	color: #ffffff
+	border-radius: 18px
+	height: 35px
+	width: 110px
+	line-height: 35px
+	text-align: center
+	font-size: 14px
+
+.block
+	background-color: $bg
+	border-radius: 5px
+	border: 1px solid #eeeeee
+	box-shadow: 2px 2px 2px 0 #cccccc
+	padding: 0 15px
+
+.header
+	&__banner
+		border: 3px solid $main
+		border-radius: 3px
+	&__mmenu
+		display: none
+	&__menu
+		width: 980px
+		background-image: url('../img/fon-menu.png')
+		background-repeat: no-repeat
+		margin-left: -21px
+		margin-top: -20px
+		nav
+			padding: 25px 0
+			ul
+				display: flex
+				list-style-type: none
+				justify-content: space-around
+				align-items: center
+				li
+					padding: 4px 9px
+					border-radius: 10px
+					border: 1px dotted rgba(#000000, 0)
+					&:hover
+						border-radius: 10px
+						border-color: #cccccc
+					a
+						text-decoration: none
+						color: #ffffff
+						font-size: 14px
+						font-weight: 700
+	&__top-line
+		&__phone
+			padding-top: 10px
+			font-size: 16px
+			color: $accent
+			span
+				font-size: 24px
+				line-height: 27px
+				color: $text
+				display: block
+		&__form
+			padding-left: 25px
+			a
+				text-align: center
+				line-height: 30px
+				text-decoration: none
+				font-weight: 700
+				font-size: 13px
+				color: #ffffff
+				background-color: lighten($main, 5%) 
+				display: block
+				width: 140px
+				height: 30px
+				border-radius: 0 0 10px 10px
+				box-shadow: 1px	1px	5px #000000
+				&:hover
+					text-decoration: none
+		&__logo
+			padding-top: 10px
+			text-align: center
+			&-text
+				padding-top: 10px
+				h1
+					color: lighten($main, 10%) 
+					font-size: 32px
+					line-height: 36px
+					margin-bottom: 0
+					span
+						color: $accent
+				p
+					font-size: 12px
+					width: 238px	
+			img
+				width: 75px
+		
+.sell
+	padding-top: 50px
+	.row
+		padding: 0 15px
+	&__left
+		background-color: $main
+		color: #ffffff
+		height: 75px
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 17px
+		text-transform: uppercase
+		font-weight: 700
+	&__right
+		background-color: $bg
+		color: $accent
+		height: 75px
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 16px
+		font-weight: 700
+		padding-top: 5px
+		span
+			margin-top: -10px
+			padding-right: 5px
+			font-size: 30px
+
+.hotel
+	padding-top: 25px
+	&__block
+		&__text
+			padding: 0 15px
+			margin: 50px 0
+		a
+			text-decoration: none
+			h2
+				padding: 5px 0
+				color: $accent
+				font-size: 24px
+				text-align: center
+		&__items
+			text-align: center
+			>a
+				margin: 0 auto
+			img
+				width: 100%
+				padding-bottom: 20px
+			p
+				font-size: 15px
+				line-height: 19px
+				padding-top: 10px
+				display: block
+				height: 80px
+			h3
+				font-size: 15px
+				line-height: 19px
+				height: 50px
+				color: lighten($main, 15%)
+				&:hover
+					text-decoration: underline
+
+.summ
+	padding-top: 25px
+	&__block
+		a
+			text-decoration: none
+			h2
+				padding: 5px 0
+				color: $accent
+				font-size: 24px
+				text-align: center
+		font-size: 16px
+		font-weight: 700
+		padding-bottom: 15px
+		&__submit
+			display: flex
+			justify-content: center
+			margin-bottom: 10px
+			input
+				background: linear-gradient(to bottom, #5ec252 0px, #48b03f 100%) 
+				border-color: #999
+				box-shadow: 2px 2px 2px 2px #ccc
+				text-shadow: 0 1px 0 #fff
+				text-transform: uppercase
+				color: #ffffff
+				font-size: 14px
+				border-radius: 4px
+				width: 195px
+				height: 35px
+		&__phone
+			margin-bottom: 10px
+			.red
+				font-size: 20px
+			input
+				height: 34px
+				border: 1px solid #cccccc
+				border-radius: 4px
+				font-size: 14px
+				color: #555555
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+		&__independence
+			margin-bottom: 10px
+			float: right
+			select
+				height: 34px
+				border: 1px solid #cccccc
+				border-radius: 4px
+				font-size: 14px
+				color: #555555
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+		&__pol
+			margin-bottom: 10px
+			label
+				cursor: pointer				
+		&__age
+			float: right
+			margin-bottom: 10px
+			input
+				width: 70px
+				height: 34px
+				border: 1px solid #cccccc
+				border-radius: 4px
+				font-size: 14px
+				color: #555555
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+
+.concern
+	padding-top: 25px
+	&__block
+		a
+			text-decoration: none
+			h2
+				padding: 5px 0
+				color: $accent
+				font-size: 24px
+				text-align: center
+		&__items
+			height: 50px
+			img
+				display: inline-block
+				vertical-align: top
+				margin-right: 10px
+			span
+				font-weight: 700
+				width: 270px
+				display: inline-block
+				line-height: 20px
+			&:nth-child(odd)
+				text-align: right
+				span
+					text-align: left
+
+.advantages
+	padding-top: 25px
+	&__block
+		padding-bottom: 20px
+		a
+			text-decoration: none
+			h2
+				padding: 5px 0
+				color: $accent
+				font-size: 24px
+				text-align: center
+		.col-lg-4
+			border-right: 1px solid #000000
+		&__items
+			padding: 20px 0
+			
+			img
+				float: left
+				width: 120px
+			span
+				display: flex
+				font-size: 13px
+				font-weight: 700
+				line-height: 16px
+				padding-left: 10px
+
+.map
+	padding-top: 25px
+	&__block
+		padding-bottom: 20px
+		img
+			width: 100%
+		a
+			text-decoration: none
+			h2
+				padding: 5px 0
+				color: $accent
+				font-size: 24px
+				text-align: center
+
+.licenz
+	padding-top: 25px
+	&__block
+		padding-top: 10px
+		&__item
+			h3
+				text-align: center
+				color: lighten($main, 15%)
+			img
+				display: block
+				margin: 0 auto
+				padding: 10px
+			p
+				font-size: 15px
+				line-height: 22px
+		&__form
+			h3
+				text-align: center
+				color: $accent
+				margin-bottom: 40px
+			label
+				width: 280px
+				display: flex
+				margin: 0 auto
+				justify-content: space-between
+				padding-bottom: 15px
+				span
+					font-weight: 700
+					.red
+						font-size: 20px
+				input
+					height: 35px
+					width: 190px
+					border: 1px solid #cccccc
+					border-radius: 4px
+					font-size: 14px
+					color: #555555
+					box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+			input[type="submit"]
+				background: linear-gradient(to bottom, #5ec252 0px, #48b03f 100%) 
+				border-color: #999
+				box-shadow: 2px 2px 2px 2px #ccc
+				text-shadow: 0 1px 0 #fff
+				text-transform: uppercase
+				color: #ffffff
+				font-size: 14px
+				border-radius: 4px
+				width: 195px
+				height: 35px
+				margin: 0 auto
+				display: block
+					
+.footer
+	background-color: #cdeacb
+	border-bottom: 10px solid $accent
+	margin-top: 25px
+	padding-bottom: 20px
+	&__copy
+		font-size: 14px
+		padding-top: 10px
+	&__form
+		a
+			margin: 0 auto
+			width: 170px
+			height: 30px
+			line-height: 30px
+			font-size: 15px
+			border-radius: 10px
+			font-weight: normal
+			text-transform: uppercase
+
+	&__address
+		color: #000000
+		font-weight: 700
+	&__phone
+		display: flex
+		justify-content: space-between
+		padding-right: 50px
+		a
+			color: #000000
+			cursor: pointer
+			font-weight: 700
+			text-decoration: none
+	&__email
+		padding-top: 10px
+		a
+			color: #000000
+			cursor: pointer
+			text-decoration: none
+			font-weight: 700
+	&__menu
+		display: flex
+		justify-content: center
+		width: 100%
+		nav
+			margin-top: 20px
+			ul
+				padding: 0
+				li
+					display: inline-block
+					&:after
+						padding: 0 5px
+						content: "|"
+					a
+						color: #000000
+						text-decoration: none
+						transition: all 0.3s ease
+						font-size: 14px
+						font-weight: 700
+						cursor: pointer
+						&:hover
+							color: $accent
+					
+
+@import "media" // Always at the end

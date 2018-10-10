@@ -1,0 +1,214 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+    .header
+        &__top-line
+            display: none
+        &__menu
+            display: none
+        &__banner
+            img
+                width: 100%
+        &__mmenu
+            display: block
+            background-color: lighten($main, 5%)
+            height: 100px
+            margin-bottom: 20px
+            transition: all 0.3s ease
+            >div>div
+                display: flex
+                align-items: center
+                justify-content: space-between
+                height: 100px
+            &__logo
+                font-size: 24px
+                text-transform: uppercase
+                color: #ffffff
+                font-weight: 700
+            &__phone
+                font-size: 24px
+                color: #ffffff
+                margin-right: 35%
+            &__burger
+                position: relative
+                float: right
+                height: 3px
+                width: 30px
+                display: block
+                background-color: #fff
+                transition: all 0.3s ease
+                &:after
+                    content: ''
+                    position: absolute
+                    top: -10px
+                    height: 3px
+                    width: 30px
+                    display: block
+                    background-color: #fff
+                    transition: all 0.3s ease
+                &:before
+                    content: ''
+                    position: absolute
+                    top: 10px
+                    height: 3px
+                    width: 30px
+                    display: block
+                    background-color: #fff
+                    transition: all 0.3s ease
+                &__active
+                    background-color: transparent
+                    &:after
+                        content: ''
+                        width: 30px
+                        margin-left: 5px
+                        transform: rotate(45deg)
+                        transform-origin: left top
+                    &:before
+                        content: ''
+                        width: 30px
+                        margin-left: 5px
+                        transform: rotate(-45deg)
+                        transform-origin: left bottom
+            ul
+                visibility: hidden
+                list-style-type: none
+                padding: 0
+                padding-bottom: 30px
+                li
+                    padding: 5px 0
+                    a
+                        color: #ffffff
+                        font-size: 20px
+                        font-weight: 700
+
+        .active
+            height: 100%
+            ul
+                visibility: visible
+    .hotel
+        &__block
+            &__items
+                margin-top: 20px
+    .summ
+        &__block
+            &__independence 
+                select
+                    width: 120px
+    .concern
+        &__block
+            &__items 
+                span
+                    width: 240px
+    .footer
+        padding-top: 20px
+        &__copy
+            text-align: center
+        &__menu
+            display: none
+                
+// ≥768px
++media-breakpoint-down(sm)
+    .header
+        &__mmenu
+            &__logo
+                font-size: 24px
+                text-transform: uppercase
+                color: #ffffff
+                font-weight: 700
+            &__phone
+                font-size: 24px
+                color: #ffffff
+                margin-right: 15%
+            &__burger
+                position: relative
+                float: right
+                height: 3px
+                width: 30px
+                display: block
+                background-color: #fff
+                transition: all 0.3s ease
+    .summ
+        &__block
+            &__independence
+                float: none
+                display: flex
+                justify-content: center
+            &__phone
+                display: flex
+                justify-content: center
+    .concern
+        &__block
+            &__items 
+                span
+                    width: auto
+                &:nth-child(odd)
+                    text-align: left
+                    span
+                        text-align: left
+    .licenz
+        &__block
+            &__form
+                input[type="submit"]
+                    margin-bottom: 20px
+    .footer
+        &__soc
+            text-align: center
+        &__email
+            text-align: center
+            padding-bottom: 10px
+        &__phone
+            padding-right: 0
+        &__address
+            text-align: center
+            padding-bottom: 10px
+
+// ≥576px
++media-breakpoint-down(xs)
+    .header
+        &__mmenu
+            &__phone
+                display: none
+    .sell
+        &__right
+            span
+                font-size: 22px
+    .summ
+        &__block
+            &__age
+                float: none
+                display: flex
+                justify-content: center
+    .concern
+        &__block
+            &__items
+                margin-bottom: 20px
+                span
+                    display: inline
+    .licenz
+        &__block
+            &__form
+                label
+                    width: 250px
+                    input
+                        width: 150px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
