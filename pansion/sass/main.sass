@@ -65,6 +65,12 @@ h2
 	// box-shadow: 2px 2px 2px 0 #cccccc
 	padding: 0 15px
 
+.orange
+	color: $accent
+
+.green
+	color: lighten($main, 20%)!important
+
 .header
 	&__banner
 		border: 3px solid $main
@@ -454,8 +460,56 @@ h2
 		display: block
 		margin: 0 auto
 
+.big
+	font-size: 18px
+	text-transform: uppercase
+
+p
+	font-size: 14pt
+	font-weight: 500
+	line-height: 20px
+
+
 .company
-	.green
-		color: lighten($main, 20%)
+	margin-top: 20px
+	&__content
+		img
+			width: 100%
+		.default
+			width: auto
+			max-height: 265px
+
+.amenities
+	margin-top: 20px
+	&__content
+		.default
+			width: auto
+			max-height: 200px		
+
+.center
+	text-align: center
+
+.program
+	margin-top: 20px
+	&__content
+		img
+			margin: 10px
+			width: 45%
+		
+		h3
+			text-align: center
+			margin-top: 20px
+		.block
+			display: block
+			background-color: darken(#F5F4F0, 3%)
+			width: 100%
+			padding: 25px
+			p
+				text-align: left
+		a
+			color: $accent
+		.right
+			text-align: right!important
+			font-size: 16px 
 
 @import "media" // Always at the end
