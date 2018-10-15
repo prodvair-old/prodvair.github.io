@@ -459,6 +459,7 @@ h2
 		width: 620px
 		display: block
 		margin: 0 auto
+		max-width: 100%
 
 .big
 	font-size: 18px
@@ -484,7 +485,8 @@ p
 	&__content
 		.default
 			width: auto
-			max-height: 200px		
+			max-height: 200px
+			max-width: 100%
 
 .center
 	text-align: center
@@ -495,7 +497,6 @@ p
 		img
 			margin: 10px
 			width: 45%
-		
 		h3
 			text-align: center
 			margin-top: 20px
@@ -511,5 +512,21 @@ p
 		.right
 			text-align: right!important
 			font-size: 16px 
+
+.slick-prev:before,.slick-next:before
+	color: $main
+.slick-prev:hover:before,.slick-next:hover:before
+	color: $accent
+.slick-dots li button:before
+	font-size: 30px
+	color: $main
+.slick-dots li.slick-active button:before
+	color: $accent
+
+.gallery
+	margin-top: 20px
+	&__content
+		img
+			padding: 0 10px
 
 @import "media" // Always at the end
