@@ -1,0 +1,66 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+a
+	color: $accent
+	&:hover
+		color: $accent
+
+.d-none
+	display: none
+
+section
+	border-bottom: 1px solid #dddddd
+	padding-top: 100px
+	h2
+		font-size: 60px
+		font-family: $font-b
+		font-weight: 700
+		padding-bottom: 90px
+		color: $black
+		&.center
+			text-align: center
+
+
+
+@import "landing"
+
+@import "media" // Always at the end

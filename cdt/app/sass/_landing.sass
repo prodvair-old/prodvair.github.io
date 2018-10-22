@@ -1,0 +1,433 @@
+.isLanding
+    
+.header
+    height: 80px
+    width: 100vw
+    display: flex
+    align-items: center
+    padding: 0 70px
+    &__logo
+        height: 50px
+        img
+            height: 100%
+    &__menu
+        nav
+            ul
+                display: flex
+                list-style-type: none
+                margin-bottom: 0
+                margin-left: 30px
+                li
+                    margin: 0 15px
+                    a
+                        font-size: 14px
+                        font-family: $font-sb
+                        text-transform: uppercase
+                        text-decoration: none
+                        &:after
+                            content: ''
+                            display: block
+                            width: 0%
+                            height: 2px
+                            background-color: $accent
+                            margin-top: -5px
+                            transition: all .3s ease
+                        &:hover
+                            &:after
+                                width: 100%
+                    .active
+                        &:after
+                            width: 100%
+    &__phone
+        margin-left: auto
+        a
+            text-decoration: none
+            cursor: pointer
+            color: $text
+            font-size: 30px
+            font-family: $font-b
+            font-weight: 700
+            &:hover
+                color: $text
+
+.share
+    padding: 95px 0
+    &.white
+        color: $text-w
+        background-image: url('../img/landing/bg.png')
+        background-size: cover
+        background-repeat: no-repeat
+        h2
+            color: $text-w
+    &.black
+        color: $black
+        background-color: #f7fafc
+        .share__block__content-form--pb
+            i
+                background-color: $black
+                color: $black
+        .share__block__content-form--checkbox:checked + .share__block__content-form--pb i
+            color: $text-w
+        .share__block__content-form--submit
+            border-color: $black
+            color: $black
+            &:hover
+                background-color: $black
+                color: $text-w
+    &__block
+        border: 10px solid $accent
+        border-top: none
+        position: relative
+        h1
+            position: absolute
+            top: -10px
+            left: -10px
+            display: flex
+            justify-content: space-between
+            text-align: center
+            width: calc(100% + 20px)
+            &:after,&:before
+                content: ''
+                display: block
+                width: 18%
+                height: 10px
+                background-color: $accent
+            span
+                font-size: 38px
+                font-family: $font-sb
+                line-height: 44px
+                margin-top: -19px
+                padding: 0 20px
+                width: 700px
+        &__content
+            padding: 50px 60px
+            ul
+                margin-left: 50px
+                list-style-type: none
+                li
+                    font-size: 24px
+                    padding-right: 20px
+                    position: relative
+                    padding-bottom: 20px
+                    line-height: 28px
+                    &:before
+                        content: '\e802'
+                        font-family: "cdt"
+                        font-style: normal
+                        font-weight: normal
+                        speak: none
+                        display: inline-block
+                        text-decoration: inherit
+                        width: 1em
+                        margin-right: .2em
+                        text-align: center
+                        font-variant: normal
+                        text-transform: none
+                        line-height: 1em
+                        margin-left: .2em
+                        -webkit-font-smoothing: antialiased
+                        -moz-osx-font-smoothing: grayscale
+                        position: absolute
+                        left: -77px
+                        top: -5px
+                        font-size: 35px
+            h3
+                font-size: 36px
+                font-family: $font-sb
+                margin-left: 20px
+            h2
+                font-size: 48px
+                font-family: $font-b
+                font-weight: 700
+                line-height: 60px
+                text-transform: uppercase
+                padding: 0
+                span
+                    background-color: $accent
+                    padding: 5px
+            &-form
+                margin-top: 35px
+                &--span
+                    margin-left: 30px
+                    font-size: 18px
+                    margin-bottom: 10px
+                &--phone
+                    font-size: 24px
+                    input
+                        height: 70px
+                        width: 276px
+                        color: #828282
+                        padding: 0 20px
+                &--submit
+                    font-size: 24px
+                    text-transform: uppercase
+                    cursor: pointer
+                    width: 200px
+                    height: 68px
+                    background-color: transparent
+                    border: 2px solid $text-w
+                    color: $text-w
+                    margin-left: 15px
+                    position: relative
+                    top: -2px
+                    transition: all .3s ease
+                    letter-spacing: 1px
+                    &:hover
+                        background-color: $text-w
+                        color: $text
+                &--pb
+                    margin-left: 30px
+                    margin-top: 10px
+                    user-select: none
+                    cursor: pointer
+                    i
+                        background-color: $text-w
+                        color: $text-w
+                        width: 30px
+                        height: 30px
+                        text-align: center
+                        line-height: 30px
+                &--checkbox:checked + .share__block__content-form--pb i
+                    color: $text
+
+.reason
+    &__item
+        margin-bottom: 170px
+        display: flex
+        align-items: center
+        flex-flow: wrap
+        &:nth-child(even)
+            .reason__item__img
+                order: 1
+            .reason__item__text
+                order: 0
+                &:before
+                    left: 10px
+        &__img
+            order: 0
+        &__text
+            order: 1
+            padding-left: 60px
+            position: relative
+            &:before
+                content:  attr(data-number)
+                position: absolute
+                z-index: -1
+                font-size: 500px
+                font-family: $font-eb
+                top: -100px
+                right: 10px
+                line-height: 500px
+                color: $number-w
+            h3
+                font-size: 46px
+                font-family: $font-b
+                font-weight: 700
+                color: $black
+            ul
+                margin-top: 40px
+                list-style-type: none
+                li
+                    margin: 15px 0
+                    font-size: 30px
+                    line-height: 34px
+                    position: relative
+                    &:before
+                        content: '\e804'
+                        font-family: "cdt"
+                        font-style: normal
+                        font-weight: normal
+                        speak: none
+                        display: inline-block
+                        text-decoration: inherit
+                        width: 1em
+                        margin-right: .2em
+                        text-align: center
+                        font-variant: normal
+                        text-transform: none
+                        line-height: 1em
+                        margin-left: .2em
+                        -webkit-font-smoothing: antialiased
+                        -moz-osx-font-smoothing: grayscale
+                        position: absolute
+                        left: -40px
+                        top: 5px
+                        font-size: 20px
+                        color: $black
+
+.function
+    padding-bottom: 100px
+    &__content
+        &__img
+            border: 10px solid #e4e4e4 
+            position: relative
+            height: 330px
+            width: 390px
+            margin-bottom: 50px
+            img
+                position: absolute
+                top: 50px
+                left: 50px
+                max-width: 390px
+            &__number
+                position: absolute
+                top: -125px
+                right: -185px
+                font-size: 500px
+                font-weight: 900
+                line-height: 500px
+                color: $accent
+                font-family: $font-eb
+        &__text
+            padding-right: 70px
+            p
+                margin-top: -5px
+                margin-bottom: 0
+                font-size: 24px
+                line-height: 26px
+    &__items
+        a
+            text-decoration: none
+        &__block
+            width: 100%
+            background-color: #e4e4e4
+            padding: 25px
+            font-size: 24px
+            line-height: 28px
+            font-family: $font-sb
+            display: flex
+            align-items: center
+            margin-bottom: 20px
+            transition: all .3s ease
+            color: #505050
+            p
+                padding: 0
+                margin: 0
+            &-icon
+                color: $text-w
+                font-size: 18px
+                width: 35px
+                height: 35px
+                background-color: $text
+                align-items: center
+                justify-content: center
+                display: flex
+                border-radius: 50%
+                margin-left: 25px
+                transition: all .2s ease
+                i
+                    display: block
+                    padding-left: 3px
+                    transition: all .3s ease
+            &.active
+                background-color: $accent
+                color: $text-w
+                >div
+                    background-color: $text-w
+                    color: $accent
+                    i
+                        transform: rotate(-180deg)
+                &:hover
+                    >div
+                        i
+                            transform: rotate(0deg)
+            &:hover
+                background-color: $accent
+                color: $text-w
+                >div
+                    background-color: $text-w
+                    color: $accent
+                    
+.about
+    padding-bottom: 100px
+    &__content
+        position: relative
+        &__left
+            position: absolute
+            top: 50%
+            left: -80px
+            transform: translateY(-50%)
+            a
+                display: flex
+                align-items: center
+                justify-content: center
+                background-color: #e4e4e4
+                width: 65px
+                height: 65px
+                color: $black
+                font-size: 25px
+                transition: all .3s ease
+                &:hover
+                    text-decoration: none
+                    background-color: $accent
+                    color: $text-w
+        &__right
+            position: absolute
+            top: 50%
+            right: -80px
+            transform: translateY(-50%)
+            a
+                display: flex
+                align-items: center
+                justify-content: center
+                background-color: #e4e4e4
+                width: 65px
+                height: 65px
+                color: $black
+                font-size: 25px
+                transition: all .3s ease
+                &:hover
+                    text-decoration: none
+                    background-color: $accent
+                    color: $text-w
+        &__slider
+            &__item
+                width: 360px
+                text-align: center
+                display: flex
+                margin: 0 20px
+                img
+                    height: 100px
+                    margin: 0 auto
+                p
+                    margin-top: 50px
+                    font-size: 24px
+                    line-height: 28px
+                    span
+                        color: $accent
+                        font-family: $font-sb
+
+.slick-dots
+    display: flex
+    justify-content: center
+    margin-top: 120px
+    li
+        display: block
+        padding: 0
+        border: 1px solid $text
+        border-radius: 50%
+        margin: 0 6px
+        width: 14px
+        height: 14px
+        cursor: pointer
+        button
+            display: none
+        &:hover
+            border-color: $accent
+            background-color: $accent
+    .slick-active
+        background-color: $text
+
+/*==========  Adaptive  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
