@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'tat-jurist';
+  src: url('../font/tat-jurist.eot?78619276');
+  src: url('../font/tat-jurist.eot?78619276#iefix') format('embedded-opentype'),
+       url('../font/tat-jurist.woff2?78619276') format('woff2'),
+       url('../font/tat-jurist.woff?78619276') format('woff'),
+       url('../font/tat-jurist.ttf?78619276') format('truetype'),
+       url('../font/tat-jurist.svg?78619276#tat-jurist') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'tat-jurist';
+    src: url('../font/tat-jurist.svg?78619276#tat-jurist') format('svg');
+  }
+}
+*/
+ 
+ [class^="tat-"]:before, [class*=" tat-"]:before {
+  font-family: "tat-jurist";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.tat-facebook:before { content: '\e800'; } /* '' */
+.tat-instagram:before { content: '\e801'; } /* '' */
+.tat-arrow-left:before { content: '\e802'; } /* '' */
+.tat-arrow-right:before { content: '\e803'; } /* '' */
+.tat-phone:before { content: '\e804'; } /* '' */
+.tat-vk:before { content: '\e805'; } /* '' */
+.tat-checked:before { content: '\e806'; } /* '' */
+.tat-down-arrow:before { content: '\e807'; } /* '' */
+.tat-twitter:before { content: '\e808'; } /* '' */
+.tat-telegram:before { content: '\e809'; } /* '' */
+.tat-share:before { content: '\e80a'; } /* '' */
+.tat-youtube:before { content: '\e80b'; } /* '' */

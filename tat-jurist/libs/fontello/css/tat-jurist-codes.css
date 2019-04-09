@@ -1,0 +1,13 @@
+
+.tat-facebook:before { content: '\e800'; } /* '' */
+.tat-instagram:before { content: '\e801'; } /* '' */
+.tat-arrow-left:before { content: '\e802'; } /* '' */
+.tat-arrow-right:before { content: '\e803'; } /* '' */
+.tat-phone:before { content: '\e804'; } /* '' */
+.tat-vk:before { content: '\e805'; } /* '' */
+.tat-checked:before { content: '\e806'; } /* '' */
+.tat-down-arrow:before { content: '\e807'; } /* '' */
+.tat-twitter:before { content: '\e808'; } /* '' */
+.tat-telegram:before { content: '\e809'; } /* '' */
+.tat-share:before { content: '\e80a'; } /* '' */
+.tat-youtube:before { content: '\e80b'; } /* '' */

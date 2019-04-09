@@ -1,0 +1,85 @@
+@import "vars"
+
+.isError
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.error
+    padding-top: 70px
+    padding-bottom: 30px
+    text-align: center
+    position: relative
+    &__bg
+        max-width: 100vw
+        padding: 0 10px
+    &__content
+        &__btn
+            position: absolute
+            top: 70px
+            left: 50%
+            transform: translateX(-50%)
+            z-index: 2
+            font-weight: 500
+        &__num
+            color: $accent
+            font-size: 300px
+            font-weight: 600
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            span
+                position: absolute
+                top: 53%
+                left: 50%
+                transform: translateX(-50%)
+                width: 100%
+                font-size: 30px
+                font-weight: 600
+                color: $white
+                background-color: $second
+                padding: 5px    
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+    .error
+        &__content
+            &__num
+                font-size: 200px
+                span
+                    font-size: 20px
+
+
+// ≥576px
++media-breakpoint-down(xs)
+    .error
+        &__content
+            &__btn
+                top: 30px
+            &__num
+                font-size: 100px
+                span
+                    font-size: 14px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

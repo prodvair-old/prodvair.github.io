@@ -1,0 +1,74 @@
+// Цвета
+$indigo:  #6610f2 !default
+$purple:  #6f42c1 !default
+$pink:    #e83e8c !default
+$orange:  #fd7e14 !default
+$yellow:  #ffc107 !default
+$green:   #28a745 !default
+$teal:    #20c997 !default
+$cyan:    #17a2b8 !default
+
+$gray-1:   #f8f9fa !default
+$gray-2:   #ECF0F1 !default
+$gray-3:   #dee2e6 !default
+$gray-4:   #ced4da !default
+$gray-5:   #adb5bd !default
+$gray-6:   #6c757d !default
+$gray-7:   #495057 !default
+$gray-8:   #343a40 !default
+$gray-9:   #212529 !default
+
+$white:    #ffffff !default
+$black:    #333333 !default
+$red:      #E73131 !default
+$blue:     #48769C !default
+
+$second:     $blue
+$accent:     $red
+$accent-l40: lighten($accent, 40%)
+$accent-l30: lighten($accent, 30%)
+$accent-l20: lighten($accent, 20%)
+$accent-l10: lighten($accent, 10%)
+$accent-l5:  lighten($accent, 5%)
+$accent-d5:  darken($accent, 5%)
+$accent-d10: darken($accent, 10%)
+$accent-d20: darken($accent, 20%)
+$accent-d30: darken($accent, 30%)
+$accent-d40: darken($accent, 40%)
+
+$text: $black
+
+$primary:       $blue !default;
+$secondary:     $gray-6 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-1 !default;
+$dark:          $gray-8 !default;
+
+// Шрифт
+$font: 'Roboto', sans-serif
+$default-rem: 15px!default
+$default-size: 15px!default
+
+// Заголовки
+$h1: 40px!default
+$h2: 33px!default
+$h3: 21px!default
+$h4: 18px!default
+$h5: 18px!default
+$h6: 16px!default
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+
+$gutter: $grid-gutter-width
+
+// PX to REM convertor
+@function rem($size)
+    $remSize: $size / $default-size
+    @return #{$remSize}rem

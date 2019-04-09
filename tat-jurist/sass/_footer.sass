@@ -1,0 +1,128 @@
+@import "vars"
+
+.isService, .isComment
+    .footer
+        margin-top: 110px    
+
+.footer
+    background-color: $black
+    &__content
+        padding: 70px 0
+        color: $white
+        &__copy
+            font-size: 13px
+            font-weight: 300
+            margin-top: 50px
+            line-height: 19px
+        &__phone
+            &__number
+                font-size: 15px
+                margin-bottom: 20px
+                color: $white
+            &__btn
+                color: $white
+                border-color: $white
+                &:hover
+                    background-color: $white
+                    color: $text
+            &-by
+                text-align: right
+                float: right
+                font-size: 13px
+                margin-top: 20px
+                color: $gray-5
+                font-weight: 300
+                &:hover
+                    color: $white
+        &__menu
+            a
+                color: $white
+                line-height: 21px
+            nav
+                ul
+                    list-style-type: none
+                    margin: 0
+                    padding: 0
+                    display: flex
+                    li
+                        margin-right: 40px
+                        font-weight: 600
+                        ul
+                            margin-top: 35px
+                        ol
+                            list-style-type: none
+                            margin: 0
+                            padding: 0
+                            margin-top: 20px
+                            li
+                                font-weight: 300
+                                margin: 7px 0
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+    .footer
+        &__content
+            &__phone
+                &__number
+                    font-size: 12px
+                &__btn
+                    padding: 20px 5px
+                    font-size: 12px
+                    text-align: center
+// ≥992px
++media-breakpoint-down(md)
+    .footer
+        &__content
+            &__menu
+                width: 100%
+                nav
+                    ul
+                        justify-content: space-between
+                        li
+                            margin: 0
+                        
+// ≥768px
++media-breakpoint-down(sm)
+    .footer
+        &__content
+            &__logo
+                img
+                    height: 40px
+            &__copy
+                margin-top: 30px
+    
+
+// ≥576px
++media-breakpoint-down(xs)
+    .footer
+        &__content
+            &__phone
+                margin-top: 30px
+                &__number
+                    font-size: 20px
+            &__menu
+                nav
+                    ul
+                        flex-direction: column
+                        li
+                            margin-top: 30px
+                            &:first-child
+                                margin-top: 0
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

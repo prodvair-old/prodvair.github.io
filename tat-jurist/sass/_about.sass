@@ -1,0 +1,99 @@
+@import "vars"
+
+.about
+    padding: 0
+    margin-top: 110px
+    position: relative
+    &__bg
+        position: absolute
+        height: 70%
+        width: 100%
+        background-size: cover
+        background-position: center
+        z-index: -1
+        top: 50%
+        transform: translateY(-50%)
+    &__content
+        color: $white
+        height: 100%
+        background-color: $second
+        box-shadow: 0 8px 37px rgba(0,0,0,0.1)
+        padding: 90px 0
+        &__img
+            margin-top: 60px
+            img
+                box-shadow: 0 4px 38px rgba(0,0,0,0.19)
+                height: 100%
+        &__text
+            margin-top: 60px
+            font-weight: 400
+        &__trig
+            display: flex
+            justify-content: space-around
+            padding-top: 25px
+            padding-bottom: 30px
+            &__item
+                text-align: center
+                &-num 
+                    font-size: 40px
+                    font-weight: 300
+                    display: block
+                    margin-bottom: 13px
+        &__btn
+            border-color: $white
+            border-width: 2px
+            color: $white
+            height: 45px
+            width: 230px
+            font-size: 1rem
+            font-weight: 500
+            &:hover
+                background-color: $white
+                color: $second
+
+    
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+    .about
+        &__content
+            &__img
+                text-align: center
+                height: 300px
+            &__btn
+                margin: 0 auto
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+    .about
+        &__content
+            padding: 90px 15px
+            &__trig
+                display: flex
+                flex-wrap: wrap
+                &__item
+                    &:last-child
+                        margin-top: 20px
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

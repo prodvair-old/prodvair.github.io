@@ -1,0 +1,67 @@
+@import "vars"
+
+.offer
+    background-color: #f6f6f6
+    padding-top: rem(197px)
+    &__content
+        &__img
+            position: relative
+            img
+                position: absolute
+                top: -140px
+                height: 898px
+        &__text
+            padding-bottom: 126px
+            &-h1
+                font-weight: 400
+                text-align: left
+                margin-bottom: 45px
+                &:after
+                    left: 0
+                    transform: none
+                b
+                    display: block
+            &-btn
+                width: 189px
+                height: 40px
+                margin-top: 30px
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+    .offer
+        &__content
+            &__img
+                display: none
+
+// ≥768px
++media-breakpoint-down(sm)
+    .offer
+        padding-top: 120px
+        &__content
+            &__text
+                padding-bottom: 70px
+    
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

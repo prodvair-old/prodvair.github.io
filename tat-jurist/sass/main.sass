@@ -1,0 +1,344 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: $gray-6
+
+::selection
+	background-color: $accent
+	color: $white
+
+html
+	font-size: $default-rem
+body
+	font-size: 1rem
+	min-width: 320px
+	min-height: 100vh
+	position: relative
+	line-height: normal
+	letter-spacing: 0.05em
+	font-family: $font
+	overflow-x: hidden
+	color: $text
+	background-color: $white
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: 500
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 700
+h1
+	font-size: rem($h1)
+	text-align: center
+	position: relative
+	letter-spacing: 0.05em
+	margin-bottom: 37px
+	&:after
+		content: ''
+		position: absolute
+		left: 50%
+		bottom: -19px
+		transform: translateX(-50%)
+		display: block
+		height: 2px
+		width: 107px
+		background-color: $accent
+h2
+	font-size: rem($h2)
+	text-align: center
+	position: relative
+	letter-spacing: 0.05em
+	margin-bottom: 21px
+	&:after
+		content: ''
+		position: absolute
+		left: 50%
+		bottom: -19px
+		transform: translateX(-50%)
+		display: block
+		height: 2px
+		width: 107px
+		background-color: $accent
+h3
+	font-size: rem($h3)
+	text-align: center
+	letter-spacing: 0.05em
+	&.line
+		position: relative
+		margin-bottom: 27px
+		&:after
+			content: ''
+			position: absolute
+			left: 50%
+			bottom: -13px
+			transform: translateX(-50%)
+			display: block
+			height: 2px
+			width: 70px
+			background-color: $accent
+			transition: all .3s ease
+h4
+	font-size: rem($h4)
+	font-weight: 500
+	line-height: normal
+	letter-spacing: 0.05em
+h5
+	font-size: rem($h5)
+h6
+	font-size: rem($h6)
+
+p, span
+	font-weight: 400
+	line-height: rem(22px)
+	letter-spacing: 0.05rem
+a
+	color: $text
+	text-decoration: none
+	display: inline-flex
+	position: relative
+	&:after
+		content: ''
+		background-color: $text
+		width: 100%
+		height: 1px
+		display: block
+		position: absolute
+		bottom: -1px
+		left: 0
+	&:hover
+		color: $text
+		text-decoration: none
+		&:after
+			height: 0
+
+.form
+	&__group
+		label
+			width: 100%
+			span
+				font-weight: 700
+				padding-left: 2px
+				display: block
+			input, select, textarea
+				background-color: transparent
+				width: 100%
+				height: rem(40px)
+				border: 1px solid $black
+				padding-left: rem(10px)
+				margin-top: rem(5px)
+			select, input[type="checkbox"]
+				cursor: pointer
+			textarea
+				padding-top: rem(10px)
+				height-min: rem(130px)!important
+			.error
+				display: block
+				padding-left: 2px
+				color: $red
+			&.submit > *
+				background-color: $accent
+				color: $white
+				border: none
+				&:hover
+					background: $accent-l5
+		.checkbox
+			display: flex
+			margin-bottom: rem(10px)
+			&-input
+				display: none
+			.check
+				margin-top: 2px
+				width: rem(15px)
+				height: rem(15px)
+				border-radius: 0
+				border: 1px solid $accent
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				padding-right: 1px
+				i
+					visibility: hidden
+					font-size: 11px
+					color: $white
+			&-input:checked + .checkbox .check
+				background-color: $accent
+				i
+					visibility: visible
+			span:last-child
+				margin-left: rem(5px)
+				font-weight: 400
+				user-select: none
+		.files
+			span
+				cursor: pointer
+				background-color: $black
+				color: $white
+				width: 100%
+				height: 40px
+				border: 1px solid $gray-6
+				border-radius: 5px
+				margin-top: rem(5px)
+				text-align: center
+				line-height: 40px
+			&.ready
+				span
+					background-color: $green
+			input
+				display: none
+
+.btn
+	background: rgba($accent, 0)
+	font-size: 13px
+	border: 1px solid $accent
+	height: 30px
+	color: $accent
+	font-weight: 500
+	transition: all .3s ease
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	padding: 0 15px
+	&:after
+		display: none
+	&:focus
+		outline: none
+	&-large
+		width: 280px
+		height: 60px
+	&-medium
+		width: 220px
+		height: 50px
+	&-small
+		width: 140px
+		height: 40px
+	&-hover
+		background: $accent-l5
+		border-color: transparent
+		color: $white
+	&:hover
+		background: $accent-l5
+		border-color: transparent
+		color: $white
+	&-fill
+		background: $accent
+		color: $white
+		font-size: 16px
+		height: 40px
+		&:hover
+			background: $accent-l10
+			border-color: transparent
+			color: $white
+	&-black
+		background: rgba($black, 0)
+		border: 3px solid $black
+		color: $black
+		&-hover
+			background: rgba($black, 0.7)
+			border-color: transparent
+			color: $white
+		&:hover
+			background: rgba($black, 0.7)
+		&.active
+			background: rgba($black, 1)
+			color: $white
+
+a:hover
+	.tat-vk, .tat-instagram, .tat-facebook, .tat-telegram, .tat-youtube, .tat-twitter, .tat-share
+		transition: all .3s ease
+	.tat-vk
+		color: #5b88bd
+	.tat-instagram
+		color: #E73168
+	.tat-facebook
+		color: #4267B2
+	.tat-telegram
+		color: #0088cc
+	.tat-youtube
+		color: #FF0000
+	.tat-twitter
+		color: #1DA1F2
+	.tat-share
+		color: $accent
+
+.slick-dots
+	list-style-type: none
+	display: flex
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	z-index: 2
+	padding: 0
+	li
+		display: block
+		height: 4px
+		width: 20px
+		margin: 0 10px
+		background-color: rgba($black,0.3)
+		transition: all .3s ease
+		cursor: pointer
+		&.slick-active
+			background-color: $accent
+		button
+			display: none
+
+section
+	padding-top: rem(110px)
+
+.mt
+	&-1
+		margin-top: 1rem
+	&-2
+		margin-top: 2rem
+	&-3
+		margin-top: 3rem
+
+.breadcrumb
+	padding: 0
+	position: relative
+	ul
+		position: absolute
+		top: 40px
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			color: #828282
+
+
+
+@import "guide"
+
+@import "service"
+@import "about"
+@import "trigers"
+@import "comment"
+@import "mail"
+@import "partner"
+@import "contact"
+@import "form"
+@import "offer"
+@import "numbers"
+@import "404"
+
+@import "footer"
+
+@import "media" // Always at the end
