@@ -1,0 +1,80 @@
+{
+  "name": "cdt",
+  "css_prefix_text": "cdt-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "d870630ff8f81e6de3958ecaeac532f2",
+      "css": "left-open",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "399ef63b1e23ab1b761dfbb5591fa4da",
+      "css": "right-open",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "43ab845088317bd348dee1d975700c48",
+      "css": "ok-circled",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "6c890e0522e0d1a552e8255cf7e8c269",
+      "css": "tick",
+      "code": 59395,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M988.7 147.5C973.7 132.5 949.4 132.5 934.3 147.5L310.9 770.9 65.7 525.7C50.6 510.7 26.3 510.7 11.3 525.7-3.8 540.7-3.8 565.1 11.3 580.1L283.7 852.5C298.7 867.5 323.1 867.5 338.1 852.5L988.7 201.9C1003.8 186.8 1003.8 162.5 988.7 147.5Z",
+        "width": 1000
+      },
+      "search": [
+        "tick"
+      ]
+    },
+    {
+      "uid": "d19e99a247b1e0c3f5d01471fc75b4c5",
+      "css": "check-mark",
+      "code": 59396,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M378.2 1000C347.1 1000 317.7 985.5 298.8 960.5L43.6 623.4C10.4 579.6 19 517.1 62.8 483.9 106.8 450.7 169.1 459.4 202.4 503.2L370.2 724.9 792.5 46.9C821.6 0.3 882.9-14 929.7 15 976.4 44.1 990.6 105.5 961.5 152.2L462.7 953.1C445.4 980.9 415.5 998.4 382.7 999.9 381.2 1000 379.7 1000 378.2 1000Z",
+        "width": 1000
+      },
+      "search": [
+        "check-mark"
+      ]
+    },
+    {
+      "uid": "f3d95e13eb43f3f6b8efe1eb424a1e3b",
+      "css": "vkontakte",
+      "code": 61833,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "8e04c98c8f5ca0a035776e3001ad2638",
+      "css": "facebook",
+      "code": 61594,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "a9862b9d5197886c1ad693ecd7120b31",
+      "css": "youtube",
+      "code": 61799,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "4c1ef492f1d2c39a2250ae457cee2a6e",
+      "css": "instagram",
+      "code": 61805,
+      "src": "fontawesome"
+    }
+  ]
+}
