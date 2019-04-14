@@ -1,0 +1,51 @@
+@import "vars"
+
+.like
+    background-image: url('../img/like_bg.png')
+    background-size: cover
+    background-position: left center
+    padding-top: 123px
+    padding-bottom: 330px
+    h2
+        color: $accent
+    &__content
+        &__block
+            margin-top: 45px
+            line-height: 22px
+            h3
+                white-space: nowrap
+                line-height: 22px
+            p
+                font-size: 18px
+                padding-bottom: 0
+
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
