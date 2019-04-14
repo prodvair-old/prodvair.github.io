@@ -1,0 +1,78 @@
+@import "vars"
+
+.product
+    background-image: url('../img/product_bg.png')
+    background-size: cover
+    background-position: center
+    position: relative
+    color: $text-gray
+    padding-top: 60px
+    padding-bottom: 166px
+    &__bg
+        position: relative
+        &-big
+            position: absolute
+            top: -197px
+            z-index: -3
+        &-min
+            position: absolute
+            right: 80px
+            top: -197px
+            z-index: 2
+    &__content
+        &__item
+            display: flex
+            margin-top: 45px
+            &__icon
+                i
+                    width: 100px
+                    height: 100px
+            &__list
+                margin-left: 18px
+                margin-top: 8px
+                ul
+                    list-style-type: none
+                    margin: 0
+                    padding: 0
+                    li
+                        a
+                            line-height: 30px
+                            color: $text-gray
+                            letter-spacing: 1px
+                            text-transform: uppercase
+                            font-size: 18px
+                        &:first-child
+                            a
+                                line-height: 33px
+                                font-weight: 600
+                                font-size: 24px
+                                color: $accent
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

@@ -1,0 +1,219 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: $gray-6
+
+::selection
+	background-color: $accent
+	color: $text-gray
+
+html
+	font-size: $default-rem
+body
+	font-size: 1rem
+	min-width: 320px
+	position: relative
+	line-height: normal
+	font-family: $font
+	overflow-x: hidden
+	color: $text
+	background-color: $text-gray
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 300
+h1
+	font-size: rem($h1)
+	font-family: $font-h
+	line-height: 0.85
+	text-transform: uppercase
+	b
+		font-size: rem(100px)
+h2
+	font-size: rem($h2)
+	font-family: $font-h
+	line-height: 0.85
+	text-transform: uppercase
+h3
+	font-size: rem($h3)
+h4
+	font-size: rem($h4)
+h5
+	font-size: rem($h5)
+	font-family: $font-h
+	line-height: rem(16px)
+	text-transform: uppercase
+h6
+	font-size: rem($h6)
+
+p, span
+	font-weight: 400
+
+a
+	color: $accent
+	// text-decoration: underline
+	&:hover
+		color: $accent
+		// text-decoration: none
+
+.form
+	&__group
+		label
+			width: 100%
+			span
+				font-weight: 700
+				padding-left: 2px
+				display: block
+			input, select, textarea
+				background-color: transparent
+				width: 100%
+				height: rem(40px)
+				border: 1px solid $gray-6
+				border-radius: 5px
+				padding-left: rem(10px)
+				margin-top: rem(5px)
+			select, input[type="checkbox"]
+				cursor: pointer
+			textarea
+				padding-top: rem(5px)
+				height: rem(130px)!important
+			.error
+				display: block
+				padding-left: 2px
+				color: $red
+			&.submit > *
+				background-color: $accent
+				color: $white
+				border: none
+				&:hover
+					background: $accent-l5
+		.checkbox
+			display: flex
+			margin-bottom: rem(10px)
+			input
+				margin-top: 3px
+				width: rem(16px)
+				height: rem(16px)
+			span
+				margin-left: rem(5px)
+				font-weight: 400
+				user-select: none
+		.files
+			span
+				cursor: pointer
+				background-color: $black
+				color: $white
+				width: 100%
+				height: 40px
+				border: 1px solid $gray-6
+				border-radius: 5px
+				margin-top: rem(5px)
+				text-align: center
+				line-height: 40px
+			&.ready
+				span
+					background-color: $green
+			input
+				display: none
+
+.btn
+	border: 2px solid $accent
+	border-radius: 10px
+	height: 50px
+	color: $accent
+	font-weight: 600
+	font-size: 16px
+	text-transform: uppercase
+	transition: all .3s ease
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	position: relative
+	overflow: hidden
+	&:after
+		content: ''
+		position: absolute
+		width: 150%	
+		height: 400%
+		background-color: $accent
+		border-radius: 50%
+		top: 0
+		left: -25%
+		transform: translateY(35%)
+		transition: all .3s ease
+		z-index: -1
+	&:focus
+		outline: none
+	&:hover
+		text-decoration: none
+		color: $white
+		&:after
+			transform: translateY(-35%)
+	&-large
+		width: 280px
+		height: 60px
+	&-medium
+		width: 220px
+		height: 50px
+	&-small
+		width: 140px
+		height: 40px
+	&__fill
+		text-decoration: none
+		color: $white
+		&:after
+			transform: translateY(-35%)
+		&:hover
+			color: $accent
+			&:after
+				transform: translateY(-100%)
+	&.active
+		background: $accent
+		color: $white
+
+	&-black
+		background: rgba($black, 0)
+		border: 3px solid $black
+		color: $black
+		&-hover
+			background: rgba($black, 0.7)
+			border-color: transparent
+			color: $white
+		&:hover
+			background: rgba($black, 0.7)
+		&.active
+			background: rgba($black, 1)
+			color: $white
+
+@import "guide"
+
+@import "icons"
+
+@import "header"
+@import "about"
+@import "product"
+@import "hit"
+
+@import "media" // Always at the end

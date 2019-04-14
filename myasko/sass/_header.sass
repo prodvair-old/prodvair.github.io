@@ -1,0 +1,201 @@
+@import "vars"
+
+.header
+    position: relative
+    height: 100vh
+    min-height: 1100px
+    &__text
+        font-family: $font-h
+        font-size: 500px
+        opacity: .07
+        position: absolute
+        bottom: 33px
+        left: 0
+        z-index: 9999
+        color: $text-gray
+    &__bg
+        position: absolute
+        top: 0
+        z-index: -1
+        height: calc(100% + 1px)
+    &__content
+        color: $text-gray
+        height: 100%
+        position: relative
+        &:after, &:before
+            content: ''
+            display: block
+            position: absolute
+            z-index: -1
+            opacity: 0.05
+            border: 1px solid $white
+        &:after    
+            top: 19px
+            height: calc(100% - 86px)
+            width: calc(100% + 210px)
+        &:before
+            top: 99px
+            height: calc(100% - 226px)
+            width: calc(100% + 70px)
+            left: -70px
+            border-right: none
+        &__offer
+            height: 80%
+            display: flex
+            align-items: center
+            &__title
+                opacity: .5
+        &__top
+            padding-top: 15px
+            &__logo
+            &__menu
+                padding-top: 36px
+                &__dropdown
+                    visibility: hidden
+                    transform: scaleY(0)
+                    transform-origin: top
+                    position: absolute
+                    z-index: 99999
+                    top: 30px
+                    display: flex
+                    justify-content: space-between
+                    background-color: rgba($black, 0.8)
+                    padding: 35px 20px
+                    transition: all .3s ease
+                    div 
+                        margin-left: 25px
+                        &:first-child
+                            margin: 0
+                    &:after, &:before
+                        content: ''
+                        display: block
+                        position: absolute
+                        width: calc(100% - 40px)
+                        height: 1px
+                        background-color: rgba($accent, .36)
+                    &:after
+                        bottom: 20px
+                    &:before
+                        top: 20px
+                    ol
+                        margin: 0
+                        padding: 0
+                        margin-top: 35px
+                        list-style-type: none
+                        width: 100%
+                        &:first-child
+                            margin: 0
+                        li
+                            text-align: left!important
+                            line-height: 24px
+                            padding: 0!important
+                            &:first-child
+                                a
+                                    color: $accent!important
+                                    font-weight: 600
+                nav
+                    ul
+                        margin: 0
+                        padding: 0
+                        display: flex
+                        justify-content: center
+                        list-style-type: none
+                        li
+                            text-align: center
+                            margin: 0 12px
+                            position: relative
+                            padding-bottom: 25px
+                            a
+                                color: $text-gray
+                                text-transform: uppercase
+                                letter-spacing: 25
+                                text-decoration: none
+                                line-height: 14px
+                                transition: all .3s ease
+                                white-space: nowrap
+                                span
+                                    text-transform: lowercase
+                                    padding-right: 2px
+                                i
+                                    height: 13px
+                                    width: 13px
+                                &:hover
+                                    color: $accent
+                                &.active
+                                    color: $accent
+                                    font-weight: 600
+                            &:hover
+                                >div
+                                    visibility: visible
+                                    transform: scaleY(1)
+
+            &__phone
+                padding-top: 26px
+                a
+                    font-size: rem(16px)
+                    font-weight: 600
+                    color: $text-gray
+                    display: flex
+                    align-items: center
+                    text-decoration: none
+                    transition: all .3s ease
+                    i
+                        height: 26px
+                        width: 26px
+                        margin-right: 10px
+                    &:hover
+                        color: $accent
+            &__cart
+                padding-top: 24px
+                a
+                    display: flex
+                    align-items: center
+                    font-style: 16px
+                    text-transform: uppercase
+                    text-decoration: none
+                    color: $text-gray
+                    transition: all .3s ease
+                    span
+                        color: $accent
+                        font-weight: 400
+                        text-transform: lowercase
+                        transition: all .3s ease
+                    i
+                        height: 35px
+                        width: 35px
+                        margin-right: 10px
+                    &:hover
+                        color: $accent
+                        span
+                            color: $text-gray
+
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

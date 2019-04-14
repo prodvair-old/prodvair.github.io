@@ -1,0 +1,57 @@
+@import "vars"
+
+.about
+    background-image: url('../img/about_bg.png')
+    background-size: cover
+    background-position: center bottom
+    padding-top: 96px
+    padding-bottom: 467px
+    position: relative
+    &__leftbg, &__rightbg
+        position: absolute
+        z-index: 1
+    &__leftbg
+        left: 0
+    &__content
+        &__text
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            img
+                width: 100%
+            p
+                font-size: 18px
+                line-height: 22px
+                text-align: right
+                padding-left: 132px
+                margin: 45px 0
+            &__btn
+                width: 200px
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

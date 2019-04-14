@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3840" height="1952" viewBox="0 0 1920 976">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="-97" y="989" width="2037" height="976" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="2.5" dy="4.33" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="3.162"/>
+      <feFlood result="flood" flood-color="#848684" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Фигура_Космос" data-name="Фигура Космос" class="cls-1" d="M-4.942,996.26c636.759-.261,1286.422-0.008,1929.942,0-2436.215,91.81,0,635.16,0,952.74-817.74-420.14-1286.628,0-1929.942,0C-193.178,1590.02-4.942,1313.84-4.942,996.26Z" transform="translate(0 -989)"/>
+</svg>

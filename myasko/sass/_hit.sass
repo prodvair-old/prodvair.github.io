@@ -1,0 +1,102 @@
+@import "vars"
+
+.hit
+    background-image: url('../img/hit_bg.png')
+    background-size: cover
+    background-position: center top
+    color: $text-gray
+    padding-top: 50px
+    padding-bottom: 125px
+    >div
+        position: relative
+    &__decor
+        position: absolute
+        top: 110px
+        left: -87px
+        z-index: 2
+    &__content
+        margin-top: 55px
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 
+        grid-gap: 9px
+        &__item
+            position: relative
+            &__desc
+                visibility: hidden
+                width: 100%
+                height: 100%
+                display: flex   
+                justify-content: center
+                align-items: center
+                flex-direction: column
+                background-color: rgba($black, 0.9)
+                transform: scaleY(0)
+                transform-origin: top
+                transition: all .3s ease
+                &:after
+                    content: ''
+                    display: block
+                    background-image: url('../img/hit_border.png')
+                    background-repeat: no-repeat
+                    background-position: center
+                    width: 100%
+                    height: 100%
+                    position: absolute
+                    top: 0
+                    left: 0
+                    z-index: -1
+                &-btn
+                    padding: 20px 60px
+                    margin-top: 30px
+                    &:hover
+                        color: $white
+                &-price
+                    color: $accent
+                    font-size: rem(24px)
+                    font-family: $font-h
+                    margin-bottom: 0
+                    margin-top: 30px
+                    &:after
+                        content: '₽'
+                &-desc
+                    font-size: rem(18px)
+            >div
+                position: absolute
+                z-index: 9
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                &:hover
+                    >div
+                        visibility: visible
+                        transform: scaleY(1)
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
