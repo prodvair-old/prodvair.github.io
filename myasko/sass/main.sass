@@ -55,6 +55,10 @@ h2
 	font-family: $font-h
 	line-height: 0.85
 	text-transform: uppercase
+	.red
+		color: $accent
+		font-family: $font
+		font-weight: 600
 h3
 	font-size: rem($h3)
 	font-family: $font-h
@@ -62,6 +66,9 @@ h3
 	text-transform: uppercase
 h4
 	font-size: rem($h4)
+	font-weight: 600
+	color: $accent
+	text-transform: uppercase
 h5
 	font-size: rem($h5)
 	font-family: $font-h
@@ -69,6 +76,9 @@ h5
 	text-transform: uppercase
 h6
 	font-size: rem($h6)
+	line-height: rem(16px)
+	text-transform: uppercase
+	font-weight: 600
 
 p, span
 	font-weight: 400
@@ -220,5 +230,8 @@ a
 @import "hit"
 @import "work"
 @import "like"
+@import "pay"
+
+@import "footer"
 
 @import "media" // Always at the end

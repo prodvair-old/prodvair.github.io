@@ -1,0 +1,99 @@
+@import "vars"
+
+.desing
+    font-size: 16px
+    letter-spacing: 1px
+    display: block
+    margin-top: 50px
+
+.footer
+    background-color: #010101
+    background-image: url('../img/footer_home_bg.png')
+    background-position: center top
+    background-repeat: no-repeat
+    color: $text-gray
+    padding-bottom: 93px
+    &__content
+        &__phone
+            h6
+                padding: 0
+                padding-bottom: 5px
+            a
+                line-height: 30px
+                letter-spacing: 1px
+                font-size: 16px
+                font-weight: 600
+        &__row
+            display: flex
+            justify-content: space-between
+        &__logo
+            margin-bottom: 45px
+        h6
+            padding-top: 35px
+        &__soc
+            margin-bottom: 26px
+            h6
+                padding: 0
+            a
+                i
+                    margin-top: 10px
+                    margin-right: 11px
+                    height: 36px
+                    width: 36px
+        &__copy
+            font-size: 16px
+            letter-spacing: 1px
+            span
+                padding-bottom: 17px
+                display: block
+            a
+                color: $text-gray
+        &__menu
+            margin-top: 45px
+            h6
+                padding: 0
+                padding-bottom: 5px
+            nav
+                display: flex
+                ul
+                    list-style-type: none
+                    padding: 0
+                    margin: 0
+                    margin-right: 76px
+                    li
+                        a
+                            font-size: 16px
+                            color: $text-gray
+                            line-height: 30px
+                            &.active
+                                color: $accent
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
