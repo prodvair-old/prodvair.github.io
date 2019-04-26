@@ -22,29 +22,23 @@
         color: $text-gray
         height: 100%
         position: relative
-        &:after, &:before
+        &:after
             content: ''
             display: block
             position: absolute
             z-index: -1
-            opacity: 0.05
-            border: 1px solid $white
-        &:after    
+            background-image: url('../img/header_decor.png')
             top: 19px
-            height: calc(100% - 86px)
-            width: calc(100% + 210px)
-        &:before
-            top: 99px
-            height: calc(100% - 226px)
-            width: calc(100% + 70px)
             left: -70px
-            border-right: none
+            height: 914px
+            width: 1462px
         &__offer
             height: 80%
             display: flex
             align-items: center
             &__title
                 opacity: .5
+                margin-bottom: 95px
         &__top
             padding-top: 15px
             &__logo
@@ -55,6 +49,7 @@
                     transform: scaleY(0)
                     transform-origin: top
                     position: absolute
+                    left: -20px
                     z-index: 99999
                     top: 30px
                     display: flex
@@ -85,6 +80,7 @@
                         width: 100%
                         &:first-child
                             margin: 0
+                            
                         li
                             text-align: left!important
                             line-height: 24px
@@ -93,6 +89,8 @@
                                 a
                                     color: $accent!important
                                     font-weight: 600
+                                    &:hover
+                                        letter-spacing: 3px
                 nav
                     ul
                         margin: 0

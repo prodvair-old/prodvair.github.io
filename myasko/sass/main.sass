@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6
 h1
 	font-size: rem($h1)
 	font-family: $font-h
-	line-height: 0.85
+	line-height: 0.83
 	text-transform: uppercase
 	b
 		font-size: rem(100px)
@@ -61,7 +61,7 @@ h2
 		font-weight: 600
 h3
 	font-size: rem($h3)
-	font-family: $font-h
+	font-weight: 600
 	line-height: 0.75
 	text-transform: uppercase
 h4
@@ -164,6 +164,7 @@ a
 	align-items: center
 	cursor: pointer
 	position: relative
+	z-index: 2
 	overflow: hidden
 	&:after
 		content: ''
@@ -172,6 +173,7 @@ a
 		height: 400%
 		background-color: $accent
 		border-radius: 50%
+		display: block
 		top: 0
 		left: -25%
 		transform: translateY(35%)
