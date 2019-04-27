@@ -1,15 +1,26 @@
 @import "vars"
 
 .about
-    background-image: url('../img/about_bg.png')
+    // background-image: url('../img/about_bg.png')
     background-size: cover
     background-position: center 100%
     padding-top: 96px
     padding-bottom: 467px
     position: relative
-    &__leftbg, &__rightbg
+    &_bg
+        position: relative
+    &__leftbg
         position: absolute
-        z-index: 1
+        z-index: 5
+        &-sfera
+            position: absolute
+            z-index: -4
+            left: 200px
+        &-korova
+            position: absolute
+            left: 50%
+            z-index: 1
+            transform: translateY(600px)
     &__leftbg
         left: 0
     &__content
