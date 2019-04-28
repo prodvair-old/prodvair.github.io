@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Пластический хирург</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body class="isHome">
+
+	<!-- контейнер -->
+	<div class="wrapper">
+
+		<!-- меню сайта -->
+		<div class="wrapper__menu menu">
+
+			<img src="img/menu-first.png" alt="" class="menu__bg-first">
+			<img src="img/menu-midle.png" alt="" class="menu__bg-middle">
+			<img src="img/menu-last.png" alt="" class="menu__bg-last">
+
+			<!-- Логотип -->
+			<div class="menu__logo">
+				<svg id="menu__logo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285" height="168" viewBox="0 0 285 168">
+					<defs>
+					  <style>
+						.cls-1 {
+						  font-size: 100px;
+						  font-family: "Rosa Marena";
+						}
+				  
+						.cls-1, .cls-3 {
+						  fill: #686767;
+						}
+				  
+						.cls-2 {
+						  fill: #fa0830;
+						}
+				  
+						.cls-3 {
+						  font-size: 16px;
+						  text-anchor: end;
+						  font-family: Candara;
+						}
+					  </style>
+					</defs>
+					<text id="Акрум" class="cls-1" x="-1" y="79">Акр<tspan class="cls-2">у</tspan>м</text>
+					<image id="Любовь_копия" data-name="Любовь копия" x="143" y="82" width="142" height="44" xlink:href="data:img/png;base64,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"/>
+					<circle id="Эллипс_8" data-name="Эллипс 8" class="cls-2" cx="195" cy="39" r="6"/>
+					<text id="пластический_хирург" data-name="пластический хирург" class="cls-3" x="285" y="148">пластический<tspan x="285" dy="16">хирург</tspan></text>
+				</svg>
+			</div>
+
+			<!-- Меню навигация -->
+			<div class="menu__nav">
+				<ul>
+					<li class="active"><a href="#">Главная</a></li>
+					<li><a href="#">О Хирурге</a></li>
+					<li><a href="#">Пациентам</a></li>
+					<li><a href="#">До & После</a></li>
+					<li><a href="#">Стоимость</a></li>
+					<li><a href="#">Отзывы</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</div>
+
+			<!-- Цифры страниц -->
+			<div class="menu__numbers">
+
+				<a href="#" class="menu__numbers__this">01</a>
+				<span class="menu__numbers__line"></span>
+				<a href="#" class="menu__numbers__all">07</a>
+
+			</div>
+
+		</div>
+
+		<!-- Контент сайта -->
+		<div class="wrapper__content">
+
+			<!-- Первый экран -->
+			<section class="header scroll" data-section-name="header">
+
+				<div class="header__line">
+					<img src="img/header/header-line.png" alt="" class="">
+				</div>
+
+				<div class="header__masters">
+
+					<img src="img/header/master-first.png" alt="" class="header__masters-first">
+					<img src="img/header/master-middle.png" alt="" class="header__masters-middle">
+					<img src="img/header/master-last.png" alt="" class="header__masters-last">
+
+				</div>
+
+			</section>
+
+			<!-- О нас -->
+			<section class="about scroll" data-section-name="about">
+
+			</section>
+
+		</div>
+
+		<!-- левая чать сайта -->
+		<div class="wrapper__right">
+				
+			<!-- контакты сайта -->
+			<div class="wrapper__right__top active">
+				<!-- Номер телефона -->
+				<div class="wrapper__right__top__phone">
+					<a href="#"> <span>+7 (495) 796-11-45</span> <img src="img/icon/icon-phone.png" alt=""> </a>
+				</div>
+				<!-- whatsapp -->
+				<div class="wrapper__right__top__whatsapp">
+					<a href="#"> <span>+7 (926) 266-55-67 <small>WhatsApp</small> </span> <img src="img/icon/icon-whatsapp.png" alt=""> </a>
+				</div>
+				<!-- instagram -->
+				<div class="wrapper__right__top__instagram">
+					<a href="#"> <span>@dr_akrum.lubov</span> <img src="img/icon/icon-instagram.png" alt=""> </a>
+				</div>
+				<!-- кнопка обратной связи -->
+				<div class="wrapper__right__top__send">
+					<a href="#"> <span>записаться на приём</span> <img src="img/icon/icon-pen.png" alt=""> </a>
+				</div>
+			</div>
+
+			<!-- кнопка действия -->
+			<div class="wrapper__right__bottom">
+				<a href="#" class="wrapper__right__bottom__btn"><img src="img/icon/icon-arrow.png" alt=""></a>
+			</div>
+
+		</div>
+
+	</div>	
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+@import "vars"
+
+@keyframes menu-animate
+    0%
+        transform: translateX(-100%)
+    50%
+        transform: translateX(0%)
+
+@keyframes menu-animate-fade
+    0%
+        opacity: 0
+    70%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes menu-animate-second
+    0%
+        transform: translateX(-100%)
+    70%
+        transform: translateX(0%)
+    85%
+        transform: translateX(5%)
+    100%
+        transform: translateX(0%)
+
+.menu
+    height: 100vh
+    &__bg
+        &-middle, &-last, &-first
+            position: absolute
+            left: 0
+            bottom: 0
+            animation: menu-animate-second .8s linear
+        &-first
+            z-index: -1
+            height: 100%
+            animation: menu-animate 1.3s ease
+        &-middle
+            z-index: -2
+        &-last
+            z-index: -3
+            animation-duration: 1s
+    &__logo
+        padding-top: 83px
+        padding-left: 60px
+        animation: menu-animate-fade 1s ease
+    &__nav
+        padding-left: 97px
+        padding-top: 40px
+        animation: menu-animate-fade 1.3s ease
+        ul
+            border-left: 2px solid #686767
+            list-style-type: none
+            margin: 0
+            padding: 40px 0
+            li
+                padding-left: 30px
+                position: relative
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    left: -8px
+                    top: 50%
+                    transform: translateY(-50%)
+                    background-color: #686767
+                    width: 15px
+                    height: 15px
+                    border-radius: 50%
+                    transition: left .3s ease
+                a
+                    color: $text
+                    font-size: rem(18px)
+                    text-decoration: none
+                    line-height: 40px
+                &:hover
+                    &::before
+                        left: 6px
+                        background-color: $accent
+                &.active
+                    &::before
+                        left: -8px
+                        background-color: $accent
+                    a
+                        color: $accent
+                        font-weight: 600
+    &__numbers
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: absolute
+        bottom: 85px
+        left: 91px
+        font-family: $font-num
+        animation: menu-animate-fade 1.5s ease
+        a
+            text-align: center
+            color: $text
+            text-decoration: none
+            font-size: rem(18px)
+        &__this
+            padding-bottom: 2px
+        &__line
+            display: block
+            background-color: $accent
+            width: 15px
+            height: 2px
+        &__all
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

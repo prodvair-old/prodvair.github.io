@@ -1,0 +1,101 @@
+@import "vars"
+
+@keyframes header-animate-line
+    0%
+        opacity: 0
+    30%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes header-animate-first
+    0%
+        transform: translate(-70%, -55%)
+        opacity: 0
+    55%
+        transform: translate(-70%, -55%)
+        opacity: 0
+    100%
+        transform: translate(-60%, -50%)
+        opacity: 1
+
+@keyframes header-animate-middle
+    0%
+        transform: translateY(-20%)
+        opacity: 0
+    50%
+        transform: translateY(-20%)
+        opacity: 0
+    100%
+        transform: translateY(0%)
+        opacity: 1
+
+@keyframes header-animate-last
+    0%
+        transform: translate(35%, -33%)
+        opacity: 0
+    55%
+        transform: translate(35%, -33%)
+        opacity: 0
+    100%
+        transform: translate(40%, -33%)
+        opacity: 1
+
+.header
+    background-image: url('../img/header/header-bg.png')
+    background-size: cover
+    height: 100vh
+    width: 100vw
+    position: relative
+    &__line
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-31%, -45%)
+        opacity: 0
+        animation: header-animate-line 1.5s ease .5
+        animation-fill-mode: forwards
+    &__masters
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-25%, -40%)
+        &-first
+            transform: translate(-60%, -50%)
+            animation: header-animate-first 1.1s ease
+        &-middle
+            animation: header-animate-middle 1s ease
+        &-last
+            transform: translate(40%, -33%)
+            animation: header-animate-last 1.5s ease
+
+    
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
