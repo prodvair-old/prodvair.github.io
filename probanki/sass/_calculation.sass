@@ -1,0 +1,348 @@
+@import "vars"
+
+.calculation
+    padding-top: 66px
+    &__form
+        margin-top: 75px
+        background-color: $gray-1
+        border-radius: 17px
+        padding: 31px 79px 42px 53px
+        width: 864px
+        position: relative
+        &__submit
+            display: none
+            justify-content: flex-end
+            margin-top: 25px
+            &-btn
+                display: none
+            &-btn_label
+                width: 246px
+                height: 65px
+                margin: 0
+        &__next
+            display: flex
+            justify-content: flex-end
+            margin-top: 25px
+            &-btn
+                display: none
+            &-btn_label
+                width: 246px
+                height: 65px
+                margin: 0
+        &__dots
+            display: flex
+            position: absolute
+            bottom: 42px
+            &-item
+                height: 17px
+                width: 17px
+                border-radius: 2px
+                border: 1px solid $gray-3
+                margin-right: 5px
+                overflow: hidden
+                position: relative
+                &:before
+                    content: ''
+                    display: block
+                    height: 100%
+                    width: 100%
+                    background-color: $blue
+                    transform-origin: left
+                    transform: scaleX(0)
+                    transition: all .3s ease
+                &:after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    top: 0
+                    z-index: 1
+                    display: block
+                    background-image: url('../img/@1x/icon/check.png')
+                    background-repeat: no-repeat
+                    background-position: center
+                    height: 100%
+                    width: 100%
+                    transform: scale(0)
+                    transition: all .3s ease
+                &.active
+                    border: 1px solid $blue
+                    &:before
+                        transform: scaleX(1)
+                    &.checked
+                        &:after
+                            transform: scaleX(1)
+        &__slider__item
+            &-lines
+                display: flex
+                .calculation__form__slider__item__group
+                    margin-left: 36px
+                    &:first-child
+                        margin-left: 0
+            &__group
+                margin-top: 28px
+                margin-bottom: 1px
+                span
+                    i
+                        border-radius: 50%
+                        display: inline-flex
+                        justify-content: center
+                        align-items: center
+                        font-size: 12px
+                        font-style: normal
+                        vertical-align: middle
+                        color: $white
+                        height: 19px
+                        width: 19px
+                        background-color: $blue
+                        margin-left: 10px
+                        cursor: help
+                        position: relative
+                        span
+                            display: block
+                            position: absolute
+                            top: 50%
+                            transform: translateY(-50%) scale(0)
+                            transform-origin: left
+                            left: 10px
+                            background-color: $white
+                            padding: 5px 10px
+                            color: $blue
+                            transition: all .3s ease
+                        &:hover
+                            span
+                                z-index: 999
+                                left: 30px
+                                transform: translateY(-50%) scale(1)
+                &-checkbox
+                    font-size: 15px
+                    color: $text
+                    margin-bottom: 20px
+                    input
+                        display: none
+                    label
+                        cursor: pointer
+                        i
+                            display: inline-block
+                            vertical-align: middle
+                            height: 22px
+                            width: 22px
+                            border-radius: 2px
+                            border: 1px solid $blue
+                            background-color: transparent
+                            margin-right: 15px
+                            margin-top: -2px
+                            position: relative
+                            &:after
+                                content: ''
+                                position: absolute
+                                left: 0
+                                top: 0
+                                display: block
+                                background-image: url('../img/@1x/icon/check.png')
+                                background-color: rgba($blue, 0)
+                                background-repeat: no-repeat
+                                background-position: center
+                                height: 100%
+                                width: 100%
+                                transform: scale(0)
+                                transition: all .3s ease
+                    input:checked + label 
+                        i:after
+                            background-color: rgba($blue, 1)
+                            transform: scale(1)
+                &-range
+                    margin-top: 34px
+                    #volumeFOT-range
+                        position: relative
+                    &_min, &_max
+                        color: #8e8e8e
+                        font-size: 15px
+                        position: absolute
+                        top: -25px
+                    &_min
+                        left: 0
+                    &_max
+                        right: 0
+                    .ui-slider
+                        height: 5px
+                        width: 283px
+                        background-color: #e7e7e7
+                        border: none
+                    .ui-slider-range
+                        background-color: $blue
+                    .ui-slider-handle
+                        height: 17px
+                        width: 17px
+                        border-radius: 50%
+                        border: none
+                        background-color: $blue
+                        margin-top: -1px
+                        cursor: pointer
+                &-select
+                    margin-top: 15px
+                    select 
+                        width: 283px
+                    .select2-selection, .select2-container
+                        display: flex
+                        justify-content: flex-start
+                        align-items: center
+                        width: 283px
+                        height: 42px
+                        border-radius: 0
+                        background-color: transparent
+                    .select2-selection--single
+                        border: 1px solid $blue
+                        position: relative
+                    .select2-selection__rendered
+                        color: #a0a4a8!important
+                        font-size: 15px!important
+                        padding-left: 14px!important
+                    .select2-selection__arrow
+                        right: 0!important
+                        top: 0!important
+                        height: 100%!important
+                        width: 42px!important
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        border-left: 1px solid $blue
+                        &:after
+                            content: ''
+                            display: block
+                            width: 100%
+                            height: 100%
+                            background-image: url('../img/@1x/icon/down.png')
+                            background-repeat: no-repeat
+                            background-position: center
+                            transform: rotate(0deg)
+                            transition: all .3s ease
+                        &:hover
+                            &:after
+                                transform: rotate(180deg)
+
+                        b
+                            display: none
+                    &.error
+                        .select2-selection--single
+                            border: 1px solid $red
+                &-currency
+                    background-color: $white
+                    border: 1px solid $blue
+                    width: 100px
+                    height: 50px
+                    display: flex
+                    margin-top: 20px
+                    &_span
+                        width: 50%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        font-size: 16px
+                        color: $blue
+                    &_btn
+                        width: 50%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        background-color: $blue
+                        cursor: pointer
+                        img
+                            transform: scale(1)
+                            transition: all .3s ease
+                        &:hover
+                            text-decoration: none
+                            img
+                                transform: scale(1.5)
+                &-radio
+                    display: flex
+                    border: 1px solid $blue
+                    width: 186px
+                    height: 33px
+                    background-color: $white
+                    position: relative
+                    margin-top: 20px
+                    label
+                        width: 100%
+                        height: 100%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        color: $blue
+                        position: relative
+                        cursor: pointer
+                        &.active
+                            color: $white
+                    input
+                        display: none
+                    &-bg
+                        background-color: $blue
+                        color: $white
+                        height: 100%
+                        position: absolute
+                        transition: all .3s ease
+                        right: 100%
+                        transform: translateX(100%)
+                    &:hover
+                        .calculation__form__slider__item__group-radio-bg
+                            animation: radio_btn .3s ease
+
+.select2-search
+    display: none
+.select2-dropdown
+    border-radius: 0
+    border: 1px solid $blue
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+    
+// ≥992px
++media-breakpoint-down(md)
+    .calculation
+        &__form
+            width: 100%
+            &__slider__item
+                &-lines
+                    display: block
+                    .calculation__form__slider__item__group
+                        margin-left: 0
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+    .calculation
+        &__form
+            padding: 31px 30px 82px 30px
+            &__submit, &__next
+                justify-content: center
+            &__dots
+                bottom: 40px
+                left: 50%
+                transform: translateX(-50%)
+            &__slider__item
+                &__group
+                    &-range
+                        .ui-slider
+                            width: 200px
+                    &-select 
+                        select
+                            width: 200px
+                        .select2-selection, .select2-container
+                            width: 200px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

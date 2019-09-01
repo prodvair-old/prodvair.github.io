@@ -1,0 +1,165 @@
+@import vars
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $font
+	overflow-x: hidden
+	color: $text
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+h1
+	font-size: $h1
+	font-weight: 900
+	line-height: 1.2
+h2
+	font-size: $h2
+	font-weight: 700
+	line-height: 1.2
+	position: relative
+	&:after
+		content: ''
+		margin-top: 13px
+		display: block
+		width: 93px
+		height: 7px
+		background-color: $blue
+h3
+	font-size: $h3
+	font-weight: 500
+	color: $text
+h4
+	font-size: $h4
+	font-weight: 500
+h5
+	font-size: $h5
+h6
+	font-size: $h6
+
+p, span
+	font-size: 400
+
+.btn
+	background-color: $red
+	height: 54px
+	width: 247px
+	display: flex
+	align-items: center
+	justify-content: center
+	color: $white
+	border-radius: 5px
+	box-shadow: 0 0 0px rgba($black, .1)
+	transform: scale(1)
+	transition: all .3s ease
+	&:hover
+		text-decoration: none
+		color: $white
+		transform: scale(1.01)
+		box-shadow: 5px 5px 25px rgba($black, .2)
+	&-submit
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: $btn
+		font-size: 22px
+		font-weight: 600
+		color: $white
+		cursor: pointer
+		box-shadow: 0 0 0px rgba($black, .1)
+		transform: scale(1)
+		transition: all .3s ease
+		&:hover
+			transform: scale(1.01)
+			box-shadow: 5px 5px 25px rgba($black, .2)
+	&-ghost
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: rgba($blue, 0)
+		border: 1px solid $btn
+		font-size: 22px
+		font-weight: 600
+		color: $btn
+		cursor: pointer
+		overflow: hidden
+		position: relative
+		span
+			position: relative
+			z-index: 2
+		&:after
+			content: ''
+			display: block
+			height: 100%
+			width: 100%
+			background-color: $btn
+			position: absolute
+			top: 0%
+			left: -101%
+			z-index: 1
+			transition: all .3s ease
+		&:hover
+			color: $white
+			text-decoration: none
+			&:after
+				left: 0
+
+.content-container
+	position: relative
+
+.arrow
+	display: flex
+	justify-content: flex-end
+	&__top
+		position: fixed
+		bottom: -50px
+		height: 48px
+		width: 48px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: $white
+		box-shadow: 0 0 0 rgba($black, .1)
+		transition: all .3s ease
+		img
+			transform: scale(1)
+			transition: all .3s ease
+		&:hover
+			box-shadow: 5px 5px 15px rgba($black, .1)
+			img
+				transform: scale(1.2)
+		&.active
+			bottom: 67px
+
+@import animation
+
+@import "header"
+@import calculation
+@import articles
+@import news
+@import banners
+@import banks
+@import "footer"
+
+@import media

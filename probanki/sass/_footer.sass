@@ -1,0 +1,70 @@
+@import "vars"
+
+.footer
+    background-color: $blue
+    color: $white
+    padding-bottom: 64px
+    &__copy
+        margin-top: 41px
+        font-size: 15px
+    &__menu
+        padding-top: 40px
+        h3
+            font-weight: 500
+            color: $white
+        &__links
+            display: flex
+            &__group
+                display: flex
+                flex-direction: column
+                margin-left: 80px
+                &:first-child
+                    margin-left: 0
+                a
+                    margin-top: 8px
+                    font-size: 17px
+                    line-height: 1.3
+                    color: #e2e2e2
+                    text-decoration: none
+                    &:hover
+                        color: $white
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+    .footer
+        &__menu
+            &__links
+                &__group
+                    margin-left: 50px
+
+// ≥576px
++media-breakpoint-down(xs)
+    .footer
+        &__menu
+            &__links
+                flex-direction: column
+                &__group
+                    margin-left: 0
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

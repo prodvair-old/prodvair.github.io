@@ -1,0 +1,311 @@
+@import "vars"
+
+.header
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 111px
+        &__burger
+            display: none
+        &__nav
+            display: flex
+            height: 100%
+            &__login
+                animation: header_top_scale .5s linear
+                transform-origin: left
+                a
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    background-color: $pink
+                    width: 228px
+                    height: 100%
+                    font-size: 16px
+                    color: $text
+                    transition: all .3s ease
+                    img
+                        margin-right: 7px
+                        transition: all .3s ease
+                    &:hover
+                        text-decoration: none
+                        background-color: darken($pink, 1)
+                        img
+                            margin-right: 10px
+            &__menu
+                animation: header_top_scale .5s linear
+                transform-origin: right
+                display: flex
+                align-items: center
+                justify-content: center
+                list-style-type: none
+                margin: 0
+                padding: 0
+                width: 691px
+                background-color: $blue
+                li
+                    height: 100%
+                    a
+                        padding: 0 15px
+                        display: flex
+                        height: 100%
+                        align-items: center
+                        cursor: pointer
+                        color: $white
+                        font-size: 15px
+                        span
+                            position: relative
+                            &:after
+                                content: ''
+                                display: block
+                                position: absolute
+                                left: 0
+                                bottom: -3px
+                                height: 1px
+                                width: 0px
+                                transition: all .3s ease
+                                background-color: $white
+                        &:hover
+                            text-decoration: none
+                            span:after
+                                width: 28px
+                        &.active span:after
+                            width: 28px
+    &__slider__content
+        outline: none
+        .container
+            display: flex!important
+            justify-content: space-between
+            padding-top: 150px
+            padding-bottom: 175px
+        &__offer
+            position: relative
+            h1
+                max-width: 755px
+                padding-top: 100px
+            &-number
+                position: absolute
+                top: 100px
+                left: -200px
+                color: rgba($blue, .11)
+                font-weight: 700
+                font-size: 229px
+                line-height: 0px
+            &-btn
+                margin-top: 42px
+        &__image
+            height: 530px
+            width: 440px
+            position: relative
+            margin-right: 116px
+            &:after
+                content: ''
+                display: block
+                background-image: url('../img/@1x/header/lines.png')
+                height: 93px
+                width: 145px
+                position: absolute
+                bottom: 0
+                left: -30px
+            &-back
+                position: absolute
+                top: 38px
+                left: 116px
+                background-color: $white-blue
+                height: 100%
+                width: 100%
+            &-icon
+                border-radius: 50%
+                background-color: $white
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 115px
+                height: 115px
+                position: absolute
+                left: 0
+                top: 56px
+                transform: translateX(-50%)
+                font-size: 47px
+                font-weight: 500
+            img
+                height: 100%
+                max-width: 100%
+                margin-left: 50%
+                transform: translateX(-50%)
+    &__controller
+        height: 120px
+        width: 558px
+        display: flex
+        justify-content: space-between
+        color: $white
+        background-color: $blue
+        &__left, &__right
+            height: 100%
+            width: 120px
+            display: flex
+            align-items: center
+            justify-content: center
+            img
+                transform: scale(1)
+                transition: all .3s ease
+            &:hover
+                img
+                    transform: scale(1.5)
+        &__number
+            display: flex
+            font-size: 18px
+            letter-spacing: -1px
+            align-items: center
+            justify-content: center
+            position: relative
+            width: calc(100% - 240px)
+            &:after, &:before
+                content: ''
+                display: block
+                height: 30px
+                width: 1px
+                background-color: $white
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+            &:after
+                right: 0
+            &:before
+                left: 0
+            &-this
+                font-size: 37px
+                margin-bottom: 8px
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+    .header
+        &__slider__content
+            &__offer
+                &-number
+                    left: -50px
+
+// ≥992px
++media-breakpoint-down(md)
+    .header
+        position: relative
+        &__top
+            &__burger
+                display: flex
+                position: relative
+                z-index: 1000
+                span
+                    width: 50px
+                    height: 4px
+                    background-color: $blue
+                    display: block
+                    position: relative
+                    transition: all .3s ease
+                    &:after, &:before
+                        content: ''
+                        position: absolute
+                        height: 4px
+                        width: 30px
+                        background-color: $blue
+                        display: block
+                        transition: all .3s ease
+                    &:before
+                        top: -13px
+                        left: 0%
+                        transform-origin: left center
+                    &:after
+                        bottom: -13px
+                        right: 0%
+                        transform-origin: right center
+                &.active
+                    span
+                        transform: rotate(-45deg)
+                        &:before
+                            transform: rotate(90deg) translate(30%,0%)
+                            width: 29px
+                            left: 50%
+                        &:after
+                            transform: rotate(90deg) translate(-30%,0%)
+                            width: 29px
+                            right: 50%
+            &__nav
+                position: absolute
+                left: 0
+                top: 0
+                z-index: 999
+                width: 100vw
+                flex-direction: column
+                padding-top: 111px
+                transform: scaleY(0)
+                transform-origin: top
+                transition: all .3s ease
+                &.active
+                    transform: scaleY(1)
+                &__login
+                    a
+                        width: 100%
+                        padding: 30px 0
+                &__menu
+                    width: 100%
+                    flex-direction: column
+                    li
+                        &:before
+                            content: ''
+                            display: block
+                            position: absolute
+                            left: 0
+                            width: 100%
+                            height: 1px
+                            background-color: #456388
+                        a
+                            padding: 30px 0
+                    
+        &__slider__content
+            &__image
+                display: none
+
+// ≥768px
++media-breakpoint-down(sm)
+    .header
+        &__controller
+            width: 100%
+
+// ≥576px
++media-breakpoint-down(xs)
+    .header
+        &__top
+            padding: 0 20px
+        &__controller
+            &__left, &__right
+                height: 100%
+                width: 90px
+            &__number
+                width: calc(100% - 180px)
+        &__slider
+            &__content
+                .container
+                    padding-top: 50px
+                    padding-bottom: 100px
+                &__offer 
+                    &-number
+                        font-size: 150px
+                        left: -20px
+                    h1
+                        font-size: 30px
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

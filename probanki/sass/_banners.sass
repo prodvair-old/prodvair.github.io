@@ -1,0 +1,105 @@
+@import "vars"
+
+.banners
+    padding-top: 67px
+    overflow-x: hidden
+    &__list
+        margin-top: 54px
+        width: 100vw
+        &__item
+            height: 418px
+            width: 546px
+            margin-right: 140px
+            margin-bottom: 40px
+            position: relative
+            outline: none
+            &-back
+                position: absolute
+                top: 35px
+                left: 51px
+                z-index: -1
+                height: 100%
+                width: 100%
+                background-color: $pink
+            &-btn
+                position: absolute
+                bottom: 32px
+                right: 45px
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: $white
+                border-radius: 50%
+                width: 59px
+                height: 59px
+                cursor: pointer
+                transform: scale(1)
+                transition: all .3s ease
+                &:hover
+                    transform: scale(1.1)
+            &-img
+                height: 100%
+                width: 100%
+    &__controller
+        display: flex
+        justify-content: flex-end
+        margin-top: 87px
+        &__left, &__right
+            background-color: $blue
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            height: 73px
+            width: 73px
+            img
+                transform: scale(1)
+                transition: all .3s ease
+            &:hover
+                text-decoration: none
+                img
+                    transform: scale(1.5)
+        &__left:after
+            content: ''
+            display: block
+            background-color: $white
+            width: 1px
+            height: 26px
+            position: absolute
+            right: 0
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+    .banners
+        &__list
+            &__item
+                height: 200px
+        &__controller
+            margin-top: 40px
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
