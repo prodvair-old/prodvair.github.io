@@ -199,7 +199,7 @@
 						<!-- Форма калькулятора -->
 						<form action="" class="calculation__form">
 
-							<h3>Укажите предпологаемые бизнес-параметры</h3>
+							<h3>Выберите предпологаемые бизнес-параметры</h3>
 
 							<!-- Слайдер шагов -->
 							<div class="calculation__form__slider">
@@ -220,8 +220,8 @@
 									<div class="calculation__form__slider__item__group">
 										<span>Курсы валют</span>
 										<div class="calculation__form__slider__item__group-currency">
-											<span class="calculation__form__slider__item__group-currency_span">$</span>
-											<input type="hidden" name="currency" value="$">
+											<span class="calculation__form__slider__item__group-currency_span">₽</span>
+											<input type="hidden" name="currency" value="₽">
 											<a href="#" class="calculation__form__slider__item__group-currency_btn" data-currency="0">
 												<img src="./img/@1x/icon/right.png" alt="">
 											</a>
@@ -349,38 +349,38 @@
 
 										<div class="calculation__form__slider__item__group-checkbox col-lg-6 col-md-8">
 											<input type="checkbox" name="smsInfo" id="smsInfo">
-											<label for="smsInfo"><i></i>SMS-информирование</label>
+											<label for="smsInfo"><i></i>SMS-информирование<span class="help"><i>?<span>Помощь в SMS-информирование</span></i></span></label>
 										</div>
 
 										<div class="calculation__form__slider__item__group-checkbox col-lg-6 col-md-8">
 											<input type="checkbox" name="internetBanking" id="internetBanking">
-											<label for="internetBanking"><i></i>Интернет-банкинг</label>
+											<label for="internetBanking"><i></i>Интернет-банкинг<span class="help"><i>?<span>Помощь в Интернет-банкинг</span></i></span></label>
 										</div>
 
 
 										<div class="calculation__form__slider__item__group-checkbox col-lg-6 col-md-8">
 											<input type="checkbox" name="mobileBanking" id="mobileBanking">
-											<label for="mobileBanking"><i></i>Мобильный банкинг</label>
+											<label for="mobileBanking"><i></i>Мобильный банкинг<span class="help"><i>?<span>Помощь в Мобильный банкинг</span></i></span></label>
 										</div>
 
 										<div class="calculation__form__slider__item__group-checkbox col-lg-6 col-md-8">
 											<input type="checkbox" name="corporateCard" id="corporateCard">
-											<label for="corporateCard"><i></i>Корпоративная карта</label>
+											<label for="corporateCard"><i></i>Корпоративная карта<span class="help"><i>?<span>Помощь в Корпоративная карта</span></i></span></label>
 										</div>
 
 										<div class="calculation__form__slider__item__group-checkbox col-lg-6 col-md-8">
 											<input type="checkbox" name="sendingPayments" id="sendingPayments">
-											<label for="sendingPayments"><i></i>Отправка платежей 24/7</label>
+											<label for="sendingPayments"><i></i>Отправка платежей 24/7<span class="help"><i>?<span>Помощь в Отправка платежей 24/7</span></i></span></label>
 										</div>
 
 										<div class="calculation__form__slider__item__group-checkbox col-lg-6 col-md-8">
 											<input type="checkbox" name="priorityService" id="priorityService">
-											<label for="priorityService"><i></i>Приоритетное обслуживание</label>
+											<label for="priorityService"><i></i>Приоритетное обслуживание<span class="help"><i>?<span>Помощь в <br>Приоритетное обслуживание</span></i></span></label>
 										</div>
 
 										<div class="calculation__form__slider__item__group-checkbox col-lg-6 col-md-8">
 											<input type="checkbox" name="accountBalance" id="accountBalance">
-											<label for="accountBalance"><i></i>% на остаток по счету</label>
+											<label for="accountBalance"><i></i>% на остаток по счету<span class="help"><i>?<span>Помощь в % на остаток по счету</span></i></span></label>
 										</div>
 
 									</div>
@@ -400,12 +400,14 @@
 
 							<!-- Кнопка отправки -->
 							<div class="calculation__form__submit">
+								<a href="#" class="calculation__form__next-prev">Назад</a>
 								<input type="submit" id="calculationSubmit" class="calculation__form__submit-btn">
 								<label for="calculationSubmit" class="calculation__form__submit-btn_label btn-submit">Подобрать тариф</label>
 							</div>
 
 							<!-- Кнопка перехода -->
 							<div class="calculation__form__next">
+								<a href="#" class="calculation__form__next-prev">Назад</a>
 								<input type="button" id="calculationSubmit" class="calculation__form__next-btn">
 								<label for="calculationSubmit" class="calculation__form__next-btn_label btn-ghost">
 									<span>Далее</span>
@@ -753,7 +755,7 @@
 	</div>
 
 	<script>
-		var currency = ['$','₽','€'];
+		var currency = ['₽','$','€'];
 	</script>
 	<script src="js/scripts.min.js"></script>
 

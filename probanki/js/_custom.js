@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		calculationDots		= $('.calculation__form__dots-item'),
 		calculationSlide	= $('.calculation__form__slider__item'),
 		calculationBtnNext	= $('.calculation__form__next'),
+		calculationBtnPrev	= $('.calculation__form__next-prev'),
 		calculationBtnSubmit= $('.calculation__form__submit'),
 		monthlyCash					= $('#monthlyCash'),
 		transfersPhysicalPersons	= $('#transfersPhysicalPersons'),
@@ -225,12 +226,35 @@ document.addEventListener("DOMContentLoaded", function() {
 		accessibility: false,
 		draggable: false,
 		swipe: false,
-		touchMove: false
+		touchMove: false,
+		adaptiveHeight: true
 	});
+
+	calculationBtnPrev.on('click', function (e) {
+		e.preventDefault();
+		calculationSlider.slick('slickPrev');
+		if (calculationSlider.slick('slickGetOption')[0].slick.currentSlide == 0) {
+
+			calculationBtnPrev.css({'transform': 'scaleX(0)'});
+			setTimeout(function () {
+				calculationBtnPrev.hide();
+			}, 100)
+			calculationSlider.slick('slickPrev');
+
+		}
+	})
 
 	calculationNext.on('click', function (e) {
 		e.preventDefault();
-		if (calculationSlider.slick('slickGetOption')[0].slick.currentSlide == 1) {
+		if (calculationSlider.slick('slickGetOption')[0].slick.currentSlide == 0) {
+
+			calculationBtnPrev.css({'display': 'flex'});
+			setTimeout(function () {
+				calculationBtnPrev.css({'transform': 'scaleX(1)'});
+			}, 100)
+			calculationSlider.slick('slickNext');
+
+		} else if (calculationSlider.slick('slickGetOption')[0].slick.currentSlide == 1) {
 
 			if (monthlyCash.select2("val") == '' || transfersPhysicalPersons.select2("val") == '' || withdrawalsCurrentAccount.select2("val") == '') {
 				if (monthlyCash.select2("val") == '') {
@@ -281,18 +305,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	calculationSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
 		calculationDots.each(function( index ) {
-			if ($(this).hasClass('active')) {
-				$(this).addClass('checked');
+			if (nextSlide > currentSlide) {
+				if ($(this).hasClass('active')) {
+					$(this).addClass('checked');
+				}
+				if ($(this).data('number') == nextSlide) {
+					$(this).addClass('active');
+				}
+				
+			} else {
+				if ($(this).data('number') == currentSlide) {
+					$(this).removeClass('active');
+				}
 			}
-			if ($(this).data('number') == nextSlide) {
-				$(this).addClass('active');
+			if (calculationSlide.length == (nextSlide + 1)) {
+				calculationBtnNext.hide();
+				calculationBtnSubmit.css({'display':'flex'});
+			} else {
+				calculationBtnSubmit.hide();
+				calculationBtnNext.css({'display':'flex'});
 			}
 		});
-		console.log(currentSlide, nextSlide)
-		if (calculationSlide.length == (nextSlide + 1)) {
-			calculationBtnNext.hide();
-			calculationBtnSubmit.css({'display':'flex'});
-		}
+		
 	});
 
 	monthlyCash.select2({

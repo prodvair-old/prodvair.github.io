@@ -12,7 +12,6 @@
         &__submit
             display: none
             justify-content: flex-end
-            margin-top: 25px
             &-btn
                 display: none
             &-btn_label
@@ -22,7 +21,17 @@
         &__next
             display: flex
             justify-content: flex-end
-            margin-top: 25px
+            &-prev
+                display: none
+                align-items: center
+                margin-right: 3rem
+                color: $blue
+                transform: scaleX(0)
+                transform-origin: right
+                transition: all .3s ease
+                &:hover
+                    text-decoration: none
+                    color: $btn
             &-btn
                 display: none
             &-btn_label
@@ -34,11 +43,11 @@
             position: absolute
             bottom: 42px
             &-item
-                height: 17px
-                width: 17px
+                height: 20px
+                width: 20px
                 border-radius: 2px
                 border: 1px solid $gray-3
-                margin-right: 5px
+                margin-right: 7px
                 overflow: hidden
                 position: relative
                 &:before
@@ -72,16 +81,22 @@
                         &:after
                             transform: scaleX(1)
         &__slider__item
+            padding-left: 2px
+            display: flex!important
+            height: 100%
+            flex-direction: column
+            justify-content: center
+            padding-bottom: 3rem
             &-lines
                 display: flex
                 .calculation__form__slider__item__group
-                    margin-left: 36px
+                    margin-left: 4rem
                     &:first-child
                         margin-left: 0
             &__group
                 margin-top: 28px
                 margin-bottom: 1px
-                span
+                span, .help
                     i
                         border-radius: 50%
                         display: inline-flex
@@ -108,6 +123,7 @@
                             padding: 5px 10px
                             color: $blue
                             transition: all .3s ease
+                            white-space: pre
                         &:hover
                             span
                                 z-index: 999
@@ -121,7 +137,8 @@
                         display: none
                     label
                         cursor: pointer
-                        i
+                        white-space: nowrap
+                        >i
                             display: inline-block
                             vertical-align: middle
                             height: 22px
@@ -222,6 +239,10 @@
 
                         b
                             display: none
+                    .select2-container--below
+                        background-color: $white
+                        .select2-selection__rendered
+                            color: $blue!important
                     &.error
                         .select2-selection--single
                             border: 1px solid $red
@@ -257,7 +278,7 @@
                     display: flex
                     border: 1px solid $blue
                     width: 186px
-                    height: 33px
+                    height: 50px
                     background-color: $white
                     position: relative
                     margin-top: 20px
@@ -302,6 +323,9 @@
     .calculation
         &__form
             width: 100%
+            padding-right: 50px
+            &__submit, &__next
+                margin-right: 29px
             &__slider__item
                 &-lines
                     display: block
@@ -310,9 +334,6 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
-
-// ≥576px
-+media-breakpoint-down(xs)
     .calculation
         &__form
             padding: 31px 30px 82px 30px
@@ -322,14 +343,38 @@
                 bottom: 40px
                 left: 50%
                 transform: translateX(-50%)
+// ≥576px
++media-breakpoint-down(xs)
+    .calculation
+        &__form
+            padding: 31px 30px 82px 30px
+            &__submit, &__next
+                justify-content: center
+                flex-direction: column
+                align-items: center
+                margin-right: 0
+                &-prev
+                    margin-right: 0
+                    padding-bottom: 1rem
+                label
+                    max-width: 100%
+            &__dots
+                bottom: 40px
+                left: 50%
+                transform: translateX(-50%)
             &__slider__item
+                padding-bottom: 2rem
                 &__group
+                    &-checkbox
+                        label
+                            white-space: pre-line
                     &-range
                         .ui-slider
                             width: 200px
                     &-select 
                         select
                             width: 200px
+                            display: none
                         .select2-selection, .select2-container
                             width: 200px
 
